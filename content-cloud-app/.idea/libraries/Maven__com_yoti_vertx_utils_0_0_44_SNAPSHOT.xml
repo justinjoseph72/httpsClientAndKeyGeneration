@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.yoti:vertx-utils:0.0.44-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/yoti/vertx-utils/0.0.44-SNAPSHOT/vertx-utils-0.0.44-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/yoti/vertx-utils/0.0.44-SNAPSHOT/vertx-utils-0.0.44-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/yoti/vertx-utils/0.0.44-SNAPSHOT/vertx-utils-0.0.44-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
