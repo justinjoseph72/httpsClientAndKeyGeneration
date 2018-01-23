@@ -1,5 +1,6 @@
 package com.yoti.app.httpClient;
 
+import com.yoti.app.httpClient.impl.RequestClientImpl;
 import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -16,19 +17,19 @@ import java.io.InputStream;
 
 public class RequestGeneratorTest {
 
-    private RequestGenereator requestGenereator;
+    private RequestClientImpl requestClientImpl;
     private String url = null;
 
     @Before
     public void init(){
-        requestGenereator = new RequestGenereator();
+        requestClientImpl = new RequestClientImpl();
         url = "https://localhost:8087/";
     }
 
 
     @Test
     public void testHttpsClientWithGet() throws IOException {
-        CloseableHttpClient httpClient = requestGenereator.httpsClient();
+        CloseableHttpClient httpClient = requestClientImpl.getCloudContentInvoker();
         HttpGet httpGet = new HttpGet(url);
         HttpResponse httpResponse = httpClient.execute(httpGet);
         Assert.assertThat(httpResponse.getStatusLine().getStatusCode(), CoreMatchers.equalTo(200));
@@ -44,7 +45,7 @@ public class RequestGeneratorTest {
 
     @Test
     public void testHttpsClientPostData() throws IOException {
-        CloseableHttpClient httpClient = requestGenereator.httpsClient();
+        CloseableHttpClient httpClient = requestClientImpl.getCloudContentInvoker();
         HttpPost httpPost = new HttpPost(url);
         StringEntity stringEntity = new StringEntity("Justin Boss");
         httpPost.setEntity(stringEntity);
