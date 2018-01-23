@@ -26,9 +26,17 @@ function printPostData(){
         res.writeHead(200, "OK", {'Content-Type': 'text/plain'});
             res.end("post successfull!!!");
       });
-    }else{
-      res.writeHead(200, "OK", {'Content-Type': 'text/plain'});
-          res.end("not a post");
+    }
+    if(req.method == 'GET'){
+      res.writeHead(200,"OK",{'Content-Type': 'applicaion/json'});
+      var item ={
+        "id":2,
+        "givenName":"retrievedGivenName",
+        "lastName":"retrievedLastName",
+        "email":"retievedEmail"
+      };
+      var myJSON = JSON.stringify(item);
+      res.end(myJSON);
     }
   }).listen(8087);
 }

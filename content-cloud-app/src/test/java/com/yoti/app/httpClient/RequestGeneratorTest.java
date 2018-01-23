@@ -1,6 +1,9 @@
 package com.yoti.app.httpClient;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.yoti.app.content_Cloud.model.Person;
 import com.yoti.app.httpClient.impl.RequestClientImpl;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -15,15 +18,18 @@ import org.junit.Test;
 import java.io.IOException;
 import java.io.InputStream;
 
+@Slf4j
 public class RequestGeneratorTest {
 
     private RequestClientImpl requestClientImpl;
     private String url = null;
+    ObjectMapper mapper;
 
     @Before
     public void init(){
         requestClientImpl = new RequestClientImpl();
         url = "https://localhost:8087/";
+        mapper = new ObjectMapper();
     }
 
 
@@ -34,7 +40,9 @@ public class RequestGeneratorTest {
         HttpResponse httpResponse = httpClient.execute(httpGet);
         Assert.assertThat(httpResponse.getStatusLine().getStatusCode(), CoreMatchers.equalTo(200));
         String responseText = getContentFromResponse(httpResponse);
-        Assert.assertThat(responseText,CoreMatchers.is("not a post"));
+        log.info(responseText);
+        Person person = mapper.readValue(responseText,Person.class);
+        Assert.assertNotNull(person);
     }
 
     private String getContentFromResponse(final HttpResponse httpResponse) throws IOException {

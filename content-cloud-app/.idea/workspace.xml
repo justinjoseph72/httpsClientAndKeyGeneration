@@ -2,28 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65429d25-8f88-4acf-b1db-97068f863e21" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ErrorCodes.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ErrorMessages.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_Cloud/annotations/CloudBody.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_Cloud/model/Person.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_Cloud/service/InsertObject.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_Cloud/service/PayloadConversion.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_Cloud/service/impl/InsertObjectImpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_Cloud/service/impl/JsonPayloadConversionImpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/exception/CloudInteractionException.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/guice_binding/InsertObjectModule.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/guice_binding/PayloadConverterModule.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/httpClient/RequestClient.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/InsertObjectTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/JsonPayloadConverterTest.java" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" afterPath="$PROJECT_DIR$/../.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/content-cloud-app.iml" afterPath="$PROJECT_DIR$/content-cloud-app.iml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ServerConstants.java" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ServerConstants.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_Cloud/SavePublicKey.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/httpClient/RequestGenereator.java" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/httpClient/impl/RequestClientImpl.java" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/yoti/app/httpClient/RequestGeneratorTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/yoti/app/httpClient/RequestGeneratorTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/InsertObjectTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/InsertObjectTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="InsertObjectImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InsertObjectImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_Cloud/service/impl/InsertObjectImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+            <state relative-caret-position="298">
+              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -68,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RequestGeneratorTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RequestGeneratorTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/httpClient/RequestGeneratorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="25" column="38" lean-forward="false" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="38" />
+            <state relative-caret-position="555">
+              <caret line="44" column="37" lean-forward="false" selection-start-line="44" selection-start-column="37" selection-end-line="44" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,8 +64,8 @@
       <file leaf-file-name="InsertObjectTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/InsertObjectTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+            <state relative-caret-position="675">
+              <caret line="45" column="32" lean-forward="true" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -191,7 +172,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/exception/CloudInteractionException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/httpClient/impl/RequestGenereator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/httpClient/RequestClient.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/yoti/app/httpClient/RequestGeneratorTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/httpClient/impl/RequestClientImpl.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_Cloud/service/InsertObject.java" />
@@ -205,10 +185,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_Cloud/service/impl/JsonPayloadConversionImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/JsonPayloadConverterTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_Cloud/model/Person.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/InsertObjectTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ServerConstants.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ErrorCodes.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_Cloud/service/impl/InsertObjectImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/InsertObjectTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/yoti/app/httpClient/RequestGeneratorTest.java" />
       </list>
     </option>
   </component>
@@ -307,6 +288,16 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="content_Cloud" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="content-cloud-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="content-cloud-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="content_Cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="annotations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="content-cloud-app" type="b2602c69:ProjectViewProjectNode" />
@@ -460,7 +451,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.JsonPayloadConverterTest">
+  <component name="RunManager" selected="JUnit.RequestGeneratorTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -495,56 +486,6 @@
       <option name="MAIN_CLASS_NAME" value="com.yoti.app.service.impl.InsertObjectTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="InsertObjectTest.testInsertData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.yoti.app.service.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="content-cloud-app" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.yoti.app.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.yoti.app.service.impl.InsertObjectTest" />
-      <option name="METHOD_NAME" value="testInsertData" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="InsertObjectTest.testObjectCreated" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.yoti.app.service.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="content-cloud-app" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.yoti.app.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.yoti.app.service.impl.InsertObjectTest" />
-      <option name="METHOD_NAME" value="testObjectCreated" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -594,6 +535,56 @@
       <option name="PACKAGE_NAME" value="com.yoti.app.service.impl" />
       <option name="MAIN_CLASS_NAME" value="com.yoti.app.service.impl.JsonPayloadConverterTest" />
       <option name="METHOD_NAME" value="testConversion" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="RequestGeneratorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.yoti.app.httpClient.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="content-cloud-app" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.yoti.app.httpClient" />
+      <option name="MAIN_CLASS_NAME" value="com.yoti.app.httpClient.RequestGeneratorTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="RequestGeneratorTest.testHttpsClientWithGet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.yoti.app.httpClient.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="content-cloud-app" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.yoti.app.httpClient" />
+      <option name="MAIN_CLASS_NAME" value="com.yoti.app.httpClient.RequestGeneratorTest" />
+      <option name="METHOD_NAME" value="testHttpsClientWithGet" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -664,19 +655,19 @@
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.InsertObjectTest.testObjectCreated" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.InsertObjectTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.InsertObjectTest.testInsertData" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.JsonPayloadConverterTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.JsonPayloadConverterTest.testConversion" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.InsertObjectTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.JsonPayloadConverterTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.JsonPayloadConverterTest.testConversion" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.RequestGeneratorTest.testHttpsClientWithGet" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.RequestGeneratorTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.JsonPayloadConverterTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.JsonPayloadConverterTest.testConversion" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.RequestGeneratorTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.RequestGeneratorTest.testHttpsClientWithGet" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.InsertObjectTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.InsertObjectTest.testObjectCreated" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.InsertObjectTest.testInsertData" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.JsonPayloadConverterTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.JsonPayloadConverterTest.testConversion" />
       </list>
     </recent_temporary>
   </component>
@@ -687,23 +678,11 @@
     <configuration />
   </component>
   <component name="TestHistory">
-    <history-entry file="InsertObjectTest - 2018.01.23 at 16h 01m 01s.xml">
+    <history-entry file="InsertObjectTest - 2018.01.23 at 16h 34m 30s.xml">
       <configuration name="InsertObjectTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InsertObjectTest - 2018.01.23 at 16h 14m 02s.xml">
+    <history-entry file="InsertObjectTest - 2018.01.23 at 16h 37m 15s.xml">
       <configuration name="InsertObjectTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InsertObjectTest_testObjectCreated - 2018.01.23 at 16h 00m 12s.xml">
-      <configuration name="InsertObjectTest.testObjectCreated" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JsonPayloadConverterTest - 2018.01.23 at 15h 58m 54s.xml">
-      <configuration name="JsonPayloadConverterTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JsonPayloadConverterTest - 2018.01.23 at 16h 12m 10s.xml">
-      <configuration name="JsonPayloadConverterTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JsonPayloadConverterTest - 2018.01.23 at 16h 14m 13s.xml">
-      <configuration name="JsonPayloadConverterTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="JsonPayloadConverterTest - 2018.01.23 at 16h 15m 50s.xml">
       <configuration name="JsonPayloadConverterTest" configurationId="JUnit" />
@@ -717,18 +696,29 @@
     <history-entry file="JsonPayloadConverterTest_testConversion - 2018.01.23 at 16h 16m 23s.xml">
       <configuration name="JsonPayloadConverterTest.testConversion" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="RequestGeneratorTest - 2018.01.23 at 16h 53m 27s.xml">
+      <configuration name="RequestGeneratorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RequestGeneratorTest_testHttpsClientWithGet - 2018.01.23 at 16h 47m 10s.xml">
+      <configuration name="RequestGeneratorTest.testHttpsClientWithGet" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RequestGeneratorTest_testHttpsClientWithGet - 2018.01.23 at 16h 49m 39s.xml">
+      <configuration name="RequestGeneratorTest.testHttpsClientWithGet" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RequestGeneratorTest_testHttpsClientWithGet - 2018.01.23 at 16h 50m 35s.xml">
+      <configuration name="RequestGeneratorTest.testHttpsClientWithGet" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="818" y="-1080" width="1920" height="1080" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286991" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="-1036" y="-957" width="1720" height="857" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="-1036" y="-957" width="1720" height="857" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31479642" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -752,6 +742,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="lots of changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="lots of changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -933,40 +927,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/JsonPayloadConverterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/guice_binding/InsertObjectModule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="74" lean-forward="false" selection-start-line="15" selection-start-column="74" selection-end-line="15" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/InsertObjectTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/httpClient/RequestGeneratorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="25" column="38" lean-forward="false" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -999,8 +963,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_Cloud/service/impl/InsertObjectImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+        <state relative-caret-position="298">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/JsonPayloadConverterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/InsertObjectTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="32" lean-forward="true" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/httpClient/RequestGeneratorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="44" column="37" lean-forward="false" selection-start-line="44" selection-start-column="37" selection-end-line="44" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

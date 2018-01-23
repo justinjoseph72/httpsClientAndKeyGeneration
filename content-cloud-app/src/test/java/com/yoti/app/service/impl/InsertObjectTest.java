@@ -49,5 +49,12 @@ public class InsertObjectTest {
         flag = insertObject.insertObjectToCloud(person);
     }
 
+    @Test
+    public void testWriteSuccess(){
+        Person person = new Person(1,"jj","dd","sf@sdf.com");
+        boolean flag = insertObject.insertObjectToCloud(person);
+        Assert.assertTrue(flag);
+    }
+
 
 }
