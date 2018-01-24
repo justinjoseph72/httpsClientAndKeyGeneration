@@ -1,0 +1,19 @@
+syntax = "proto2";
+
+package compubapi_v1;
+
+option java_package = "com.yoti.compubapi_v1";
+option java_outer_classname = "AdminReasonCodeProto";
+
+// AdminReasonCode is the reason admin came to the decision they did.
+message AdminReasonCode {
+    // Type is the check type the resolution is for. It is provided to allow
+    // the correct error response to be displayed when the category and reason
+    // are the same for two different check types (e.g. GENUINE_DOCUMENT and
+    // FACES_MATCH).
+    optional string type = 1;
+    // Category is the high level reason.
+    optional string category = 2;
+    // Reason is a finer grained reason within a high level category.
+    optional string reason = 3;
+}

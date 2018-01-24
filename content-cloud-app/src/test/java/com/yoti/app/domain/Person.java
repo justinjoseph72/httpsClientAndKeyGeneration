@@ -1,6 +1,6 @@
-package com.yoti.app.content_Cloud.model;
+package com.yoti.app.domain;
 
-import com.yoti.app.content_Cloud.annotations.CloudBody;
+import com.yoti.app.content_cloud.annotations.CloudBody;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

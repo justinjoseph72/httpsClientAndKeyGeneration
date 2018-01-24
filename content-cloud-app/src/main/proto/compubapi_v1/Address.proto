@@ -1,0 +1,89 @@
+syntax = "proto2";
+
+package compubapi_v1;
+
+option java_package = "com.yoti.compubapi_v1";
+option java_outer_classname = "AddressProto";
+
+// Address contains the information required to represent a user's postal
+// address. Only the fields required to represent the address in the country
+// of the address may be present, the full details can be found at
+// https://lampkicking.atlassian.net/wiki/spaces/IPASS/pages/112890732/Structured+Address+Attribute
+message Address {
+	// AddressFormat is used to identify which fields may be present in the
+	// object.
+	optional uint32 address_format = 1;
+
+	// CareOf identifies the owner of the premises.
+	optional string care_of = 2;
+
+	// SubBuilding is used when the building is divided into smaller units
+	// (e.g. a block of flats) to identify the sub unit.
+	optional string sub_building = 3;
+
+	// BuildingNumber is the number of the building.
+	optional string building_number = 4;
+
+	// Building is the name/number of the building.
+	optional string building = 5;
+
+	// Street is the name/number of the street the building is on.
+	optional string street = 6;
+
+	// Landmark is a description used to describe the location of the
+	// building.
+	optional string landmark = 7;
+
+	// AddressLine1 is the first line of the address.
+	optional string address_line1 = 8;
+
+	// AddressLine2 is the second line of the address.
+	optional string address_line2 = 9;
+
+	// AddressLine3 is the third line of the address.
+	optional string address_line3 = 10;
+
+	// AddressLine4 is the fourth line of the address.
+	optional string address_line4 = 11;
+
+	// AddressLine5 is the fifth line of the address.
+	optional string address_line5 = 12;
+
+	// AddressLine6 is the sixth line of the address.
+	optional string address_line6 = 13;
+
+	// Locality is the area the building is in.
+	optional string locality = 14;
+
+	// TownCity is the town/city/village/hamlet/community/etc. that the
+	// building is in.
+	optional string town_city = 15;
+
+	// Subdistrict is the sub-district the building is in.
+	optional string subdistrict = 16;
+
+	// District is the district the building is in.
+	optional string district = 17;
+
+	// State is the state/county the building is in.
+	optional string state = 18;
+
+	// PostalCode is a code used by the country's postal service to aid in
+	// sorting and delivering mail (e.g. postcode, zipcode, pincode).
+	optional string postal_code = 19;
+
+	// PostOffice is the post office that serves the area the building is in.
+	optional string post_office = 20;
+
+	// CountryIso is the country the building is in. In ISO-3166-1 alpha-3
+	// format.
+	optional string country_iso = 21;
+
+	// Country is the country the building is in. It is human readable and
+	// localised.
+	optional string country = 22;
+
+	// FormattedAddress is the full address in a single human readable
+	// string in a format that is suitable for printing onto an envelope.
+	optional string formatted_address = 23;
+}

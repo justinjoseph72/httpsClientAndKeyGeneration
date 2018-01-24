@@ -1,4 +1,4 @@
-package com.yoti.app.content_Cloud.model;
+package com.yoti.app.content_cloud.model;
 
 import lombok.Data;
 

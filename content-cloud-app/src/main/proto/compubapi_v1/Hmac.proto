@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package compubapi_v1;
+
+option java_package = "com.yoti.compubapi_v1";
+option java_outer_classname = "HmacProto";
+
+message Hmac {
+    // Hmac is a keyed-hash message authentication code
+    optional bytes hmac = 1;
+}

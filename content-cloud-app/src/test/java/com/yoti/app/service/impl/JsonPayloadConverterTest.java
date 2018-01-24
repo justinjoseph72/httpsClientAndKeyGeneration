@@ -3,9 +3,9 @@ package com.yoti.app.service.impl;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import com.yoti.app.content_Cloud.model.Person;
-import com.yoti.app.content_Cloud.service.PayloadConversion;
-import com.yoti.app.content_Cloud.service.impl.JsonPayloadConversionImpl;
+import com.yoti.app.domain.Person;
+import com.yoti.app.content_cloud.service.PayloadConversion;
+import com.yoti.app.content_cloud.service.impl.JsonPayloadConversionImpl;
 import com.yoti.app.guice_binding.PayloadConverterModule;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
@@ -36,7 +36,7 @@ public class JsonPayloadConverterTest {
     @Test
     public void testConversion() throws IOException {
         Person person = new Person(1,"jj","dd","sf@sdf.com");
-        String str = payloadConversion.getPayloadAsString(person);
+        String str = payloadConversion.getEncryptedPayload(person,"sd");
         Assert.assertNotNull(str);
         log.info(str);
         ObjectMapper mapper = new ObjectMapper();

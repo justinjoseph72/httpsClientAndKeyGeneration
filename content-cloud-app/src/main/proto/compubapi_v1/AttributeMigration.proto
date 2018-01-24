@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+package compubapi_v1;
+
+option java_package = "com.yoti.compubapi_v1";
+option java_outer_classname = "AttributeMigrationPayloadProto";
+
+// A AttributeMigrationPayload contains the information needed to migrate an
+// attribute or a set of attributes.
+message AttributeMigrationPayload {
+	// AttributeIds is a list of the attribute IDs pointing to the
+	// attributes to be migrated.
+	repeated bytes attribute_ids = 1;
+}

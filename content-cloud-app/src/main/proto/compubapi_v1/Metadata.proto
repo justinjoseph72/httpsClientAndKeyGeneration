@@ -1,0 +1,51 @@
+syntax = "proto2";
+
+package compubapi_v1;
+
+// Metadata is attached as payload to all public endpoints.
+// It allows us to keep track of device data.
+message Metadata {
+    // ManufactureName is the maker of the device.
+    optional string manufacture_name = 1;
+
+    // ModelName is the model name of the device.
+    optional string model_name = 2;
+
+    // OsName is the name of the underlying OS, iOS or Android.
+    optional string os_name = 3;
+
+    // OsVersion is the current version of the underlying OS, iOS or
+    // Android.
+    optional string os_version = 4;
+
+    // OsVendorLayer is populated with the vendor layer present
+    // on some Android models.
+    optional string os_vendor_layer = 5;
+
+    // ClientVersion is populated with Yoti client version number.
+    optional string client_version = 6;
+
+    // StartTime is the time when the app is launched
+    // for the first time (right after installation).
+    //
+    // In order to avoid the timestamp being used as a sort of "unique identifier"
+    // for the user, let's use the following algorithm:
+    //
+    // - if elapsed time (now - start_time) ≤ 48h,
+    // report the timestamp to the minute
+    // (e.g. if app was opened 2017-04-04T23:42:53Z, then we'll report 2017-04-04T23:42Z)
+    //
+    // - else report timestamp to the day
+    // (2017-04-04T23:42:53Z report as 2017-04-04Z).
+    //
+    // This means the format is the usual RFC3339 in UTC,
+    // with time to the minute in one case and with just date in the other.
+    optional string start_time = 7;
+
+    // AvailableSensors reports the list of available sensors for the device.
+    // E.g. GYROSCOPE, ORIENTATION, etc.
+    // Since both Android and iOS have very specific ways of identifyng them
+    // we are not trying to consolidate them across platforms.
+    // Each platform will populate with whatever makes sense for them.
+    repeated string available_sensors = 8;
+}

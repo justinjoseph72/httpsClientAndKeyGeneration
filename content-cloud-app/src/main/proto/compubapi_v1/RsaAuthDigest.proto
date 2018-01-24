@@ -1,0 +1,35 @@
+syntax = "proto2";
+
+package compubapi_v1;
+
+import "compubapi_v1/Signature.proto";
+
+option java_package = "com.yoti.compubapi_v1";
+option java_outer_classname = "RsaAuthDigestProto";
+
+// RsaAuthDigest is an authentication digest based on an RSA
+// public/private key pair.
+// The server will verify the digest with the enrolled public key
+// and only if verified will authorise the request.
+// The public key enrolment happens providing this same digest in
+// the appropriate request, the associated private key
+// should be protected on the client side.
+message RsaAuthDigest {
+	// PubKey is the DER-marshalled ASN.1 form of the RSA public key.
+	optional bytes pub_key = 1;
+
+	// Nonce is used to compute the auth digest.
+	// The nonce is 32 random bytes, to be generated for each call.
+	optional bytes nonce = 2;
+
+	// Timestamp is used to compute the auth digest.
+	// RFC3339 UTC Timestamp e.g.: 2006-01-02T15:04:05Z
+	optional string timestamp = 3;
+
+	// Signature is the signature over <nonce + timestamp>
+	// performed using the private key associated
+	// with the public key above.
+	// Suggested algo from compubapi_v1.Signature is RSA_PSS_SHA256,
+	// if not available RSA_PKCS1V15_SHA256 can be used.
+	optional compubapi_v1.Signature signature = 4;
+}

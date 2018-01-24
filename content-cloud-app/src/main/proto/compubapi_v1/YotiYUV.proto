@@ -1,0 +1,26 @@
+syntax = "proto2";
+
+package compubapi_v1;
+
+option java_package = "com.yoti.compubapi_v1";
+option java_outer_classname = "YotiYUVProto";
+
+// YotiYUV is our lossless image format. It uses gzip compression on two blocks
+// of data: planar Y and interleaved U/V. We expect the source data to be
+// YUV4:2:0.
+message YotiYUV {
+	// the header must always be set to the string "YOTI_YUV"
+	optional string Header = 1;
+
+	// image dimensions
+	optional int32 width = 2;
+	optional int32 height = 3;
+
+	// the Y data, compressed as gzip. We ignore comments in the header
+	// but do validate the checksum.
+	optional bytes gzip_Y = 16;
+
+	// the U/V data, interleaved. This should be compressed as gzip.
+	// Uncompressed, it should be ½ the size of the Y data.
+	optional bytes gzip_UV = 17;
+}

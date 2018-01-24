@@ -1,0 +1,36 @@
+syntax = "proto2";
+
+package compubapi_v1;
+
+option java_package = "com.yoti.compubapi_v1";
+option java_outer_classname = "SignatureProto";
+
+// Signature represents a PKI signature. This message is used in case we ever
+// switch signature algorithm, hash function, etc.
+message Signature {
+	// Algorithm specifies the exact details of the signature algorithm.
+	enum Algorithm {
+		// UNDEFINED is invalid.
+		UNDEFINED = 0;
+
+		// RSA_PSS_SHA512 means RSASSA-PSS (with automatic salt length)
+		// over a SHA-512 hash of the data.
+		RSA_PSS_SHA512 = 1;
+
+		// RSA_PSS_SHA256 means RSASSA-PSS (with automatic salt length)
+		// over a SHA-256 hash of the data.
+		RSA_PSS_SHA256 = 2;
+
+		// RSA_PKCS1V15_SHA256 means RSASSA-PKCS1-V1_5-SIGN
+		// from RSA PKCS#1 v1.5 over a SHA-256 hash of the data.
+		// This mode is discouraged and should not be used
+		// for new implementations.
+		RSA_PKCS1V15_SHA256 = 3;
+	}
+
+	// Algo specifies the algorith that was used to create Sig.
+	optional Algorithm algo = 1;
+
+	// Sig is the raw signature bytes.
+	optional bytes sig = 2;
+}

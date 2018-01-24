@@ -1,4 +1,4 @@
-package com.yoti.app.content_Cloud.annotations;
+package com.yoti.app.content_cloud.annotations;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

@@ -1,7 +1,7 @@
 package com.yoti.app.httpClient;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.yoti.app.content_Cloud.model.Person;
+import com.yoti.app.domain.Person;
 import com.yoti.app.httpClient.impl.RequestClientImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
@@ -23,7 +23,7 @@ public class RequestGeneratorTest {
 
     private RequestClientImpl requestClientImpl;
     private String url = null;
-    ObjectMapper mapper;
+    private ObjectMapper mapper;
 
     @Before
     public void init(){
