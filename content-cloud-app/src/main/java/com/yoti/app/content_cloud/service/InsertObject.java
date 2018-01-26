@@ -4,7 +4,7 @@ import com.yoti.app.content_cloud.model.InsertMessageRequest;
 import com.yoti.app.content_cloud.model.InsertMessageResponse;
 import com.yoti.app.exception.CloudInteractionException;
 
-public interface InsertObject extends CloudContentInteraction {
+public interface InsertObject extends ContentCloudInteraction {
 
     <T> InsertMessageResponse insertObjectToCloud(InsertMessageRequest<T> insertMessageRequest) throws CloudInteractionException;
 }

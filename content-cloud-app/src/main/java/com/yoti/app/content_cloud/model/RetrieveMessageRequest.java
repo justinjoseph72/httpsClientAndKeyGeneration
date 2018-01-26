@@ -16,7 +16,7 @@ public class RetrieveMessageRequest {
     private List<String> queryTags;
     private Date startDate;
     private Date endDate;
-    private String searchType;
+    private int searchType;
     private Boolean retrieveBin;
 
 }
