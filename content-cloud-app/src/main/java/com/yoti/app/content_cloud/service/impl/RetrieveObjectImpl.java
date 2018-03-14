@@ -2,6 +2,7 @@ package com.yoti.app.content_cloud.service.impl;
 
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
+import com.googlecode.protobuf.format.JsonFormat;
 import com.yoti.app.UrlConstants.ErrorCodes;
 import com.yoti.app.UrlConstants.ErrorMessages;
 import com.yoti.app.UrlConstants.ServerConstants;
@@ -9,6 +10,7 @@ import com.yoti.app.content_cloud.adpaters.RetrieveProtoAdapter;
 import com.yoti.app.content_cloud.model.ResponseRecord;
 import com.yoti.app.content_cloud.model.RetrieveMessageRequest;
 import com.yoti.app.content_cloud.model.RetrieveMessageResponse;
+import com.yoti.app.content_cloud.service.PayloadConversion;
 import com.yoti.app.content_cloud.service.RetrieveObject;
 import com.yoti.app.exception.CloudDataAdapterException;
 import com.yoti.app.exception.CloudDataConversionException;
@@ -20,6 +22,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpResponse;
 import org.apache.http.entity.ByteArrayEntity;
+import org.apache.http.entity.StringEntity;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -38,6 +41,10 @@ public class RetrieveObjectImpl implements RetrieveObject {
     @Getter
     private RequestClient requestClient;
 
+    @Inject
+    @Getter
+    private PayloadConversion payloadConversion;
+
     @Override
     public RetrieveMessageResponse fetchRecordsFromCloud(final RetrieveMessageRequest retrieveMessageRequest) throws CloudInteractionException, CloudDataConversionException, CloudDataAdapterException {
         validateRequest(retrieveMessageRequest);
@@ -45,7 +52,12 @@ public class RetrieveObjectImpl implements RetrieveObject {
             RetrieveProto.RetrieveRequest retrieveRequest = retrieveProtoAdapter
                     .getRetrieveRequestProtoFromRetrieveRequest(retrieveMessageRequest);
             ByteArrayEntity byteEntity = new ByteArrayEntity(retrieveRequest.toByteArray());
-            HttpResponse httpResponse = postDataAndGetResponse(requestClient, byteEntity, ServerConstants.RETIEVE_DATA_URL);
+            //  String jsonStr = payloadConversion.getEncryptedPayload(retrieveRequest, "ddd");
+            JsonFormat s = new JsonFormat();
+            String jsonStr = s.printToString(retrieveRequest);
+            log.info("the json string is {}", jsonStr);
+            StringEntity strEntity = new StringEntity(jsonStr);
+            HttpResponse httpResponse = postDataAndGetResponse(requestClient, strEntity, ServerConstants.RETIEVE_DATA_URL);
             return handleResponse(httpResponse);
         } catch (CloudDataConversionException | CloudDataAdapterException | CloudInteractionException e) {
             log.info("Exception {} ", e.getMessage());

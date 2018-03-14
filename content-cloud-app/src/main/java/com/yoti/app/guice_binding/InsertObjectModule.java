@@ -8,11 +8,11 @@ import com.yoti.app.content_cloud.service.impl.JsonPayloadConversionImpl;
 import com.yoti.app.httpClient.RequestClient;
 import com.yoti.app.httpClient.impl.RequestClientImpl;
 
-public class InsertObjectModule  extends AbstractModule{
+public class InsertObjectModule extends AbstractModule {
     @Override
     protected void configure() {
         bind(InsertObject.class).to(InsertObjectImpl.class);
         bind(RequestClient.class).to(RequestClientImpl.class);
-       // bind(PayloadConversion.class).to(JsonPayloadConversionImpl.class);
+        // bind(PayloadConversion.class).to(JsonPayloadConversionImpl.class);
     }
 }

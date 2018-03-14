@@ -6,14 +6,17 @@ import com.yoti.app.content_cloud.model.ResponseRecord;
 import com.yoti.app.content_cloud.model.RetrieveMessageRequest;
 import com.yoti.app.content_cloud.model.RetrieveMessageResponse;
 import com.yoti.app.content_cloud.service.RetrieveObject;
+import com.yoti.app.content_cloud.service.impl.JsonPayloadConversionImpl;
 import com.yoti.app.content_cloud.service.impl.RetrieveObjectImpl;
 import com.yoti.app.domain.Person;
 import com.yoti.app.exception.CloudInteractionException;
+import com.yoti.app.guice_binding.PayloadConverterModule;
 import com.yoti.app.guice_binding.RetrieveObjectModule;
 import com.yoti.ccloudpubapi_v1.RetrieveProto;
 import org.hamcrest.Matcher;
 import org.hamcrest.Matchers;
 import org.hamcrest.collection.IsIterableContainingInAnyOrder;
+import org.hamcrest.core.IsInstanceOf;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Rule;
@@ -35,7 +38,7 @@ public class RetrieveObjectTest {
 
     @Before
     public void init() {
-        Injector injector = Guice.createInjector(new RetrieveObjectModule());
+        Injector injector = Guice.createInjector(new RetrieveObjectModule(), new PayloadConverterModule());
         retrieveObject = injector.getInstance(RetrieveObject.class);
         clock = Clock.systemUTC();
     }
@@ -46,6 +49,8 @@ public class RetrieveObjectTest {
         RetrieveObjectImpl impl = (RetrieveObjectImpl) retrieveObject;
         Assert.assertNotNull(impl.getRequestClient());
         Assert.assertNotNull(impl.getRetrieveProtoAdapter());
+        Assert.assertNotNull(impl.getPayloadConversion());
+        Assert.assertThat(impl.getPayloadConversion(), Matchers.is(IsInstanceOf.instanceOf(JsonPayloadConversionImpl.class)));
     }
 
     @Test

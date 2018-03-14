@@ -3,6 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="65429d25-8f88-4acf-b1db-97068f863e21" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ServerConstants.java" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ServerConstants.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/ContentCloudInteraction.java" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/ContentCloudInteraction.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/JsonPayloadConversionImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/JsonPayloadConversionImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/guice_binding/InsertObjectModule.java" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/guice_binding/InsertObjectModule.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/RetrieveObjectTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/RetrieveObjectTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -15,103 +21,180 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="RetrieveObjectTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/RetrieveObjectTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="34" lean-forward="false" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+            <state relative-caret-position="195">
+              <caret line="38" column="11" lean-forward="true" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Person.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/domain/Person.java">
+      <file leaf-file-name="PayloadConversion.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/PayloadConversion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="90">
+              <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BinInteractionsImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/BinInteractionsImpl.java">
+      <file leaf-file-name="InsertProtoAdapter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/adpaters/InsertProtoAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1005">
-              <caret line="85" column="44" lean-forward="false" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="44" />
+            <state relative-caret-position="441">
+              <caret line="43" column="30" lean-forward="true" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RetrieveObjectImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="118">
+              <caret line="45" column="21" lean-forward="true" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProtobufFormatter.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/googlecode/protobuf-java-format/protobuf-java-format/1.4/protobuf-java-format-1.4.jar!/com/googlecode/protobuf/format/ProtobufFormatter.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="43" column="18" lean-forward="false" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <marker date="1515749582868" expanded="false" signature="0:104" ph="/.../" />
+                <marker date="1515749582868" expanded="false" signature="154:472" ph="..." />
+                <marker date="1515749582868" expanded="true" signature="611:618" ph="{}" />
+                <marker date="1515749582868" expanded="false" signature="665:676" ph=" { " />
+                <marker date="1515749582868" expanded="false" signature="701:707" ph=" }" />
+                <marker date="1515749582868" expanded="false" signature="747:758" ph=" { " />
+                <marker date="1515749582868" expanded="false" signature="785:791" ph=" }" />
+                <marker date="1515749582868" expanded="true" signature="872:937" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="1124:1188" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="1346:1731" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="1789:2181" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="2394:2479" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="2558:2660" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="2776:2859" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="2920:3071" ph="{...}" />
+                <marker date="1515749582868" expanded="false" signature="3025:3040" ph=" { " />
+                <marker date="1515749582868" expanded="false" signature="3055:3065" ph=" }" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BinObjectModule.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/guice_binding/BinObjectModule.java">
+      <file leaf-file-name="JsonFormat.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/googlecode/protobuf-java-format/protobuf-java-format/1.4/protobuf-java-format-1.4.jar!/com/googlecode/protobuf/format/JsonFormat.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2319">
+              <caret line="40" column="39" lean-forward="false" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+              <folding>
+                <marker date="1515749582868" expanded="false" signature="0:104" ph="/.../" />
+                <marker date="1515749582868" expanded="false" signature="154:1228" ph="..." />
+                <marker date="1515749582868" expanded="true" signature="1315:1322" ph="{}" />
+                <marker date="1515749582868" expanded="true" signature="1401:1591" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="1677:1879" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="1978:2526" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="2647:2710" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="2838:4364" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="4491:5738" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="5864:8593" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="8724:9160" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="9311:11272" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="11429:12502" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="12717:13218" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="13343:15645" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="15863:16980" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="17030:18361" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="18405:18701" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="18799:22408" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="22453:23969" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="24040:24329" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="24416:26337" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="26407:26467" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="26538:26599" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="26670:26724" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="26796:26851" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="26966:29282" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="29353:29519" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="29580:29746" ph="{...}" />
+                <marker date="1515749582868" expanded="false" signature="29696:29711" ph=" { " />
+                <marker date="1515749582868" expanded="false" signature="29730:29740" ph=" }" />
+                <marker date="1515749582868" expanded="true" signature="29807:29958" ph="{...}" />
+                <marker date="1515749582868" expanded="false" signature="29912:29927" ph=" { " />
+                <marker date="1515749582868" expanded="false" signature="29942:29952" ph=" }" />
+                <marker date="1515749582868" expanded="true" signature="29997:40799" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="30871:31030" ph="{...}" />
+                <marker date="1515749582868" expanded="false" signature="31062:31077" ph=" { " />
+                <marker date="1515749582868" expanded="false" signature="31116:31126" ph=" }" />
+                <marker date="1515749582868" expanded="true" signature="31160:32183" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="32223:32425" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="32475:32665" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="32742:32884" ph="{...}" />
+                <marker date="1515749582868" expanded="false" signature="32925:32940" ph=" { " />
+                <marker date="1515749582868" expanded="false" signature="33006:33016" ph=" }" />
+                <marker date="1515749582868" expanded="true" signature="33060:33310" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="33354:33575" ph="{...}" />
+                <marker date="1515749582868" expanded="false" signature="33613:33628" ph=" { " />
+                <marker date="1515749582868" expanded="false" signature="33653:33663" ph=" }" />
+                <marker date="1515749582868" expanded="true" signature="33740:34265" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="34334:34620" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="34690:34977" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="35047:35334" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="35405:35693" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="35766:36522" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="36593:37350" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="37425:37788" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="37861:39038" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="39119:39991" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="40069:40192" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="40283:40422" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="40513:40609" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="40698:40793" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="40842:42264" ph="{...}" />
+                <marker date="1515749582868" expanded="false" signature="41009:41024" ph=" { " />
+                <marker date="1515749582868" expanded="false" signature="41045:41055" ph=" }" />
+                <marker date="1515749582868" expanded="false" signature="41085:41100" ph=" { " />
+                <marker date="1515749582868" expanded="false" signature="41125:41135" ph=" }" />
+                <marker date="1515749582868" expanded="true" signature="41167:41440" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="41506:41923" ph="{...}" />
+                <marker date="1515749582868" expanded="true" signature="42000:42258" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContentCloudInteraction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/ContentCloudInteraction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JsonPayloadConversionImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/JsonPayloadConversionImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="38" column="10" lean-forward="false" selection-start-line="38" selection-start-column="8" selection-end-line="40" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PayloadConverterModule.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/guice_binding/PayloadConverterModule.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InsertObjectModule.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/guice_binding/InsertObjectModule.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RequestClientImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/httpClient/impl/RequestClientImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InsertObjectTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/InsertObjectTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="43" column="83" lean-forward="false" selection-start-line="43" selection-start-column="83" selection-end-line="43" selection-end-column="83" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BinOpsProtoAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/adpaters/BinOpsProtoAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="16" column="80" lean-forward="false" selection-start-line="16" selection-start-column="80" selection-end-line="16" selection-end-column="80" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RequestGeneratorTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/httpClient/RequestGeneratorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="25" column="12" lean-forward="false" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GenerateKeyPair.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/keygen/GenerateKeyPair.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="30" column="45" lean-forward="true" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+              <caret line="6" column="35" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -134,6 +217,8 @@
       <find>PROTOBUF</find>
       <find>Tags</find>
       <find>vertx</find>
+      <find>ObjectM</find>
+      <find>printToString</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -147,7 +232,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ErrorMessages.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/guice_binding/PayloadConverterModule.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_Cloud/service/PayloadConversion.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_Cloud/service/impl/JsonPayloadConversionImpl.java" />
@@ -169,14 +253,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/InsertMessageRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/PayloadConversion.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/guice_binding/InsertProtoAdapterModule.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/guice_binding/InsertObjectModule.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/JsonPayloadConverterTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/RetrieveResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/RetrieveMessageResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/InsertObject.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/yoti/app/httpClient/RequestGeneratorTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/InsertObjectTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/JsonPayloadConversionImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/CloudContentInteraction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/guice_binding/RetrieveProtoAdapter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/guice_binding/RetrieveObjectModule.java" />
@@ -186,7 +268,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/exception/CloudDataAdpterException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/adpaters/RetrieveProtoAdapter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/RetrieveObject.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/RetrieveObjectTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/exception/CloudDataAdapterException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/adpaters/InsertProtoAdapter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/guice_binding/BinObjectModule.java" />
@@ -194,10 +275,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/adpaters/BinOpsProtoAdapter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ErrorCodes.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/InsertObjectImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/BinInteractions.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ServerConstants.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/BinInteractionsImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/guice_binding/InsertObjectModule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ServerConstants.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/RetrieveObjectTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/ContentCloudInteraction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/JsonPayloadConversionImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectImpl.java" />
       </list>
     </option>
   </component>
@@ -252,7 +337,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -313,6 +397,16 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="content_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="annotations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="content-cloud-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="content-cloud-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="content_cloud" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -362,6 +456,16 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="httpClient" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="content-cloud-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="content-cloud-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="httpClient" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="content-cloud-app" type="b2602c69:ProjectViewProjectNode" />
@@ -453,12 +557,43 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="content-cloud-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="content-cloud-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.apache.httpcomponents:httpcore:4.4.4" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="content-cloud-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.apache.httpcomponents:httpcore:4.4.4" type="70bed36:NamedLibraryElementNode" />
+              <item name="httpcore-4.4.4.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="content-cloud-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.apache.httpcomponents:httpcore:4.4.4" type="70bed36:NamedLibraryElementNode" />
+              <item name="httpcore-4.4.4.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="content-cloud-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.apache.httpcomponents:httpcore:4.4.4" type="70bed36:NamedLibraryElementNode" />
+              <item name="httpcore-4.4.4.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="http" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -488,7 +623,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.InsertObjectTest.testValidateInputObject">
+  <component name="RunManager" selected="JUnit.RetrieveObjectTest.validObjectReturnedForValidInput">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -508,31 +643,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-    </configuration>
-    <configuration name="BinInteractionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.yoti.app.service.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="content-cloud-app" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.yoti.app.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.yoti.app.service.impl.BinInteractionTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
     </configuration>
     <configuration name="BinInteractionTest.validResponseForValidInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -559,7 +669,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="BinInteractionTest.validateInputObject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InsertObjectTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.yoti.app.service.impl.*" />
@@ -570,9 +680,9 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.yoti.app.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.yoti.app.service.impl.BinInteractionTest" />
-      <option name="METHOD_NAME" value="validateInputObject" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.yoti.app.service.impl.InsertObjectTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -609,7 +719,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="InsertObjectTest.testWriteSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RetrieveObjectTest.validObjectReturnedForValidInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.yoti.app.service.impl.*" />
@@ -620,8 +730,33 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.yoti.app.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.yoti.app.service.impl.InsertObjectTest" />
-      <option name="METHOD_NAME" value="testWriteSuccess" />
+      <option name="MAIN_CLASS_NAME" value="com.yoti.app.service.impl.RetrieveObjectTest" />
+      <option name="METHOD_NAME" value="validObjectReturnedForValidInput" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="RetrieveObjectTest.validateObjectCreation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.yoti.app.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="content-cloud-app" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.yoti.app.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.yoti.app.service.impl.RetrieveObjectTest" />
+      <option name="METHOD_NAME" value="validateObjectCreation" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -692,19 +827,19 @@
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.InsertObjectTest.testWriteSuccess" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.BinInteractionTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.BinInteractionTest.validateInputObject" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.BinInteractionTest.validResponseForValidInput" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.InsertObjectTest.testValidateInputObject" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.BinInteractionTest.validResponseForValidInput" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.InsertObjectTest.testValidateInputObject" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.InsertObjectTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.RetrieveObjectTest.validObjectReturnedForValidInput" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.RetrieveObjectTest.validateObjectCreation" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.InsertObjectTest.testValidateInputObject" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.BinInteractionTest.validResponseForValidInput" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.BinInteractionTest.validateInputObject" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.BinInteractionTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.InsertObjectTest.testWriteSuccess" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.RetrieveObjectTest.validObjectReturnedForValidInput" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.RetrieveObjectTest.validateObjectCreation" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.InsertObjectTest.testValidateInputObject" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.InsertObjectTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.BinInteractionTest.validResponseForValidInput" />
       </list>
     </recent_temporary>
   </component>
@@ -715,35 +850,35 @@
     <configuration />
   </component>
   <component name="TestHistory">
-    <history-entry file="BinInteractionTest - 2018.01.26 at 13h 00m 14s.xml">
-      <configuration name="BinInteractionTest" configurationId="JUnit" />
+    <history-entry file="InsertObjectTest - 2018.03.09 at 15h 04m 30s.xml">
+      <configuration name="InsertObjectTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BinInteractionTest - 2018.01.26 at 13h 00m 33s.xml">
-      <configuration name="BinInteractionTest" configurationId="JUnit" />
+    <history-entry file="InsertObjectTest - 2018.03.09 at 15h 10m 30s.xml">
+      <configuration name="InsertObjectTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BinInteractionTest - 2018.01.26 at 13h 05m 44s.xml">
-      <configuration name="BinInteractionTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BinInteractionTest_validResponseForValidInput - 2018.01.26 at 13h 13m 00s.xml">
-      <configuration name="BinInteractionTest.validResponseForValidInput" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BinInteractionTest_validateInputObject - 2018.01.26 at 13h 07m 15s.xml">
-      <configuration name="BinInteractionTest.validateInputObject" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InsertObjectTest_testValidateInputObject - 2018.01.26 at 13h 30m 15s.xml">
+    <history-entry file="InsertObjectTest_testValidateInputObject - 2018.03.09 at 15h 15m 54s.xml">
       <configuration name="InsertObjectTest.testValidateInputObject" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InsertObjectTest_testWriteSuccess - 2018.01.26 at 11h 49m 53s.xml">
-      <configuration name="InsertObjectTest.testWriteSuccess" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RetrieveObjectTest_validObjectReturnedForValidInput - 2018.01.26 at 11h 26m 31s.xml">
-      <configuration name="RetrieveObjectTest.validObjectReturnedForValidInput" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RetrieveObjectTest_validObjectReturnedForValidInput - 2018.01.26 at 11h 27m 57s.xml">
-      <configuration name="RetrieveObjectTest.validObjectReturnedForValidInput" configurationId="JUnit" />
     </history-entry>
     <history-entry file="RetrieveObjectTest_validObjectReturnedForValidInput - 2018.01.26 at 11h 29m 09s.xml">
       <configuration name="RetrieveObjectTest.validObjectReturnedForValidInput" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RetrieveObjectTest_validObjectReturnedForValidInput - 2018.03.09 at 15h 42m 27s.xml">
+      <configuration name="RetrieveObjectTest.validObjectReturnedForValidInput" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RetrieveObjectTest_validObjectReturnedForValidInput - 2018.03.09 at 16h 14m 34s.xml">
+      <configuration name="RetrieveObjectTest.validObjectReturnedForValidInput" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RetrieveObjectTest_validObjectReturnedForValidInput - 2018.03.09 at 16h 14m 57s.xml">
+      <configuration name="RetrieveObjectTest.validObjectReturnedForValidInput" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RetrieveObjectTest_validObjectReturnedForValidInput - 2018.03.09 at 16h 15m 51s.xml">
+      <configuration name="RetrieveObjectTest.validObjectReturnedForValidInput" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RetrieveObjectTest_validObjectReturnedForValidInput - 2018.03.09 at 16h 22m 31s.xml">
+      <configuration name="RetrieveObjectTest.validObjectReturnedForValidInput" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RetrieveObjectTest_validateObjectCreation - 2018.03.09 at 16h 07m 19s.xml">
+      <configuration name="RetrieveObjectTest.validateObjectCreation" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -751,28 +886,28 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286991" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19739583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31479642" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31479642" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39920557" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286991" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="-1036" y="-957" width="1720" height="857" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -824,7 +959,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/RetrieveObjectTest.java</url>
-          <line>62</line>
+          <line>67</line>
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
@@ -848,55 +983,28 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectImpl.java</url>
-          <line>68</line>
+          <line>80</line>
           <properties />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectImpl.java</url>
-          <line>73</line>
+          <line>85</line>
           <properties />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/InsertObjectTest.java</url>
+          <line>51</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="15" />
+      <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/target/classes/com/yoti/app/content_Cloud/model/Person.class" />
-    <entry file="file://$PROJECT_DIR$/src/main/proto/ccloudpubapi_v1/Retrieve.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-383">
-          <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/proto/ccloudpubapi_v1/Insert.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/MoveToBinRequest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/proto/ccloudpubapi_v1/BinOps.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="17" column="35" lean-forward="true" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/ProtoBuffPayloadConversionImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/adpaters/InsertMessageRequestAdapter.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/PayloadConversion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="54" lean-forward="false" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/domain/ContentCloudInsertRequest.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/19.0/guava-19.0.jar!/com/google/common/net/MediaType.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
@@ -908,14 +1016,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="13" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/InsertMessageRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -954,31 +1054,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/InsertObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/JsonPayloadConversionImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/JsonPayloadConverterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/guice_binding/InsertProtoAdapterModule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -997,69 +1072,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/RetrieveMessageRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/RetrieveObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="185" lean-forward="false" selection-start-line="10" selection-start-column="185" selection-end-line="10" selection-end-column="185" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/exception/CloudDataAdapterException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/RetrieveObjectTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="62" column="69" lean-forward="true" selection-start-line="62" selection-start-column="69" selection-end-line="62" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/generated-sources/protobuf/java/com/yoti/ccloudpubapi_v1/RetrieveProto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="2979" column="64" lean-forward="true" selection-start-line="2979" selection-start-column="64" selection-end-line="2979" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/adpaters/RetrieveProtoAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="22" column="55" lean-forward="false" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/adpaters/InsertProtoAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="38" column="33" lean-forward="false" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1088,70 +1100,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/ContentCloudInteraction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ErrorCodes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="53" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/InsertObjectImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="46" column="106" lean-forward="false" selection-start-line="46" selection-start-column="106" selection-end-line="46" selection-end-column="106" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="47" column="122" lean-forward="false" selection-start-line="47" selection-start-column="122" selection-end-line="47" selection-end-column="122" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/BinInteractions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="127" lean-forward="false" selection-start-line="14" selection-start-column="127" selection-end-line="14" selection-end-column="127" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ServerConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="64" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/httpClient/RequestClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="37" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/httpClient/impl/RequestClientImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/domain/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1160,39 +1112,31 @@
         <state relative-caret-position="1005">
           <caret line="85" column="44" lean-forward="false" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="44" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/guice_binding/BinObjectModule.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/InsertMessageRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="28" />
+        <state relative-caret-position="210">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/guice_binding/InsertObjectModule.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/httpClient/RequestGeneratorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="105">
+          <caret line="23" column="48" lean-forward="false" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/keygen/GenerateKeyPair.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="34" lean-forward="false" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/InsertObjectTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="43" column="83" lean-forward="false" selection-start-line="43" selection-start-column="83" selection-end-line="43" selection-end-column="83" />
+        <state relative-caret-position="359">
+          <caret line="29" column="41" lean-forward="false" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -1205,18 +1149,418 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/httpClient/RequestGeneratorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/BinInteractions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="25" column="12" lean-forward="false" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+        <state relative-caret-position="180">
+          <caret line="14" column="127" lean-forward="false" selection-start-line="14" selection-start-column="127" selection-end-line="14" selection-end-column="127" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/keygen/GenerateKeyPair.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/RetrieveObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="30" column="45" lean-forward="true" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+        <state relative-caret-position="90">
+          <caret line="10" column="185" lean-forward="false" selection-start-line="10" selection-start-column="185" selection-end-line="10" selection-end-column="185" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/exception/CloudDataAdapterException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/guice_binding/BinObjectModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/httpClient/RequestClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="37" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/InsertObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/guice_binding/InsertObjectModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/InsertObjectTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/InsertObjectImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="62" column="110" lean-forward="false" selection-start-line="62" selection-start-column="98" selection-end-line="62" selection-end-column="110" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/annotations/CloudBody.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/domain/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/httpClient/impl/RequestClientImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ServerConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/RetrieveMessageRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/generated-sources/protobuf/java/com/yoti/ccloudpubapi_v1/RetrieveProto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="2650" column="29" lean-forward="false" selection-start-line="2650" selection-start-column="29" selection-end-line="2650" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/adpaters/RetrieveProtoAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="19" column="41" lean-forward="false" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="34" lean-forward="false" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/JsonPayloadConverterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="19" column="12" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/guice_binding/PayloadConverterModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="35" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.5.2/httpclient-4.5.2.jar!/org/apache/http/client/methods/HttpEntityEnclosingRequestBase.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+          <folding>
+            <marker date="1515591320695" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1515591320695" expanded="false" signature="154:360" ph="..." />
+            <marker date="1515591320695" expanded="true" signature="570:577" ph="{}" />
+            <marker date="1515591320695" expanded="false" signature="612:623" ph=" { " />
+            <marker date="1515591320695" expanded="false" signature="642:648" ph=" }" />
+            <marker date="1515591320695" expanded="true" signature="694:705" ph=" { " />
+            <marker date="1515591320695" expanded="true" signature="726:732" ph=" }" />
+            <marker date="1515591320695" expanded="true" signature="770:917" ph="{...}" />
+            <marker date="1515591320695" expanded="true" signature="979:1224" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.4/httpcore-4.4.4.jar!/org/apache/http/entity/ByteArrayEntity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="15" column="48" lean-forward="false" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+          <folding>
+            <marker date="1516361641253" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1516361641253" expanded="false" signature="146:343" ph="..." />
+            <marker date="1516361641253" expanded="true" signature="443:461" ph="/**...*/" />
+            <marker date="1516361641253" expanded="true" signature="659:917" ph="{...}" />
+            <marker date="1516361641253" expanded="true" signature="999:1510" ph="{...}" />
+            <marker date="1516361641253" expanded="false" signature="1548:1559" ph=" { " />
+            <marker date="1516361641253" expanded="false" signature="1586:1592" ph=" }" />
+            <marker date="1516361641253" expanded="false" signature="1648:1659" ph=" { " />
+            <marker date="1516361641253" expanded="false" signature="1696:1702" ph=" }" />
+            <marker date="1516361641253" expanded="false" signature="1737:1748" ph=" { " />
+            <marker date="1516361641253" expanded="false" signature="1760:1766" ph=" }" />
+            <marker date="1516361641253" expanded="false" signature="1802:1813" ph=" { " />
+            <marker date="1516361641253" expanded="false" signature="1835:1841" ph=" }" />
+            <marker date="1516361641253" expanded="false" signature="1878:1889" ph=" { " />
+            <marker date="1516361641253" expanded="false" signature="1949:1955" ph=" }" />
+            <marker date="1516361641253" expanded="true" signature="2024:2161" ph="{...}" />
+            <marker date="1516361641253" expanded="false" signature="2195:2206" ph=" { " />
+            <marker date="1516361641253" expanded="false" signature="2219:2225" ph=" }" />
+            <marker date="1516361641253" expanded="true" signature="2287:2324" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/ContentCloudInteraction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.4/httpcore-4.4.4.jar!/org/apache/http/entity/AbstractHttpEntity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <marker date="1516361641253" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1516361641253" expanded="false" signature="146:325" ph="..." />
+            <marker date="1516361641253" expanded="true" signature="604:611" ph="{}" />
+            <marker date="1516361641253" expanded="false" signature="647:658" ph=" { " />
+            <marker date="1516361641253" expanded="false" signature="682:688" ph=" }" />
+            <marker date="1516361641253" expanded="false" signature="728:739" ph=" { " />
+            <marker date="1516361641253" expanded="false" signature="767:773" ph=" }" />
+            <marker date="1516361641253" expanded="false" signature="805:816" ph=" { " />
+            <marker date="1516361641253" expanded="false" signature="836:842" ph=" }" />
+            <marker date="1516361641253" expanded="false" signature="894:905" ph=" { " />
+            <marker date="1516361641253" expanded="false" signature="936:942" ph=" }" />
+            <marker date="1516361641253" expanded="true" signature="992:1166" ph="{...}" />
+            <marker date="1516361641253" expanded="false" signature="1226:1237" ph=" { " />
+            <marker date="1516361641253" expanded="false" signature="1276:1282" ph=" }" />
+            <marker date="1516361641253" expanded="true" signature="1336:1518" ph="{...}" />
+            <marker date="1516361641253" expanded="false" signature="1557:1568" ph=" { " />
+            <marker date="1516361641253" expanded="false" signature="1585:1591" ph=" }" />
+            <marker date="1516361641253" expanded="true" signature="1597:1615" ph="/**...*/" />
+            <marker date="1516361641253" expanded="true" signature="1684:1691" ph="{}" />
+            <marker date="1516361641253" expanded="true" signature="1722:2455" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.4/httpcore-4.4.4.jar!/org/apache/http/entity/StringEntity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding>
+            <marker date="1516361641253" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1516361641253" expanded="false" signature="146:512" ph="..." />
+            <marker date="1516361641253" expanded="true" signature="741:1118" ph="{...}" />
+            <marker date="1516361641253" expanded="true" signature="1124:1142" ph="/**...*/" />
+            <marker date="1516361641253" expanded="true" signature="1267:1544" ph="{...}" />
+            <marker date="1516361641253" expanded="true" signature="1636:1732" ph="{...}" />
+            <marker date="1516361641253" expanded="true" signature="1790:1886" ph="{...}" />
+            <marker date="1516361641253" expanded="true" signature="1963:2018" ph="{...}" />
+            <marker date="1516361641253" expanded="false" signature="2053:2064" ph=" { " />
+            <marker date="1516361641253" expanded="false" signature="2076:2082" ph=" }" />
+            <marker date="1516361641253" expanded="false" signature="2118:2129" ph=" { " />
+            <marker date="1516361641253" expanded="false" signature="2162:2168" ph=" }" />
+            <marker date="1516361641253" expanded="true" signature="2225:2287" ph="{...}" />
+            <marker date="1516361641253" expanded="true" signature="2356:2479" ph="{...}" />
+            <marker date="1516361641253" expanded="false" signature="2513:2524" ph=" { " />
+            <marker date="1516361641253" expanded="false" signature="2537:2543" ph=" }" />
+            <marker date="1516361641253" expanded="true" signature="2605:2642" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/JsonPayloadConversionImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="38" column="10" lean-forward="false" selection-start-line="38" selection-start-column="8" selection-end-line="40" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/googlecode/protobuf-java-format/protobuf-java-format/1.4/protobuf-java-format-1.4.jar!/com/googlecode/protobuf/format/JsonFormat.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2319">
+          <caret line="40" column="39" lean-forward="false" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+          <folding>
+            <marker date="1515749582868" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1515749582868" expanded="false" signature="154:1228" ph="..." />
+            <marker date="1515749582868" expanded="true" signature="1315:1322" ph="{}" />
+            <marker date="1515749582868" expanded="true" signature="1401:1591" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="1677:1879" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="1978:2526" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="2647:2710" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="2838:4364" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="4491:5738" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="5864:8593" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="8724:9160" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="9311:11272" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="11429:12502" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="12717:13218" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="13343:15645" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="15863:16980" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="17030:18361" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="18405:18701" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="18799:22408" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="22453:23969" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="24040:24329" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="24416:26337" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="26407:26467" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="26538:26599" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="26670:26724" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="26796:26851" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="26966:29282" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="29353:29519" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="29580:29746" ph="{...}" />
+            <marker date="1515749582868" expanded="false" signature="29696:29711" ph=" { " />
+            <marker date="1515749582868" expanded="false" signature="29730:29740" ph=" }" />
+            <marker date="1515749582868" expanded="true" signature="29807:29958" ph="{...}" />
+            <marker date="1515749582868" expanded="false" signature="29912:29927" ph=" { " />
+            <marker date="1515749582868" expanded="false" signature="29942:29952" ph=" }" />
+            <marker date="1515749582868" expanded="true" signature="29997:40799" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="30871:31030" ph="{...}" />
+            <marker date="1515749582868" expanded="false" signature="31062:31077" ph=" { " />
+            <marker date="1515749582868" expanded="false" signature="31116:31126" ph=" }" />
+            <marker date="1515749582868" expanded="true" signature="31160:32183" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="32223:32425" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="32475:32665" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="32742:32884" ph="{...}" />
+            <marker date="1515749582868" expanded="false" signature="32925:32940" ph=" { " />
+            <marker date="1515749582868" expanded="false" signature="33006:33016" ph=" }" />
+            <marker date="1515749582868" expanded="true" signature="33060:33310" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="33354:33575" ph="{...}" />
+            <marker date="1515749582868" expanded="false" signature="33613:33628" ph=" { " />
+            <marker date="1515749582868" expanded="false" signature="33653:33663" ph=" }" />
+            <marker date="1515749582868" expanded="true" signature="33740:34265" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="34334:34620" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="34690:34977" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="35047:35334" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="35405:35693" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="35766:36522" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="36593:37350" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="37425:37788" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="37861:39038" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="39119:39991" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="40069:40192" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="40283:40422" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="40513:40609" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="40698:40793" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="40842:42264" ph="{...}" />
+            <marker date="1515749582868" expanded="false" signature="41009:41024" ph=" { " />
+            <marker date="1515749582868" expanded="false" signature="41045:41055" ph=" }" />
+            <marker date="1515749582868" expanded="false" signature="41085:41100" ph=" { " />
+            <marker date="1515749582868" expanded="false" signature="41125:41135" ph=" }" />
+            <marker date="1515749582868" expanded="true" signature="41167:41440" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="41506:41923" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="42000:42258" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/googlecode/protobuf-java-format/protobuf-java-format/1.4/protobuf-java-format-1.4.jar!/com/googlecode/protobuf/format/ProtobufFormatter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="43" column="18" lean-forward="false" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+          <folding>
+            <marker date="1515749582868" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1515749582868" expanded="false" signature="154:472" ph="..." />
+            <marker date="1515749582868" expanded="true" signature="611:618" ph="{}" />
+            <marker date="1515749582868" expanded="false" signature="665:676" ph=" { " />
+            <marker date="1515749582868" expanded="false" signature="701:707" ph=" }" />
+            <marker date="1515749582868" expanded="false" signature="747:758" ph=" { " />
+            <marker date="1515749582868" expanded="false" signature="785:791" ph=" }" />
+            <marker date="1515749582868" expanded="true" signature="872:937" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="1124:1188" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="1346:1731" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="1789:2181" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="2394:2479" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="2558:2660" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="2776:2859" ph="{...}" />
+            <marker date="1515749582868" expanded="true" signature="2920:3071" ph="{...}" />
+            <marker date="1515749582868" expanded="false" signature="3025:3040" ph=" { " />
+            <marker date="1515749582868" expanded="false" signature="3055:3065" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/RetrieveObjectTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="38" column="11" lean-forward="true" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="45" column="21" lean-forward="true" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/PayloadConversion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/adpaters/InsertProtoAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="43" column="30" lean-forward="true" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
           <folding />
         </state>
       </provider>
