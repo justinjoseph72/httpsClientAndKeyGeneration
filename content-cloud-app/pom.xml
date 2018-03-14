@@ -98,42 +98,23 @@
             <version>1.16.18</version>
             <scope>provided</scope>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
-        <!--<dependency>-->
-            <!--<groupId>ch.qos.logback</groupId>-->
-            <!--<artifactId>logback-classic</artifactId>-->
-            <!--<version>1.2.1</version>-->
-            <!--<scope>test</scope>-->
-        <!--</dependency>-->
-        <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-core -->
-        <!--<dependency>-->
-            <!--<groupId>ch.qos.logback</groupId>-->
-            <!--<artifactId>logback-core</artifactId>-->
-            <!--<version>1.2.1</version>-->
-        <!--</dependency>-->
-        <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.slf4j/log4j-over-slf4j &ndash;&gt;-->
-        <!--<dependency>-->
-            <!--<groupId>org.slf4j</groupId>-->
-            <!--<artifactId>log4j-over-slf4j</artifactId>-->
-            <!--<version>1.7.20</version>-->
-        <!--</dependency>-->
+        
         <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-io -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-io</artifactId>
             <version>1.3.2</version>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>com.yoti.connect.api</groupId>-->
-            <!--<artifactId>connect-api-proto</artifactId>-->
-            <!--<version>${connect-api-proto.version}</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>com.yoti</groupId>-->
-            <!--<artifactId>signed-requests-utils</artifactId>-->
-            <!--<version>${signed-requests.utils.version}</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>com.yoti.connect.api</groupId>
+            <artifactId>connect-api-proto</artifactId>
+            <version>${connect-api-proto.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.yoti</groupId>
+            <artifactId>signed-requests-utils</artifactId>
+            <version>${signed-requests.utils.version}</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on -->
         <dependency>
             <groupId>org.bouncycastle</groupId>
