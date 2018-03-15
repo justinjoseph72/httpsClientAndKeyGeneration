@@ -15,16 +15,19 @@ import com.yoti.app.exception.CloudInteractionException;
 import com.yoti.app.httpClient.RequestClient;
 import com.yoti.ccloudpubapi_v1.InsertProto;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpResponse;
 import org.apache.http.entity.ByteArrayEntity;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 
 
 @Slf4j
-@Singleton
+@Service
+@RequiredArgsConstructor
 public class InsertObjectImpl implements InsertObject {
 
     @Inject

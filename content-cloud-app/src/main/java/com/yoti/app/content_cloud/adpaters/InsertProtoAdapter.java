@@ -1,7 +1,6 @@
 package com.yoti.app.content_cloud.adpaters;
 
 import com.google.inject.Inject;
-import com.google.inject.Singleton;
 import com.google.protobuf.ByteString;
 import com.yoti.app.content_cloud.model.InsertMessageRequest;
 import com.yoti.app.content_cloud.model.InsertMessageResponse;
@@ -9,8 +8,9 @@ import com.yoti.app.content_cloud.service.PayloadConversion;
 import com.yoti.app.exception.CloudDataAdapterException;
 import com.yoti.ccloudpubapi_v1.InsertProto;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
-@Singleton
+@Component
 @Slf4j
 public class InsertProtoAdapter {
 
@@ -27,7 +27,7 @@ public class InsertProtoAdapter {
                     //TODO tags mapping
                     .build();
         } catch (Exception e) {
-            log.info("Error in mapping to InsertRequest Proto {}",e.getMessage());
+            log.info("Error in mapping to InsertRequest Proto {}", e.getMessage());
             throw new CloudDataAdapterException(e.getMessage());
         }
     }
@@ -42,7 +42,7 @@ public class InsertProtoAdapter {
                     .recordId(responseProto.getRecordId().toStringUtf8())
                     .build();
         } catch (Exception e) {
-            log.info("Error in mapping to InsertMessageResponse {}",e.getMessage());
+            log.info("Error in mapping to InsertMessageResponse {}", e.getMessage());
             throw new CloudDataAdapterException(e.getMessage());
         }
     }

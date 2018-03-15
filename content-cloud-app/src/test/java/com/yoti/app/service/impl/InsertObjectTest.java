@@ -40,9 +40,7 @@ public class InsertObjectTest {
     public void testObjectCreated() {
         Assert.assertNotNull(insertObject);
         InsertObjectImpl imp = (InsertObjectImpl) insertObject;
-        Assert.assertNotNull(imp.getRequestClient());
-        Assert.assertThat(imp.getRequestClient(), CoreMatchers.instanceOf(RequestClientImpl.class));
-        Assert.assertThat(imp.getInsertProtoAdapter(), CoreMatchers.instanceOf(InsertProtoAdapter.class));
+
 
     }
 

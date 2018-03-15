@@ -8,18 +8,16 @@ import com.yoti.app.content_cloud.adpaters.RetrieveProtoAdapter;
 import com.yoti.app.content_cloud.model.ResponseRecord;
 import com.yoti.app.content_cloud.model.RetrieveMessageRequest;
 import com.yoti.app.content_cloud.model.RetrieveMessageResponse;
-import com.yoti.app.content_cloud.service.PayloadConversion;
 import com.yoti.app.content_cloud.service.PostDataService;
 import com.yoti.app.content_cloud.service.RetrieveObject;
 import com.yoti.app.exception.CloudDataAdapterException;
 import com.yoti.app.exception.CloudDataConversionException;
 import com.yoti.app.exception.CloudInteractionException;
 import com.yoti.ccloudpubapi_v1.RetrieveProto;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.http.entity.StringEntity;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -27,18 +25,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
-@Component
+@Service
+@RequiredArgsConstructor
 public class RetrieveObjectImpl implements RetrieveObject {
 
-    @Autowired
-    private RetrieveProtoAdapter retrieveProtoAdapter;
+    private final RetrieveProtoAdapter retrieveProtoAdapter;
 
-    @Autowired
-    private PostDataService postDataService;
+    private final PostDataService postDataService;
 
-    @Autowired
-    private PayloadConversion payloadConversion;
-
+    private final JsonFormat.Printer jsonPrinter = JsonFormat.printer().preservingProtoFieldNames();
+    private final JsonFormat.Parser jsonParser = JsonFormat.parser();
 
     @Override
     public RetrieveMessageResponse fetchRecordsFromCloud(final RetrieveMessageRequest retrieveMessageRequest) throws CloudInteractionException, CloudDataConversionException, CloudDataAdapterException {
@@ -46,9 +42,8 @@ public class RetrieveObjectImpl implements RetrieveObject {
         try {
             RetrieveProto.RetrieveRequest retrieveRequest = retrieveProtoAdapter
                     .getRetrieveRequestProtoFromRetrieveRequest(retrieveMessageRequest);
-            String jsonStr = JsonFormat.printer().preservingProtoFieldNames().print(retrieveRequest);
+            String jsonStr = jsonPrinter.print(retrieveRequest);
             log.info("the json string is {}", jsonStr);
-            StringEntity strEntity = new StringEntity(jsonStr);
             //HttpResponse httpResponse = postDataAndGetResponse(requestClient, strEntity, ServerConstants.RETRIEVE_DATA_URL);
             ResponseEntity<?> responseEntity = postDataService.postData(ServerConstants.RETRIEVE_DATA_URL, jsonStr);
             return handleResponse(responseEntity);
@@ -79,7 +74,7 @@ public class RetrieveObjectImpl implements RetrieveObject {
             log.info("the response body");
             log.info(body);
             RetrieveProto.RetrieveResponse.Builder builder = RetrieveProto.RetrieveResponse.newBuilder();
-            JsonFormat.parser().merge(body, builder);
+            jsonParser.merge(body, builder);
             RetrieveProto.RetrieveResponse retrieveResponse = builder.build();
             List<RetrieveProto.Record> recordProtoList = retrieveResponse.getRecordsList();
             if (recordProtoList != null && !recordProtoList.isEmpty()) {
