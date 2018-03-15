@@ -22,13 +22,21 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import java.time.Clock;
 import java.time.temporal.ChronoUnit;
+import java.util.Arrays;
 import java.util.Date;
 
+@RunWith(SpringRunner.class)
+@SpringBootTest
 public class RetrieveObjectTest {
 
+    @Autowired
     private RetrieveObject retrieveObject;
 
     private Clock clock;
@@ -38,8 +46,8 @@ public class RetrieveObjectTest {
 
     @Before
     public void init() {
-        Injector injector = Guice.createInjector(new RetrieveObjectModule(), new PayloadConverterModule());
-        retrieveObject = injector.getInstance(RetrieveObject.class);
+      //  Injector injector = Guice.createInjector(new RetrieveObjectModule(), new PayloadConverterModule());
+       // retrieveObject = injector.getInstance(RetrieveObject.class);
         clock = Clock.systemUTC();
     }
 
@@ -47,10 +55,6 @@ public class RetrieveObjectTest {
     public void validateObjectCreation() {
         Assert.assertNotNull(retrieveObject);
         RetrieveObjectImpl impl = (RetrieveObjectImpl) retrieveObject;
-        Assert.assertNotNull(impl.getRequestClient());
-        Assert.assertNotNull(impl.getRetrieveProtoAdapter());
-        Assert.assertNotNull(impl.getPayloadConversion());
-        Assert.assertThat(impl.getPayloadConversion(), Matchers.is(IsInstanceOf.instanceOf(JsonPayloadConversionImpl.class)));
     }
 
     @Test
@@ -78,6 +82,7 @@ public class RetrieveObjectTest {
                 .cloudId("cloudId")
                 .dataGroup("Connection")
                 .requesterPublicKey("public key")
+                .queryTags(Arrays.asList("query1", "query2"))
                 .endDate(Date.from(clock.instant().plus(2, ChronoUnit.HOURS)))
                 .startDate(Date.from(clock.instant()))
                 .searchType(0)

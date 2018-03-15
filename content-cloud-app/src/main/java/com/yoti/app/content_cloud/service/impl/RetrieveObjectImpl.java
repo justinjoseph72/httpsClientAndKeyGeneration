@@ -1,8 +1,6 @@
 package com.yoti.app.content_cloud.service.impl;
 
-import com.google.inject.Inject;
-import com.google.inject.Singleton;
-import com.googlecode.protobuf.format.JsonFormat;
+import com.google.protobuf.util.JsonFormat;
 import com.yoti.app.UrlConstants.ErrorCodes;
 import com.yoti.app.UrlConstants.ErrorMessages;
 import com.yoti.app.UrlConstants.ServerConstants;
@@ -11,18 +9,17 @@ import com.yoti.app.content_cloud.model.ResponseRecord;
 import com.yoti.app.content_cloud.model.RetrieveMessageRequest;
 import com.yoti.app.content_cloud.model.RetrieveMessageResponse;
 import com.yoti.app.content_cloud.service.PayloadConversion;
+import com.yoti.app.content_cloud.service.PostDataService;
 import com.yoti.app.content_cloud.service.RetrieveObject;
 import com.yoti.app.exception.CloudDataAdapterException;
 import com.yoti.app.exception.CloudDataConversionException;
 import com.yoti.app.exception.CloudInteractionException;
-import com.yoti.app.httpClient.RequestClient;
 import com.yoti.ccloudpubapi_v1.RetrieveProto;
-import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.io.IOUtils;
-import org.apache.http.HttpResponse;
-import org.apache.http.entity.ByteArrayEntity;
 import org.apache.http.entity.StringEntity;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -30,20 +27,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
-@Singleton
+@Component
 public class RetrieveObjectImpl implements RetrieveObject {
 
-    @Inject
-    @Getter
+    @Autowired
     private RetrieveProtoAdapter retrieveProtoAdapter;
 
-    @Inject
-    @Getter
-    private RequestClient requestClient;
+    @Autowired
+    private PostDataService postDataService;
 
-    @Inject
-    @Getter
+    @Autowired
     private PayloadConversion payloadConversion;
+
 
     @Override
     public RetrieveMessageResponse fetchRecordsFromCloud(final RetrieveMessageRequest retrieveMessageRequest) throws CloudInteractionException, CloudDataConversionException, CloudDataAdapterException {
@@ -51,14 +46,12 @@ public class RetrieveObjectImpl implements RetrieveObject {
         try {
             RetrieveProto.RetrieveRequest retrieveRequest = retrieveProtoAdapter
                     .getRetrieveRequestProtoFromRetrieveRequest(retrieveMessageRequest);
-            ByteArrayEntity byteEntity = new ByteArrayEntity(retrieveRequest.toByteArray());
-            //  String jsonStr = payloadConversion.getEncryptedPayload(retrieveRequest, "ddd");
-            JsonFormat s = new JsonFormat();
-            String jsonStr = s.printToString(retrieveRequest);
+            String jsonStr = JsonFormat.printer().preservingProtoFieldNames().print(retrieveRequest);
             log.info("the json string is {}", jsonStr);
             StringEntity strEntity = new StringEntity(jsonStr);
-            HttpResponse httpResponse = postDataAndGetResponse(requestClient, strEntity, ServerConstants.RETIEVE_DATA_URL);
-            return handleResponse(httpResponse);
+            //HttpResponse httpResponse = postDataAndGetResponse(requestClient, strEntity, ServerConstants.RETRIEVE_DATA_URL);
+            ResponseEntity<?> responseEntity = postDataService.postData(ServerConstants.RETRIEVE_DATA_URL, jsonStr);
+            return handleResponse(responseEntity);
         } catch (CloudDataConversionException | CloudDataAdapterException | CloudInteractionException e) {
             log.info("Exception {} ", e.getMessage());
             throw e;
@@ -76,14 +69,18 @@ public class RetrieveObjectImpl implements RetrieveObject {
         }
     }
 
-    private RetrieveMessageResponse handleResponse(final HttpResponse httpResponse) throws CloudInteractionException, CloudDataConversionException {
+    private RetrieveMessageResponse handleResponse(final ResponseEntity<?> httpResponse) throws CloudInteractionException, CloudDataConversionException {
         //TODO have to check the response from the server and convert accordingly after decrypting the data in the responseRecord
-        if (httpResponse.getStatusLine().getStatusCode() != 200) {
-            throw new CloudInteractionException(ErrorCodes.CLOUD_INSERT_ERROR, String.format("Status %d returned from the Content Cloud Service", httpResponse.getStatusLine().getStatusCode()));
+        if (httpResponse.getStatusCodeValue() != 200) {
+            throw new CloudInteractionException(ErrorCodes.CLOUD_INSERT_ERROR, String.format("Status %d returned from the Content Cloud Service", httpResponse.getStatusCodeValue()));
         }
         try {
-            byte[] responseByte = IOUtils.toByteArray(httpResponse.getEntity().getContent());
-            RetrieveProto.RetrieveResponse retrieveResponse = RetrieveProto.RetrieveResponse.parseFrom(responseByte);
+            String body = (String) httpResponse.getBody();
+            log.info("the response body");
+            log.info(body);
+            RetrieveProto.RetrieveResponse.Builder builder = RetrieveProto.RetrieveResponse.newBuilder();
+            JsonFormat.parser().merge(body, builder);
+            RetrieveProto.RetrieveResponse retrieveResponse = builder.build();
             List<RetrieveProto.Record> recordProtoList = retrieveResponse.getRecordsList();
             if (recordProtoList != null && !recordProtoList.isEmpty()) {
                 List<ResponseRecord> records = new ArrayList<>();
@@ -101,10 +98,10 @@ public class RetrieveObjectImpl implements RetrieveObject {
                         .build();
             }
         } catch (IOException e) {
-            log.info("Exception {} ", e.getMessage());
+            log.warn("Exception {} ", e.getMessage());
             throw new CloudDataConversionException(e.getMessage());
         } catch (Exception e) {
-            log.info("Exception {}", e.getMessage());
+            log.warn("Exception {}", e.getMessage());
             throw new CloudInteractionException(ErrorCodes.CLOUD_RETRIEVE_ERROR, e.getMessage());
         }
         return null;

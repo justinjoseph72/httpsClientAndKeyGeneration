@@ -10,15 +10,18 @@ import com.yoti.app.content_cloud.annotations.CloudBody;
 import com.yoti.app.content_cloud.service.PayloadConversion;
 import com.yoti.app.exception.CloudInteractionException;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 @Slf4j
-@Singleton
+@Component
+@RequiredArgsConstructor
 public class JsonPayloadConversionImpl implements PayloadConversion {
 
-    @Inject
-    @Getter
-    private ObjectMapper mapper;
+
+    private final ObjectMapper mapper;
 
     @Override
     public <T> String getEncryptedPayload(final T obj, final String encryptionKeyId) throws CloudInteractionException {

@@ -7,11 +7,15 @@ import com.yoti.app.exception.CloudDataAdapterException;
 import com.yoti.ccloudpubapi_v1.RetrieveProto;
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
+@Component
 @Slf4j
 public class RetrieveProtoAdapter {
 
@@ -20,6 +24,7 @@ public class RetrieveProtoAdapter {
     public RetrieveProto.RetrieveRequest getRetrieveRequestProtoFromRetrieveRequest(@NonNull final RetrieveMessageRequest retrieveMessageRequest) throws CloudDataAdapterException {
         RetrieveProto.RetrieveRequest retrieveRequest = null;
         try {
+
             retrieveRequest = RetrieveProto.RetrieveRequest.newBuilder()
                     .setCloudId(ByteString.copyFromUtf8(retrieveMessageRequest.getCloudId()))
                     .setDataGroup(retrieveMessageRequest.getDataGroup())
@@ -27,20 +32,23 @@ public class RetrieveProtoAdapter {
                     .setStartDate(getFormattedDate(retrieveMessageRequest.getStartDate()))
                     .setEndDate(getFormattedDate(retrieveMessageRequest.getEndDate()))
                     .setSearchType(RetrieveProto.RetrieveRequest.SearchType.forNumber(retrieveMessageRequest.getSearchType()))
-                    .build();
+                    .buildPartial();
             // TODO this is something to be checked with the CC team
-            //this is a wrong implementation
+            //check about this implementation from CC team
             if (retrieveMessageRequest.getQueryTags() != null && !retrieveMessageRequest.getQueryTags().isEmpty()) {
                 for (int tagIndex = 0; tagIndex < retrieveMessageRequest.getQueryTags().size(); tagIndex++) {
-                    RetrieveProto.Tag tag = RetrieveProto.Tag.newBuilder().setKey("key").setValue(retrieveMessageRequest.getQueryTags().get(tagIndex)).build();
-                    retrieveRequest = RetrieveProto.RetrieveRequest.newBuilder(retrieveRequest).setQueryTags(tagIndex, tag).build();
+                    RetrieveProto.Tag tag = RetrieveProto.Tag.newBuilder().setKey(retrieveMessageRequest.getQueryTags().get(tagIndex))
+                            .setValue(retrieveMessageRequest.getQueryTags().get(tagIndex)).build();
+                    retrieveRequest = RetrieveProto.RetrieveRequest.newBuilder(retrieveRequest).addQueryTags(tag).buildPartial();
                 }
-
             }
+
         } catch (Exception e) {
             log.info(e.getMessage());
             throw new CloudDataAdapterException(e.getMessage());
         }
+        retrieveRequest = RetrieveProto.RetrieveRequest.newBuilder(retrieveRequest)
+                .build();
         return retrieveRequest;
 
     }

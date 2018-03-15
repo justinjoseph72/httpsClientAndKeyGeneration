@@ -29,8 +29,6 @@ public class JsonPayloadConverterTest {
     public void testInjectionOfClasses(){
         Assert.assertNotNull(payloadConversion);
         JsonPayloadConversionImpl impl = (JsonPayloadConversionImpl)payloadConversion;
-        ObjectMapper mapper = impl.getMapper();
-        Assert.assertNotNull(mapper);
     }
 
     @Test
