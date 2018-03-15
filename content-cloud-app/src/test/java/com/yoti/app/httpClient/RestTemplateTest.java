@@ -18,7 +18,7 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootTest
 @Slf4j
 @ActiveProfiles("dev")
-public class RestTemplateTEst {
+public class RestTemplateTest {
 
     @Autowired
     RestTemplate restTemplate;

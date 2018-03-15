@@ -4,6 +4,7 @@ import com.yoti.app.content_cloud.model.BinRequest;
 import com.yoti.app.content_cloud.service.BinInteractions;
 import com.yoti.app.exception.CloudInteractionException;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -57,14 +58,6 @@ public class BinInteractionTest {
     public void validResponseForValidRemoveBinInput() {
         BinRequest binRequest = getBinRequest();
         Boolean moved = binInteractions.removeBinnedObjectFromBin(binRequest);
-        Assert.assertNotNull(moved);
-        Assert.assertTrue(moved.booleanValue());
-    }
-
-    @Test
-    public void validResponseForValidEmptyBinInput() {
-        BinRequest binRequest = getBinRequest();
-        Boolean moved = binInteractions.emptyBin(binRequest);
         Assert.assertNotNull(moved);
         Assert.assertTrue(moved.booleanValue());
     }

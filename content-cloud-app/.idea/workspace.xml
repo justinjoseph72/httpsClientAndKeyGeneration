@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a6026f32-d891-4989-a790-8822e0ce3fbb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/keygen/GenerateKeyPair.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/yoti/app/httpClient/RestTemplateTEst.java" afterPath="$PROJECT_DIR$/src/test/java/com/yoti/app/httpClient/RestTemplateTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/yoti/app/keygen/GenerateKeyPairTest.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/BinInteractionTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/BinInteractionTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,44 +20,14 @@
   <component name="ChangesViewManager" flattened_view="false" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RetrieveMessageRequest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/RetrieveMessageRequest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="27" column="12" lean-forward="false" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BinRequest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/BinRequest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BinInteractionsImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/BinInteractionsImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="88" column="19" lean-forward="false" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
+            <state relative-caret-position="316">
+              <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BinOpsProtoAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/adpaters/BinOpsProtoAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -107,7 +82,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/InsertObjectImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
-              <caret line="39" column="83" lean-forward="true" selection-start-line="39" selection-start-column="83" selection-end-line="39" selection-end-column="83" />
+              <caret line="39" column="83" lean-forward="false" selection-start-line="39" selection-start-column="83" selection-end-line="39" selection-end-column="83" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -115,11 +90,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InsertProtoAdapter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InsertProtoAdapter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/adpaters/InsertProtoAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="382">
+              <caret line="54" column="70" lean-forward="false" selection-start-line="54" selection-start-column="70" selection-end-line="54" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BinInteractionTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/BinInteractionTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InsertObjectTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/InsertObjectTest.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="26" column="65" lean-forward="true" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
+              <caret line="44" column="29" lean-forward="false" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -138,6 +143,8 @@
     <findStrings>
       <find>Tag</find>
       <find>restoreDataFromBin</find>
+      <find>Bininteraction</find>
+      <find>contentCloudControllerTes</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -156,7 +163,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/config/AppConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/PostDataService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/adpaters/RetrieveProtoAdapter.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/adpaters/InsertProtoAdapter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/InsertObject.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/RetrieveObject.java" />
@@ -171,7 +177,6 @@
         <option value="$PROJECT_DIR$/src/test/java/com/yoti/app/httpClient/RestTemplateTEst.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/RetrieveObjectTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/InsertObjectTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/BinInteractionTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ServerConstants.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/InsertMessageRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ApiConstants.java" />
@@ -182,6 +187,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/BinRequest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/yoti/app/controller/ContentCloudControllerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/JsonPayloadConverterTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/yoti/app/controller/ContentCloudControllerIT.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/BinInteractionTest.java" />
       </list>
     </option>
   </component>
@@ -272,113 +280,6 @@
               <item name="content-cloud-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="content-cloud-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="content-cloud-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="content-cloud-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="content_cloud" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="content-cloud-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="content-cloud-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="content_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="adpaters" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="content-cloud-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="content-cloud-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="content_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="content-cloud-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="content-cloud-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="content_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="content-cloud-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="content-cloud-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="content_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="content-cloud-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="content-cloud-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="content-cloud-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="content-cloud-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="UrlConstants" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="content-cloud-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="content-cloud-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="proto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="content-cloud-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="content-cloud-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="proto" type="462c0819:PsiDirectoryNode" />
-              <item name="ccloudpubapi_v1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="content-cloud-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="content-cloud-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="proto" type="462c0819:PsiDirectoryNode" />
-              <item name="compubapi_v1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="content-cloud-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="content-cloud-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="content-cloud-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="content-cloud-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -395,6 +296,24 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="content-cloud-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="content-cloud-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="content-cloud-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="content-cloud-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="content-cloud-app" type="b2602c69:ProjectViewProjectNode" />
@@ -444,7 +363,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.JsonPayloadConverterTest.testConversion">
+  <component name="RunManager" selected="JUnit.InsertObjectTest.testValidateInputObject">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -466,20 +385,20 @@
       <module name="" />
       <envs />
     </configuration>
-    <configuration name="ContentCloudControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BinInteractionTest.validResponseForValidRemoveBinInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.yoti.app.controller.*" />
+          <option name="PATTERN" value="com.yoti.app.service.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="content-cloud-app" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.yoti.app.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.yoti.app.controller.ContentCloudControllerTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.yoti.app.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.yoti.app.service.impl.BinInteractionTest" />
+      <option name="METHOD_NAME" value="validResponseForValidRemoveBinInput" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -541,6 +460,31 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration name="InsertObjectTest.testValidateInputObject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.yoti.app.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="content-cloud-app" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.yoti.app.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.yoti.app.service.impl.InsertObjectTest" />
+      <option name="METHOD_NAME" value="testValidateInputObject" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
     <configuration name="JsonPayloadConverterTest.testConversion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -555,31 +499,6 @@
       <option name="MAIN_CLASS_NAME" value="com.yoti.app.service.impl.JsonPayloadConverterTest" />
       <option name="METHOD_NAME" value="testConversion" />
       <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="RestTemplateTEst" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.yoti.app.httpClient.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="content-cloud-app" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.yoti.app.httpClient" />
-      <option name="MAIN_CLASS_NAME" value="com.yoti.app.httpClient.RestTemplateTEst" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -621,7 +540,7 @@
     <configuration name="ContentCloudApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.yoti.app.ContentCloudApplication" />
-      <option name="ACTIVE_PROFILES" value="mock" />
+      <option name="ACTIVE_PROFILES" value="dev" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <module name="content-cloud-app" />
       <envs />
@@ -658,19 +577,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.ContentCloudApp" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.RestTemplateTEst" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ContentCloudControllerTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ContentCloudControllerTest.testInValidDataInsertDataEndpoint" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ContentCloudControllerTest.testInsertPersonDataEndpoint" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.JsonPayloadConverterTest.testConversion" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ContentCloudControllerTest.testInValidDataInsertDataEndpoint" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ContentCloudControllerTest.testInsertPersonDataEndpoint" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.JsonPayloadConverterTest.testConversion" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.BinInteractionTest.validResponseForValidRemoveBinInput" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.InsertObjectTest.testValidateInputObject" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.JsonPayloadConverterTest.testConversion" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ContentCloudControllerTest.testInsertPersonDataEndpoint" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ContentCloudControllerTest.testInValidDataInsertDataEndpoint" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ContentCloudControllerTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.RestTemplateTEst" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.InsertObjectTest.testValidateInputObject" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.BinInteractionTest.validResponseForValidRemoveBinInput" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.JsonPayloadConverterTest.testConversion" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ContentCloudControllerTest.testInsertPersonDataEndpoint" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ContentCloudControllerTest.testInValidDataInsertDataEndpoint" />
       </list>
     </recent_temporary>
   </component>
@@ -681,11 +600,8 @@
     <configuration />
   </component>
   <component name="TestHistory">
-    <history-entry file="BinInteractionTest - 2018.03.15 at 11h 43m 12s.xml">
-      <configuration name="BinInteractionTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BinInteractionTest - 2018.03.15 at 11h 47m 02s.xml">
-      <configuration name="BinInteractionTest" configurationId="JUnit" />
+    <history-entry file="BinInteractionTest_validResponseForValidRemoveBinInput - 2018.03.15 at 15h 28m 21s.xml">
+      <configuration name="BinInteractionTest.validResponseForValidRemoveBinInput" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ContentCloudControllerTest - 2018.03.15 at 13h 41m 48s.xml">
       <configuration name="ContentCloudControllerTest" configurationId="JUnit" />
@@ -701,6 +617,9 @@
     </history-entry>
     <history-entry file="ContentCloudControllerTest_testInsertPersonDataEndpoint - 2018.03.15 at 14h 36m 12s.xml">
       <configuration name="ContentCloudControllerTest.testInsertPersonDataEndpoint" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InsertObjectTest_testValidateInputObject - 2018.03.15 at 15h 31m 58s.xml">
+      <configuration name="InsertObjectTest.testValidateInputObject" configurationId="JUnit" />
     </history-entry>
     <history-entry file="JsonPayloadConverterTest_testConversion - 2018.03.15 at 14h 38m 14s.xml">
       <configuration name="JsonPayloadConverterTest.testConversion" configurationId="JUnit" />
@@ -722,7 +641,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09821428" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34012875" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48175967" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -754,7 +673,8 @@
     <MESSAGE value="spring DI for insert and payload conversion" />
     <MESSAGE value="updating spring di for bin operations" />
     <MESSAGE value="adding controller for endpoints" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding controller for endpoints" />
+    <MESSAGE value="removing key pair generation" />
+    <option name="LAST_COMMIT_MESSAGE" value="removing key pair generation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -951,14 +871,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="89" column="12" lean-forward="false" selection-start-line="89" selection-start-column="8" selection-end-line="93" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -1232,7 +1144,7 @@
         <state relative-caret-position="271">
           <caret line="34" column="89" lean-forward="false" selection-start-line="34" selection-start-column="89" selection-end-line="34" selection-end-column="89" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1245,7 +1157,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/httpClient/RestTemplateTEst.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/httpClient/RestTemplateTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="22" />
@@ -1261,28 +1173,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/InsertObjectTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/BinInteractionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="13" column="60" lean-forward="true" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/JsonPayloadConversionImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1324,7 +1220,7 @@
         <state relative-caret-position="193">
           <caret line="51" column="42" lean-forward="false" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1342,7 +1238,7 @@
         <state relative-caret-position="210">
           <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="37" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1371,16 +1267,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/BinInteractionsImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="88" column="19" lean-forward="false" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/adpaters/BinOpsProtoAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1394,20 +1280,6 @@
         <state relative-caret-position="120">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/controller/ContentCloudControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="96" column="8" lean-forward="false" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="82" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1231#1232#0" expanded="true" />
-            <element signature="e#1308#1309#0" expanded="true" />
-            <element signature="e#4665#4666#0" expanded="true" />
-            <element signature="e#4744#4745#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1430,7 +1302,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/InsertObjectImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
-          <caret line="39" column="83" lean-forward="true" selection-start-line="39" selection-start-column="83" selection-end-line="39" selection-end-column="83" />
+          <caret line="39" column="83" lean-forward="false" selection-start-line="39" selection-start-column="83" selection-end-line="39" selection-end-column="83" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1439,8 +1311,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/adpaters/InsertProtoAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/controller/ContentCloudControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="96" column="8" lean-forward="false" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="82" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1231#1232#0" expanded="true" />
+            <element signature="e#1308#1309#0" expanded="true" />
+            <element signature="e#4665#4666#0" expanded="true" />
+            <element signature="e#4744#4745#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/keygen/GenerateKeyPairTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="54" column="70" lean-forward="false" selection-start-line="54" selection-start-column="70" selection-end-line="54" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/BinInteractionsImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/BinInteractionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/InsertObjectTest.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="26" column="65" lean-forward="true" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
+          <caret line="44" column="29" lean-forward="false" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="39" />
           <folding />
         </state>
       </provider>
