@@ -1,15 +1,10 @@
 package com.yoti.app.service.impl;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.inject.Guice;
-import com.google.inject.Injector;
-import com.yoti.app.domain.Person;
 import com.yoti.app.content_cloud.service.PayloadConversion;
-import com.yoti.app.content_cloud.service.impl.JsonPayloadConversionImpl;
-import com.yoti.app.guice_binding.PayloadConverterModule;
+import com.yoti.app.domain.Person;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

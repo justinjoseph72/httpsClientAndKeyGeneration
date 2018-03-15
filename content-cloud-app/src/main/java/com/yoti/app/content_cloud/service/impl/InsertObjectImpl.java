@@ -12,13 +12,9 @@ import com.yoti.app.content_cloud.service.PostDataService;
 import com.yoti.app.exception.CloudDataAdapterException;
 import com.yoti.app.exception.CloudDataConversionException;
 import com.yoti.app.exception.CloudInteractionException;
-import com.yoti.app.httpClient.RequestClient;
 import com.yoti.ccloudpubapi_v1.InsertProto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.io.IOUtils;
-import org.apache.http.HttpResponse;
-import org.apache.http.entity.ByteArrayEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
