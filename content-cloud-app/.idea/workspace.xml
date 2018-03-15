@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6026f32-d891-4989-a790-8822e0ce3fbb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ApiConstants.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/controllers/ContentCloudController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/yoti/app/controller/ContentCloudControllerTest.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/config/EndpointsProperties.java" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/config/EndpointsProperties.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/BinRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/BinRequest.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/InsertMessageRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/InsertMessageRequest.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/RetrieveMessageRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/RetrieveMessageRequest.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/BinInteractionsImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/BinInteractionsImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/controllers/TestController.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/JsonPayloadConverterTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/JsonPayloadConverterTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -764,7 +753,8 @@
     <MESSAGE value="using resttemplate and spring injection" />
     <MESSAGE value="spring DI for insert and payload conversion" />
     <MESSAGE value="updating spring di for bin operations" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating spring di for bin operations" />
+    <MESSAGE value="adding controller for endpoints" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding controller for endpoints" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
