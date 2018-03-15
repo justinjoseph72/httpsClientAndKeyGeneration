@@ -29,7 +29,7 @@ public class JsonPayloadConverterTest {
 
     @Test
     public void testConversion() throws IOException {
-        Person person = new Person(1, "jj", "dd", "sf@sdf.com");
+        Person person = new Person(1, "givenName", "lastName", "email@email.com");
         String str = payloadConversion.getEncryptedPayload(person, "sd");
         Assert.assertNotNull(str);
         log.info(str);

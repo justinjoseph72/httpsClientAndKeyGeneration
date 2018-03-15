@@ -14,7 +14,7 @@ content_cloud:
     insertData: http://localhost:23443/content-cloud/v1/insert
     retrieveData: http://localhost:23443/content-cloud/v1/retrieve
     moveDataToBin: http://localhost:23443/content-cloud/v1/move-to-bin
-    restoreDataToBin: http://localhost:23443/content-cloud/v1/restore-from-bin
+    restoreDataFromBin: http://localhost:23443/content-cloud/v1/restore-from-bin
     removeBinnedObject: http://localhost:23443/content-cloud/v1/remove-binned
     emptyBin: http://localhost:23443/content-cloud/v1/remove-binned
 
@@ -26,6 +26,6 @@ content_cloud:
     insertData: https://localhost:8087/
     retrieveData: https://localhost:8087/
     moveDataToBin: https://localhost:8087/
-    restoreDataToBin: https://localhost:8087/
+    restoreDataFromBin: https://localhost:8087/
     removeBinnedObject: https://localhost:8087/
     emptyBin: https://localhost:8087/

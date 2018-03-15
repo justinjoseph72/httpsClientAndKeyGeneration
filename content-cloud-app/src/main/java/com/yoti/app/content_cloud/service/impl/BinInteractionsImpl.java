@@ -54,8 +54,8 @@ public class BinInteractionsImpl implements BinInteractions {
             BinOpsProto.RestoreFromBinRequest restoreFromBinRequestProto = binAdapter.getRestoreFromBinRequestProto(binRequest);
             String jsonPayload = jsonPrinter.print(restoreFromBinRequestProto);
             log.info("the restore object from bin request is {}", jsonPayload);
-            log.info("url to use {}", endpointsProperties.getRestoreDataToBin());
-            ResponseEntity<?> responseEntity = postDataService.postData(endpointsProperties.getRestoreDataToBin(), jsonPayload);
+            log.info("url to use {}", endpointsProperties.getRestoreDataFromBin());
+            ResponseEntity<?> responseEntity = postDataService.postData(endpointsProperties.getRestoreDataFromBin(), jsonPayload);
             return handleResponse(responseEntity);
         } catch (CloudDataConversionException | CloudDataAdapterException | CloudInteractionException e) {
             log.info(" Exception {}", e.getMessage());

@@ -12,7 +12,7 @@ public class EndpointsProperties {
     private String insertData;
     private String retrieveData;
     private String moveDataToBin;
-    private String restoreDataToBin;
+    private String restoreDataFromBin;
     private String removeBinnedObject;
     private String emptyBin;
 
