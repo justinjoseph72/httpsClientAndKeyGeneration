@@ -3,7 +3,7 @@ package com.yoti.app.content_cloud.service.impl;
 import com.google.protobuf.util.JsonFormat;
 import com.yoti.app.UrlConstants.ErrorCodes;
 import com.yoti.app.UrlConstants.ErrorMessages;
-import com.yoti.app.UrlConstants.ServerConstants;
+import com.yoti.app.config.EndpointsProperties;
 import com.yoti.app.content_cloud.adpaters.InsertProtoAdapter;
 import com.yoti.app.content_cloud.model.InsertMessageRequest;
 import com.yoti.app.content_cloud.model.InsertMessageResponse;
@@ -28,9 +28,8 @@ public class InsertObjectImpl implements InsertObject {
 
 
     private final PostDataService postDataService;
-
     private final InsertProtoAdapter insertProtoAdapter;
-
+    private final EndpointsProperties endpointsProperties;
     private final JsonFormat.Printer jsonPrinter = JsonFormat.printer().preservingProtoFieldNames();
     private final JsonFormat.Parser jsonParser = JsonFormat.parser();
 
@@ -41,7 +40,8 @@ public class InsertObjectImpl implements InsertObject {
             InsertProto.InsertRequest request = insertProtoAdapter.getInsertProtoFromInsertMessageRequest(insertMessageRequest);
             String jsonPayload = jsonPrinter.print(request);
             log.info("the insert request is {}", jsonPayload);
-            ResponseEntity<?> responseEntity = postDataService.postData(ServerConstants.INSERT_DATA_URL, jsonPayload);
+            log.info("url to use {}",endpointsProperties.getInsertData());
+            ResponseEntity<?> responseEntity = postDataService.postData(endpointsProperties.getInsertData(), jsonPayload);
             return handleResponse(responseEntity);
         } catch (CloudDataConversionException | CloudDataAdapterException | CloudInteractionException e) {
             log.info("Exception {}", e.getMessage());

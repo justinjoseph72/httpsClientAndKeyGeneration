@@ -10,10 +10,12 @@ import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@ActiveProfiles("mock")
 public class BinInteractionTest {
 
     @Autowired
@@ -44,7 +46,7 @@ public class BinInteractionTest {
     }
 
     @Test
-    public void validResponseForValidRestoreBinInput(){
+    public void validResponseForValidRestoreBinInput() {
         BinRequest binRequest = getBinRequest();
         Boolean moved = binInteractions.restoreObjectFromBin(binRequest);
         Assert.assertNotNull(moved);
@@ -52,17 +54,17 @@ public class BinInteractionTest {
     }
 
     @Test
-    public void validResponseForValidRetrieveBinInput(){
+    public void validResponseForValidRemoveBinInput() {
         BinRequest binRequest = getBinRequest();
-        Boolean moved = binInteractions.restoreObjectFromBin(binRequest);
+        Boolean moved = binInteractions.removeBinnedObjectFromBin(binRequest);
         Assert.assertNotNull(moved);
         Assert.assertTrue(moved.booleanValue());
     }
 
     @Test
-    public void validResponseForValidEmptyBinInput(){
+    public void validResponseForValidEmptyBinInput() {
         BinRequest binRequest = getBinRequest();
-        Boolean moved = binInteractions.restoreObjectFromBin(binRequest);
+        Boolean moved = binInteractions.emptyBin(binRequest);
         Assert.assertNotNull(moved);
         Assert.assertTrue(moved.booleanValue());
     }

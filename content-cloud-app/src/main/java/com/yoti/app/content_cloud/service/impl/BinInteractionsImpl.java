@@ -3,7 +3,7 @@ package com.yoti.app.content_cloud.service.impl;
 import com.google.protobuf.util.JsonFormat;
 import com.yoti.app.UrlConstants.ErrorCodes;
 import com.yoti.app.UrlConstants.ErrorMessages;
-import com.yoti.app.UrlConstants.ServerConstants;
+import com.yoti.app.config.EndpointsProperties;
 import com.yoti.app.content_cloud.adpaters.BinOpsProtoAdapter;
 import com.yoti.app.content_cloud.model.BinRequest;
 import com.yoti.app.content_cloud.service.BinInteractions;
@@ -24,6 +24,7 @@ public class BinInteractionsImpl implements BinInteractions {
 
     private final PostDataService postDataService;
     private final BinOpsProtoAdapter binAdapter;
+    private final EndpointsProperties endpointsProperties;
     private final JsonFormat.Printer jsonPrinter = JsonFormat.printer().preservingProtoFieldNames();
 
     @Override
@@ -32,7 +33,9 @@ public class BinInteractionsImpl implements BinInteractions {
         try {
             BinOpsProto.MoveToBinRequest moveToBinRequestProto = binAdapter.getMoveToBinRequestProto(binRequest);
             String jsonPayload = jsonPrinter.print(moveToBinRequestProto);
-            ResponseEntity<?> responseEntity = postDataService.postData(ServerConstants.MOVE_DATA_TO_BIN_URL, jsonPayload);
+            log.info("the move to bin request is {}", jsonPayload);
+            log.info("url to use {}", endpointsProperties.getMoveDataToBin());
+            ResponseEntity<?> responseEntity = postDataService.postData(endpointsProperties.getMoveDataToBin(), jsonPayload);
             return handleResponse(responseEntity);
         } catch (CloudDataConversionException | CloudDataAdapterException | CloudInteractionException e) {
             log.info(" Exception {}", e.getMessage());
@@ -50,7 +53,9 @@ public class BinInteractionsImpl implements BinInteractions {
         try {
             BinOpsProto.RestoreFromBinRequest restoreFromBinRequestProto = binAdapter.getRestoreFromBinRequestProto(binRequest);
             String jsonPayload = jsonPrinter.print(restoreFromBinRequestProto);
-            ResponseEntity<?> responseEntity = postDataService.postData(ServerConstants.RESTORE_DATA_FROM_BIN_URL, jsonPayload);
+            log.info("the restore object from bin request is {}", jsonPayload);
+            log.info("url to use {}", endpointsProperties.getRestoreDataToBin());
+            ResponseEntity<?> responseEntity = postDataService.postData(endpointsProperties.getRestoreDataToBin(), jsonPayload);
             return handleResponse(responseEntity);
         } catch (CloudDataConversionException | CloudDataAdapterException | CloudInteractionException e) {
             log.info(" Exception {}", e.getMessage());
@@ -67,7 +72,9 @@ public class BinInteractionsImpl implements BinInteractions {
         try {
             BinOpsProto.EmptyBinRequest emptyBinRequestProto = binAdapter.getEmptyBinRequestProto(binRequest);
             String jsonPayload = jsonPrinter.print(emptyBinRequestProto);
-            ResponseEntity<?> responseEntity = postDataService.postData(ServerConstants.EMPTY_BIN_URL, jsonPayload);
+            log.info("the empty bin request is {}", jsonPayload);
+            log.info("url to use {}", endpointsProperties.getEmptyBin());
+            ResponseEntity<?> responseEntity = postDataService.postData(endpointsProperties.getEmptyBin(), jsonPayload);
             return handleResponse(responseEntity);
         } catch (CloudDataConversionException | CloudDataAdapterException | CloudInteractionException e) {
             log.info(" Exception {}", e.getMessage());
@@ -84,7 +91,9 @@ public class BinInteractionsImpl implements BinInteractions {
         try {
             BinOpsProto.RemoveBinnedRequest removeBinnedRequestProto = binAdapter.getRemoveBinnedRequestProto(binRequest);
             String jsonPayload = jsonPrinter.print(removeBinnedRequestProto);
-            ResponseEntity<?> responseEntity = postDataService.postData(ServerConstants.REMOVE_BINNED_OBJECT_FROM_BIN_URL, jsonPayload);
+            log.info("the remove object from bin request is {}", jsonPayload);
+            log.info("url to use {}", endpointsProperties.getRemoveBinnedObject());
+            ResponseEntity<?> responseEntity = postDataService.postData(endpointsProperties.getRemoveBinnedObject(), jsonPayload);
             return handleResponse(responseEntity);
         } catch (CloudDataConversionException | CloudDataAdapterException | CloudInteractionException e) {
             log.info(" Exception {}", e.getMessage());

@@ -3,7 +3,7 @@ package com.yoti.app.content_cloud.service.impl;
 import com.google.protobuf.util.JsonFormat;
 import com.yoti.app.UrlConstants.ErrorCodes;
 import com.yoti.app.UrlConstants.ErrorMessages;
-import com.yoti.app.UrlConstants.ServerConstants;
+import com.yoti.app.config.EndpointsProperties;
 import com.yoti.app.content_cloud.adpaters.RetrieveProtoAdapter;
 import com.yoti.app.content_cloud.model.ResponseRecord;
 import com.yoti.app.content_cloud.model.RetrieveMessageRequest;
@@ -30,9 +30,8 @@ import java.util.List;
 public class RetrieveObjectImpl implements RetrieveObject {
 
     private final RetrieveProtoAdapter retrieveProtoAdapter;
-
+    private final EndpointsProperties endpointsProperties;
     private final PostDataService postDataService;
-
     private final JsonFormat.Printer jsonPrinter = JsonFormat.printer().preservingProtoFieldNames();
     private final JsonFormat.Parser jsonParser = JsonFormat.parser();
 
@@ -44,7 +43,8 @@ public class RetrieveObjectImpl implements RetrieveObject {
                     .getRetrieveRequestProtoFromRetrieveRequest(retrieveMessageRequest);
             String jsonStr = jsonPrinter.print(retrieveRequest);
             log.info("the json string is {}", jsonStr);
-            ResponseEntity<?> responseEntity = postDataService.postData(ServerConstants.RETRIEVE_DATA_URL, jsonStr);
+            log.info("url to use {}",endpointsProperties.getRetrieveData());
+            ResponseEntity<?> responseEntity = postDataService.postData(endpointsProperties.getRetrieveData(), jsonStr);
             return handleResponse(responseEntity);
         } catch (CloudDataConversionException | CloudDataAdapterException | CloudInteractionException e) {
             log.info("Exception {} ", e.getMessage());

@@ -6,3 +6,26 @@ logging:
       warn
     com.yoti.app:
       debug
+---
+spring:
+  profiles: mock
+content_cloud:
+  endpoint:
+    insertData: http://localhost:23443/content-cloud/v1/insert
+    retrieveData: http://localhost:23443/content-cloud/v1/retrieve
+    moveDataToBin: http://localhost:23443/content-cloud/v1/move-to-bin
+    restoreDataToBin: http://localhost:23443/content-cloud/v1/restore-from-bin
+    removeBinnedObject: http://localhost:23443/content-cloud/v1/remove-binned
+    emptyBin: http://localhost:23443/content-cloud/v1/remove-binned
+
+---
+spring:
+  profiles: dev
+content_cloud:
+  endpoint:
+    insertData: https://localhost:8087/
+    retrieveData: https://localhost:8087/
+    moveDataToBin: https://localhost:8087/
+    restoreDataToBin: https://localhost:8087/
+    removeBinnedObject: https://localhost:8087/
+    emptyBin: https://localhost:8087/
