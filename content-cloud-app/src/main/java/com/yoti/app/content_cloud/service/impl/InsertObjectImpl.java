@@ -44,7 +44,7 @@ public class InsertObjectImpl implements InsertObject {
         try {
             InsertProto.InsertRequest request = insertProtoAdapter.getInsertProtoFromInsertMessageRequest(insertMessageRequest);
             String jsonPayload = jsonPrinter.print(request);
-            log.info("the insert request is /n {}", jsonPayload);
+            log.info("the insert request is {}", jsonPayload);
             ResponseEntity<?> responseEntity = postDataService.postData(ServerConstants.INSERT_DATA_URL, jsonPayload);
             return handleResponse(responseEntity);
         } catch (CloudDataConversionException | CloudDataAdapterException | CloudInteractionException e) {
@@ -63,7 +63,7 @@ public class InsertObjectImpl implements InsertObject {
         }
         try {
             String jsonResponseBody = (String) httpResponse.getBody();
-            log.info("the response json body is /n {}", jsonResponseBody);
+            log.info("the response json body is {}", jsonResponseBody);
             InsertProto.InsertResponse.Builder responseBuilder = InsertProto.InsertResponse.newBuilder();
             jsonParser.merge(jsonResponseBody, responseBuilder);
             InsertProto.InsertResponse insertResponseProto = responseBuilder.build();

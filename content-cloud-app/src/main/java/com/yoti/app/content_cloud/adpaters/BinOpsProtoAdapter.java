@@ -3,7 +3,9 @@ package com.yoti.app.content_cloud.adpaters;
 import com.google.protobuf.ByteString;
 import com.yoti.app.content_cloud.model.BinRequest;
 import com.yoti.ccloudpubapi_v1.BinOpsProto;
+import org.springframework.stereotype.Component;
 
+@Component
 public class BinOpsProtoAdapter {
 
     public BinOpsProto.EmptyBinRequest getEmptyBinRequestProto(BinRequest binRequest) {

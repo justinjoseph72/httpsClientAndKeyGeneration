@@ -4,7 +4,7 @@ import com.yoti.app.content_cloud.model.BinRequest;
 import com.yoti.app.exception.CloudDataAdapterException;
 import com.yoti.app.exception.CloudInteractionException;
 
-public interface BinInteractions extends ContentCloudInteraction {
+public interface BinInteractions {
 
     Boolean moveObjectToBin(final BinRequest binRequest) throws CloudDataAdapterException, CloudInteractionException;
 

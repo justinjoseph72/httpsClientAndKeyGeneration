@@ -1,39 +1,32 @@
 package com.yoti.app.service.impl;
 
-import com.google.inject.Guice;
-import com.google.inject.Injector;
 import com.yoti.app.content_cloud.model.BinRequest;
 import com.yoti.app.content_cloud.service.BinInteractions;
-import com.yoti.app.content_cloud.service.impl.BinInteractionsImpl;
-import com.yoti.app.exception.CloudDataAdapterException;
 import com.yoti.app.exception.CloudInteractionException;
-import com.yoti.app.guice_binding.BinObjectModule;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
+@RunWith(SpringRunner.class)
+@SpringBootTest
 public class BinInteractionTest {
 
+    @Autowired
     private BinInteractions binInteractions;
 
     @Rule
     public ExpectedException expectedException = ExpectedException.none();
 
-    @Before
-    public void init() {
-        Injector injector = Guice.createInjector(new BinObjectModule());
-        binInteractions = injector.getInstance(BinInteractions.class);
-    }
-
 
     @Test
     public void validateAllObjects() {
         Assert.assertNotNull(binInteractions);
-        BinInteractionsImpl impl = (BinInteractionsImpl) binInteractions;
-        Assert.assertNotNull(impl.getBinAdapter());
-        Assert.assertNotNull(impl.getRequestClient());
+
     }
 
     @Test
@@ -43,12 +36,37 @@ public class BinInteractionTest {
     }
 
     @Test
-    public void validResponseForValidInput() {
+    public void validResponseForValidMoveToBinInput() {
         BinRequest binRequest = getBinRequest();
         Boolean moved = binInteractions.moveObjectToBin(binRequest);
         Assert.assertNotNull(moved);
         Assert.assertTrue(moved.booleanValue());
     }
+
+    @Test
+    public void validResponseForValidRestoreBinInput(){
+        BinRequest binRequest = getBinRequest();
+        Boolean moved = binInteractions.restoreObjectFromBin(binRequest);
+        Assert.assertNotNull(moved);
+        Assert.assertTrue(moved.booleanValue());
+    }
+
+    @Test
+    public void validResponseForValidRetrieveBinInput(){
+        BinRequest binRequest = getBinRequest();
+        Boolean moved = binInteractions.restoreObjectFromBin(binRequest);
+        Assert.assertNotNull(moved);
+        Assert.assertTrue(moved.booleanValue());
+    }
+
+    @Test
+    public void validResponseForValidEmptyBinInput(){
+        BinRequest binRequest = getBinRequest();
+        Boolean moved = binInteractions.restoreObjectFromBin(binRequest);
+        Assert.assertNotNull(moved);
+        Assert.assertTrue(moved.booleanValue());
+    }
+
 
     private BinRequest getBinRequest() {
         return BinRequest.builder()

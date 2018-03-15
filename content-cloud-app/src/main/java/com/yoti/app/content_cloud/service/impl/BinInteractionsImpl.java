@@ -1,45 +1,39 @@
 package com.yoti.app.content_cloud.service.impl;
 
-import com.google.inject.Inject;
-import com.google.inject.Singleton;
+import com.google.protobuf.util.JsonFormat;
 import com.yoti.app.UrlConstants.ErrorCodes;
 import com.yoti.app.UrlConstants.ErrorMessages;
 import com.yoti.app.UrlConstants.ServerConstants;
 import com.yoti.app.content_cloud.adpaters.BinOpsProtoAdapter;
 import com.yoti.app.content_cloud.model.BinRequest;
 import com.yoti.app.content_cloud.service.BinInteractions;
+import com.yoti.app.content_cloud.service.PostDataService;
 import com.yoti.app.exception.CloudDataAdapterException;
 import com.yoti.app.exception.CloudDataConversionException;
 import com.yoti.app.exception.CloudInteractionException;
-import com.yoti.app.httpClient.RequestClient;
 import com.yoti.ccloudpubapi_v1.BinOpsProto;
-import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.http.HttpResponse;
-import org.apache.http.entity.ByteArrayEntity;
-
-import java.io.IOException;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 
 @Slf4j
-@Singleton
+@Service
+@RequiredArgsConstructor
 public class BinInteractionsImpl implements BinInteractions {
 
-    @Inject
-    @Getter
-    private RequestClient requestClient;
-
-    @Inject
-    @Getter
-    private BinOpsProtoAdapter binAdapter;
-
+    private final PostDataService postDataService;
+    private final BinOpsProtoAdapter binAdapter;
+    private final JsonFormat.Printer jsonPrinter = JsonFormat.printer().preservingProtoFieldNames();
 
     @Override
     public Boolean moveObjectToBin(final BinRequest binRequest) throws CloudDataAdapterException, CloudInteractionException {
         validateRequest(binRequest);
         try {
             BinOpsProto.MoveToBinRequest moveToBinRequestProto = binAdapter.getMoveToBinRequestProto(binRequest);
-            HttpResponse httpResponse = getHttpResponse(moveToBinRequestProto.toByteArray(), requestClient, ServerConstants.MOVE_DATA_TO_BIN_URL);
-            return handleResponse(httpResponse);
+            String jsonPayload = jsonPrinter.print(moveToBinRequestProto);
+            ResponseEntity<?> responseEntity = postDataService.postData(ServerConstants.MOVE_DATA_TO_BIN_URL, jsonPayload);
+            return handleResponse(responseEntity);
         } catch (CloudDataConversionException | CloudDataAdapterException | CloudInteractionException e) {
             log.info(" Exception {}", e.getMessage());
             throw e;
@@ -55,8 +49,9 @@ public class BinInteractionsImpl implements BinInteractions {
         validateRequest(binRequest);
         try {
             BinOpsProto.RestoreFromBinRequest restoreFromBinRequestProto = binAdapter.getRestoreFromBinRequestProto(binRequest);
-            HttpResponse httpResponse = getHttpResponse(restoreFromBinRequestProto.toByteArray(), requestClient, ServerConstants.RESTORE_DATA_FROM_BIN_URL);
-            return handleResponse(httpResponse);
+            String jsonPayload = jsonPrinter.print(restoreFromBinRequestProto);
+            ResponseEntity<?> responseEntity = postDataService.postData(ServerConstants.RESTORE_DATA_FROM_BIN_URL, jsonPayload);
+            return handleResponse(responseEntity);
         } catch (CloudDataConversionException | CloudDataAdapterException | CloudInteractionException e) {
             log.info(" Exception {}", e.getMessage());
             throw e;
@@ -71,8 +66,9 @@ public class BinInteractionsImpl implements BinInteractions {
         validateRequest(binRequest);
         try {
             BinOpsProto.EmptyBinRequest emptyBinRequestProto = binAdapter.getEmptyBinRequestProto(binRequest);
-            HttpResponse httpResponse = getHttpResponse(emptyBinRequestProto.toByteArray(), requestClient, ServerConstants.EMPTY_BIN_URL);
-            return handleResponse(httpResponse);
+            String jsonPayload = jsonPrinter.print(emptyBinRequestProto);
+            ResponseEntity<?> responseEntity = postDataService.postData(ServerConstants.EMPTY_BIN_URL, jsonPayload);
+            return handleResponse(responseEntity);
         } catch (CloudDataConversionException | CloudDataAdapterException | CloudInteractionException e) {
             log.info(" Exception {}", e.getMessage());
             throw e;
@@ -87,8 +83,9 @@ public class BinInteractionsImpl implements BinInteractions {
         validateRequest(binRequest);
         try {
             BinOpsProto.RemoveBinnedRequest removeBinnedRequestProto = binAdapter.getRemoveBinnedRequestProto(binRequest);
-            HttpResponse httpResponse = getHttpResponse(removeBinnedRequestProto.toByteArray(), requestClient, ServerConstants.REMOVE_BINNED_OBJECT_FROM_BIN_URL);
-            return handleResponse(httpResponse);
+            String jsonPayload = jsonPrinter.print(removeBinnedRequestProto);
+            ResponseEntity<?> responseEntity = postDataService.postData(ServerConstants.REMOVE_BINNED_OBJECT_FROM_BIN_URL, jsonPayload);
+            return handleResponse(responseEntity);
         } catch (CloudDataConversionException | CloudDataAdapterException | CloudInteractionException e) {
             log.info(" Exception {}", e.getMessage());
             throw e;
@@ -98,15 +95,11 @@ public class BinInteractionsImpl implements BinInteractions {
         }
     }
 
-    private HttpResponse getHttpResponse(final byte[] protoByte, final RequestClient requestClient, final String serviceUrl) throws IOException {
-        ByteArrayEntity byteArrayEntity = new ByteArrayEntity(protoByte);
-        HttpResponse httpResponse = postDataAndGetResponse(requestClient, byteArrayEntity, serviceUrl);
-        return httpResponse;
-    }
 
-    private Boolean handleResponse(final HttpResponse httpResponse) {
-        if (httpResponse.getStatusLine().getStatusCode() != 200) {
-            throw new CloudInteractionException(ErrorCodes.CLOUD_INSERT_ERROR, String.format("Status %d returned from the Content Cloud Service", httpResponse.getStatusLine().getStatusCode()));
+    private Boolean handleResponse(final ResponseEntity<?> httpResponse) {
+        if (httpResponse.getStatusCodeValue() != 200) {
+            throw new CloudInteractionException(ErrorCodes.CLOUD_INSERT_ERROR, String.format("Status %d returned from the Content Cloud Service",
+                    httpResponse.getStatusCodeValue()));
         }
         return Boolean.TRUE;
     }

@@ -6,7 +6,7 @@ import com.yoti.app.exception.CloudDataAdapterException;
 import com.yoti.app.exception.CloudDataConversionException;
 import com.yoti.app.exception.CloudInteractionException;
 
-public interface RetrieveObject extends ContentCloudInteraction {
+public interface RetrieveObject {
 
     RetrieveMessageResponse fetchRecordsFromCloud(RetrieveMessageRequest retrieveMessageRequest) throws CloudInteractionException, CloudDataConversionException,CloudDataAdapterException;
 }
