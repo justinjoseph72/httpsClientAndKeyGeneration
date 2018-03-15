@@ -44,7 +44,6 @@ public class RetrieveObjectImpl implements RetrieveObject {
                     .getRetrieveRequestProtoFromRetrieveRequest(retrieveMessageRequest);
             String jsonStr = jsonPrinter.print(retrieveRequest);
             log.info("the json string is {}", jsonStr);
-            //HttpResponse httpResponse = postDataAndGetResponse(requestClient, strEntity, ServerConstants.RETRIEVE_DATA_URL);
             ResponseEntity<?> responseEntity = postDataService.postData(ServerConstants.RETRIEVE_DATA_URL, jsonStr);
             return handleResponse(responseEntity);
         } catch (CloudDataConversionException | CloudDataAdapterException | CloudInteractionException e) {
@@ -66,15 +65,16 @@ public class RetrieveObjectImpl implements RetrieveObject {
 
     private RetrieveMessageResponse handleResponse(final ResponseEntity<?> httpResponse) throws CloudInteractionException, CloudDataConversionException {
         //TODO have to check the response from the server and convert accordingly after decrypting the data in the responseRecord
+        //TODO check the response from the mock service its not returning records for the input i use in tests
         if (httpResponse.getStatusCodeValue() != 200) {
             throw new CloudInteractionException(ErrorCodes.CLOUD_INSERT_ERROR, String.format("Status %d returned from the Content Cloud Service", httpResponse.getStatusCodeValue()));
         }
         try {
-            String body = (String) httpResponse.getBody();
-            log.info("the response body");
-            log.info(body);
+            String jsonResponseBody = (String) httpResponse.getBody();
+            log.info("the response jsonResponseBody");
+            log.info(jsonResponseBody);
             RetrieveProto.RetrieveResponse.Builder builder = RetrieveProto.RetrieveResponse.newBuilder();
-            jsonParser.merge(body, builder);
+            jsonParser.merge(jsonResponseBody, builder);
             RetrieveProto.RetrieveResponse retrieveResponse = builder.build();
             List<RetrieveProto.Record> recordProtoList = retrieveResponse.getRecordsList();
             if (recordProtoList != null && !recordProtoList.isEmpty()) {

@@ -1,30 +1,29 @@
 package com.yoti.app.service.impl;
 
-import com.google.inject.Guice;
-import com.google.inject.Injector;
-import com.google.inject.Module;
-import com.yoti.app.content_cloud.adpaters.InsertProtoAdapter;
 import com.yoti.app.content_cloud.model.InsertMessageRequest;
 import com.yoti.app.content_cloud.model.InsertMessageResponse;
-import com.yoti.app.domain.Person;
 import com.yoti.app.content_cloud.service.InsertObject;
-import com.yoti.app.content_cloud.service.impl.InsertObjectImpl;
-import com.yoti.app.content_cloud.service.impl.JsonPayloadConversionImpl;
+import com.yoti.app.domain.Person;
 import com.yoti.app.exception.CloudInteractionException;
-import com.yoti.app.guice_binding.InsertObjectModule;
-import com.yoti.app.guice_binding.InsertProtoAdapterModule;
-import com.yoti.app.httpClient.impl.RequestClientImpl;
 import lombok.extern.slf4j.Slf4j;
-import org.hamcrest.CoreMatchers;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.Arrays;
 
 @Slf4j
+@RunWith(SpringRunner.class)
+@SpringBootTest
 public class InsertObjectTest {
 
+    @Autowired
     private InsertObject insertObject;
 
     @Rule
@@ -32,16 +31,12 @@ public class InsertObjectTest {
 
     @Before
     public void init() {
-        Injector injector = Guice.createInjector(new Module[]{new InsertObjectModule(), new InsertProtoAdapterModule()});
-        insertObject = injector.getInstance(InsertObject.class);
+
     }
 
     @Test
     public void testObjectCreated() {
         Assert.assertNotNull(insertObject);
-        InsertObjectImpl imp = (InsertObjectImpl) insertObject;
-
-
     }
 
     @Test
@@ -77,6 +72,7 @@ public class InsertObjectTest {
                 .dataObj(person)
                 .requesterPublicKey("public key")
                 .encryptionKeyId("keyId")
+                .tag(Arrays.asList("key1", "key2"))
                 .build();
     }
 

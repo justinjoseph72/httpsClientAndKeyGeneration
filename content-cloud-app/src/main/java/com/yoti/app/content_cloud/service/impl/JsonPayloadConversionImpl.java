@@ -20,7 +20,6 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class JsonPayloadConversionImpl implements PayloadConversion {
 
-
     private final ObjectMapper mapper;
 
     @Override
@@ -39,9 +38,6 @@ public class JsonPayloadConversionImpl implements PayloadConversion {
         if (obj == null) {
             throw new CloudInteractionException(ErrorCodes.NULL_INPUT, ErrorMessages.NULL_OBJ_MSG);
         }
-        /*if (!obj.getClass().isAnnotationPresent(CloudBody.class)) {
-            throw new CloudInteractionException(ErrorCodes.NOT_CLOUD_BODY, ErrorMessages.NOT_CLOUD_BODY);
-        }*/
     }
 
     private String encryptDataUsingKey(final String dataToEncrypt, final String encryptionKeyId) {
