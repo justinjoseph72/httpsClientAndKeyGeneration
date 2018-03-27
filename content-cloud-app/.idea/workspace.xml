@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a6026f32-d891-4989-a790-8822e0ce3fbb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/BinRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/BinRequest.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/InsertMessageRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/InsertMessageRequest.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/RegisterPublicKeyModel.java" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/RegisterPublicKeyModel.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/RetrieveMessageRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/RetrieveMessageRequest.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,18 +29,18 @@
       <file leaf-file-name="RetrieveObjectImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="45" column="78" lean-forward="false" selection-start-line="45" selection-start-column="78" selection-end-line="45" selection-end-column="78" />
+            <state relative-caret-position="211">
+              <caret line="67" column="39" lean-forward="false" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RetrieveMessageRequest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RetrieveMessageRequest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/RetrieveMessageRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="62" column="43" lean-forward="false" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
+            <state relative-caret-position="498">
+              <caret line="71" column="12" lean-forward="false" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -91,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RetrieveObjectTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RetrieveObjectTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="70" column="29" lean-forward="false" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
+            <state relative-caret-position="333">
+              <caret line="61" column="24" lean-forward="false" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
               <folding>
                 <element signature="e#1453#1454#0" expanded="true" />
                 <element signature="e#1505#1506#0" expanded="true" />
@@ -734,8 +729,8 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.RetrieveObjectTest.validObjectReturnedForValidInput" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.RetrieveObjectTest.validateInputObject" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.RetrieveObjectTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.RetrieveObjectTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.RetrieveObjectTest.validateInputObject" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.InsertObjectTest" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.InsertObjectTest.testValidateInputObject" />
       </list>
@@ -748,22 +743,13 @@
     <configuration />
   </component>
   <component name="TestHistory">
-    <history-entry file="InsertObjectTest - 2018.03.27 at 14h 26m 03s.xml">
-      <configuration name="InsertObjectTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InsertObjectTest - 2018.03.27 at 14h 37m 37s.xml">
-      <configuration name="InsertObjectTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InsertObjectTest_testValidateInputObject - 2018.03.27 at 14h 29m 04s.xml">
-      <configuration name="InsertObjectTest.testValidateInputObject" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InsertObjectTest_testWriteSuccess - 2018.03.27 at 14h 11m 18s.xml">
-      <configuration name="InsertObjectTest.testWriteSuccess" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InsertObjectTest_testWriteSuccess - 2018.03.27 at 14h 25m 36s.xml">
-      <configuration name="InsertObjectTest.testWriteSuccess" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="RetrieveObjectTest - 2018.03.27 at 14h 44m 04s.xml">
+      <configuration name="RetrieveObjectTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RetrieveObjectTest - 2018.03.27 at 15h 31m 32s.xml">
+      <configuration name="RetrieveObjectTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RetrieveObjectTest - 2018.03.27 at 15h 33m 07s.xml">
       <configuration name="RetrieveObjectTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="RetrieveObjectTest_validObjectReturnedForValidInput - 2018.03.27 at 15h 03m 16s.xml">
@@ -775,13 +761,21 @@
     <history-entry file="RetrieveObjectTest_validObjectReturnedForValidInput - 2018.03.27 at 15h 08m 52s.xml">
       <configuration name="RetrieveObjectTest.validObjectReturnedForValidInput" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="RetrieveObjectTest_validObjectReturnedForValidInput - 2018.03.27 at 15h 45m 31s.xml">
+      <configuration name="RetrieveObjectTest.validObjectReturnedForValidInput" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RetrieveObjectTest_validObjectReturnedForValidInput - 2018.03.27 at 15h 48m 28s.xml">
+      <configuration name="RetrieveObjectTest.validObjectReturnedForValidInput" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RetrieveObjectTest_validObjectReturnedForValidInput - 2018.03.27 at 15h 49m 57s.xml">
+      <configuration name="RetrieveObjectTest.validObjectReturnedForValidInput" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="RetrieveObjectTest_validateInputObject - 2018.03.27 at 14h 53m 38s.xml">
       <configuration name="RetrieveObjectTest.validateInputObject" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-1136" y="-1080" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286991" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -790,7 +784,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" x="-1036" y="-980" width="1720" height="880" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0859375" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30983117" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30983117" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30486593" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1304,25 +1298,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="45" column="78" lean-forward="false" selection-start-line="45" selection-start-column="78" selection-end-line="45" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="70" column="29" lean-forward="false" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
-          <folding>
-            <element signature="e#1453#1454#0" expanded="true" />
-            <element signature="e#1505#1506#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/InsertMessageRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="574">
@@ -1355,11 +1330,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="67" column="39" lean-forward="false" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/RetrieveMessageRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="62" column="43" lean-forward="false" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
+        <state relative-caret-position="498">
+          <caret line="71" column="12" lean-forward="false" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="61" column="24" lean-forward="false" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
+          <folding>
+            <element signature="e#1453#1454#0" expanded="true" />
+            <element signature="e#1505#1506#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

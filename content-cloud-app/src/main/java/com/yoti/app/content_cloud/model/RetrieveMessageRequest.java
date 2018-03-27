@@ -69,7 +69,7 @@ public class RetrieveMessageRequest {
     private int searchType;
 
     @JsonProperty("retrieveBin")
-    @NotBlank(message = "retrieveBin may not be null")
+    @NotNull(message = "retrieveBin may not be null")
     private Boolean retrieveBin;
 
 }
