@@ -37,7 +37,7 @@ public class InsertProtoAdapter {
             }
             return InsertProto.InsertRequest.newBuilder(insertRequest).build();
         } catch (Exception e) {
-            log.info("Error in mapping to InsertRequest Proto {}", e.getMessage());
+            log.warn("Error in mapping to InsertRequest Proto {} {} ", e.getClass().getName(), e.getMessage());
             throw new CloudDataAdapterException(e.getMessage());
         }
     }
@@ -52,7 +52,7 @@ public class InsertProtoAdapter {
                     .recordId(responseProto.getRecordId().toStringUtf8())
                     .build();
         } catch (Exception e) {
-            log.info("Error in mapping to InsertMessageResponse {}", e.getMessage());
+            log.warn("Error in mapping to InsertMessageResponse {} {}",e.getClass().getName(), e.getMessage());
             throw new CloudDataAdapterException(e.getMessage());
         }
     }

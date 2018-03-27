@@ -1,6 +1,6 @@
 package com.yoti.app.content_cloud.service.impl;
 
-import com.google.common.collect.ImmutableList;
+import com.yoti.app.content_cloud.RequestHelper;
 import com.yoti.app.content_cloud.model.InsertMessageRequest;
 import com.yoti.app.content_cloud.model.InsertMessageResponse;
 import com.yoti.app.content_cloud.service.InsertObject;
@@ -47,13 +47,7 @@ public class InsertObjectTest {
         InsertMessageRequest insertMessageRequest = getInsertMessageRequest();
         InsertMessageResponse response = insertObject.insertObjectToCloud(insertMessageRequest);
         Assert.assertNotNull(response);
-        insertMessageRequest = InsertMessageRequest.builder()
-                .cloudId("cloudId")
-                .dataGroup("Connection")
-                .dataObj(null)
-                .requesterPublicKey("public key")
-                .encryptionKeyId("keyId")
-                .build();
+        insertMessageRequest = RequestHelper.getInsertMessagRequest(null, "public-key", "cloudId", Arrays.asList("key1", "key2"), "encryptionId");
         expectedException.expect(CloudInteractionException.class);
         insertObject.insertObjectToCloud(insertMessageRequest);
     }
@@ -69,14 +63,7 @@ public class InsertObjectTest {
 
     private InsertMessageRequest getInsertMessageRequest() {
         Person person = new Person(1, "jj", "dd", "sf@sdf.com");
-        return InsertMessageRequest.builder()
-                .cloudId("cloudId")
-                .dataGroup("Connection")
-                .dataObj(person)
-                .requesterPublicKey("public key")
-                .encryptionKeyId("keyId")
-                .tag(ImmutableList.copyOf(Arrays.asList("key1", "key2")))
-                .build();
+        return RequestHelper.getInsertMessagRequest(person, "public-key", "cloudId", Arrays.asList("key1", "key2"), "encryptionId");
     }
 
 }

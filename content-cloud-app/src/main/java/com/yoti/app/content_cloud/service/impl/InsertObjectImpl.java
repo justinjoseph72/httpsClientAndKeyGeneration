@@ -17,8 +17,13 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 
+import javax.validation.ConstraintViolation;
+import javax.validation.Validator;
 import java.io.IOException;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 
 @Slf4j
@@ -30,6 +35,7 @@ public class InsertObjectImpl implements InsertObject {
     private final PostDataService postDataService;
     private final InsertProtoAdapter insertProtoAdapter;
     private final EndpointsProperties endpointsProperties;
+    private final Validator validator;
     private final JsonFormat.Printer jsonPrinter = JsonFormat.printer().preservingProtoFieldNames();
     private final JsonFormat.Parser jsonParser = JsonFormat.parser();
 
@@ -53,14 +59,16 @@ public class InsertObjectImpl implements InsertObject {
 
     private InsertMessageResponse handleResponse(final ResponseEntity<?> httpResponse) {
         if (httpResponse.getStatusCodeValue() != 200) {
+            log.debug("The status from content cloud is {}", httpResponse.getStatusCodeValue());
             throw new CloudInteractionException(ErrorCodes.CLOUD_INSERT_ERROR, String.format("Status %d returned from the Content Cloud Service", httpResponse.getStatusCodeValue()));
         }
         try {
             String jsonResponseBody = (String) httpResponse.getBody();
-            log.info("the response json body is {}", jsonResponseBody);
+            log.debug("the response json body is {}", jsonResponseBody);
             InsertProto.InsertResponse.Builder responseBuilder = InsertProto.InsertResponse.newBuilder();
             jsonParser.merge(jsonResponseBody, responseBuilder);
             InsertProto.InsertResponse insertResponseProto = responseBuilder.build();
+            log.debug("response from content cloud parsed successfully");
             return insertProtoAdapter.getInsertMessageResponse(insertResponseProto);
         } catch (IOException e) {
             log.warn(" Exception {} {}", e.getClass().getName(), e.getMessage());
@@ -72,12 +80,16 @@ public class InsertObjectImpl implements InsertObject {
 
     }
 
-
     private <T> void validateInputObject(final T obj) {
         if (obj == null) {
             throw new CloudInteractionException(ErrorCodes.NULL_INPUT, ErrorMessages.NULL_OBJ_MSG);
         }
-
+        Set<ConstraintViolation<T>> violations = validator.validate(obj);
+        if (!CollectionUtils.isEmpty(violations)) {
+            String message = violations.stream().map(s -> s.getMessage()).collect(Collectors.joining("::"));
+            log.debug("Invalid InputObject with error {}", message);
+            throw new CloudInteractionException(ErrorCodes.INVALID_CLOUD_BODY, message);
+        }
     }
 
 
