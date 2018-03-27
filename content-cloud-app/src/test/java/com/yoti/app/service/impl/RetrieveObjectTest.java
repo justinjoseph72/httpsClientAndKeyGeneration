@@ -1,5 +1,6 @@
 package com.yoti.app.service.impl;
 
+import com.google.common.collect.ImmutableList;
 import com.yoti.app.content_cloud.model.ResponseRecord;
 import com.yoti.app.content_cloud.model.RetrieveMessageRequest;
 import com.yoti.app.content_cloud.model.RetrieveMessageResponse;
@@ -72,7 +73,7 @@ public class RetrieveObjectTest {
                 .cloudId("cloudId")
                 .dataGroup("Connection")
                 .requesterPublicKey("public key")
-                .queryTags(Arrays.asList("query1", "query2"))
+                .queryTags(ImmutableList.copyOf(Arrays.asList("query1", "query2")))
                 .endDate(Date.from(clock.instant().plus(2, ChronoUnit.HOURS)))
                 .startDate(Date.from(clock.instant()))
                 .searchType(0)

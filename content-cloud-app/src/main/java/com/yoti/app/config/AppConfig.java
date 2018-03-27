@@ -19,15 +19,12 @@ public class AppConfig {
 
     @Bean
     public HttpComponentsClientHttpRequestFactory getHttpComponentsClientHttpRequestFactory() {
-        //.setSSLHostnameVerifier(new NoopHostnameVerifier())
-
         HttpComponentsClientHttpRequestFactory requestFactory = null;
         try {
             SSLContext sslContext = SSLContexts.custom().loadTrustMaterial(null, (cert, authType) -> true).build();
             CloseableHttpClient httpClient = HttpClients.custom()
                     .setSSLContext(sslContext)
                     .setSSLHostnameVerifier(new NoopHostnameVerifier()).build();
-            /*CloseableHttpClient httpClient = HttpClients.custom().setSSLHostnameVerifier(new NoopHostnameVerifier()).build();*/
             requestFactory = new HttpComponentsClientHttpRequestFactory();
             requestFactory.setHttpClient(httpClient);
         } catch (NoSuchAlgorithmException e) {

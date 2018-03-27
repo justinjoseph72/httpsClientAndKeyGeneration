@@ -1,6 +1,7 @@
 package com.yoti.app.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.common.collect.ImmutableList;
 import com.yoti.app.UrlConstants.ApiConstants;
 import com.yoti.app.content_cloud.model.InsertMessageRequest;
 import com.yoti.app.domain.Person;
@@ -84,7 +85,7 @@ public class ContentCloudControllerTest {
     private InsertMessageRequest<String> getInsertMessageRequestForStringInput() {
         InsertMessageRequest insertMessageRequest = InsertMessageRequest.builder()
                 .cloudId("cloudId")
-                .tag(Arrays.asList("key1", "key2"))
+                .tag(ImmutableList.copyOf(Arrays.asList("key1", "key2")))
                 .encryptionKeyId("eee")
                 .dataObj("common-aes-key")
                 .dataGroup("Conn")
@@ -97,7 +98,7 @@ public class ContentCloudControllerTest {
         Person person = new Person(1, "givenName", "lastName", "email@email.com");
         InsertMessageRequest insertMessageRequest = InsertMessageRequest.builder()
                 .cloudId("cloudId")
-                .tag(Arrays.asList("key1", "key2"))
+                .tag(ImmutableList.copyOf(Arrays.asList("key1", "key2")))
                 .encryptionKeyId("eee")
                 .dataObj(person)
                 .dataGroup("Conn")
@@ -109,7 +110,7 @@ public class ContentCloudControllerTest {
     private InsertMessageRequest<String> getInvalidInsertMessageRequestForStringInput() {
         InsertMessageRequest insertMessageRequest = InsertMessageRequest.builder()
                 .cloudId("cloudId")
-                .tag(Arrays.asList("key1", "key2"))
+                .tag(ImmutableList.copyOf(Arrays.asList("key1", "key2")))
                 .encryptionKeyId(null)
                 .dataObj("common-aes-key")
                 .dataGroup("Conn")

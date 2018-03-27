@@ -1,5 +1,6 @@
 package com.yoti.app.service.impl;
 
+import com.google.common.collect.ImmutableList;
 import com.yoti.app.content_cloud.model.InsertMessageRequest;
 import com.yoti.app.content_cloud.model.InsertMessageResponse;
 import com.yoti.app.content_cloud.service.InsertObject;
@@ -74,7 +75,7 @@ public class InsertObjectTest {
                 .dataObj(person)
                 .requesterPublicKey("public key")
                 .encryptionKeyId("keyId")
-                .tag(Arrays.asList("key1", "key2"))
+                .tag(ImmutableList.copyOf(Arrays.asList("key1", "key2")))
                 .build();
     }
 

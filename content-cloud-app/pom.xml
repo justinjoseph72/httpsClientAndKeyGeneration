@@ -159,6 +159,11 @@
             <artifactId>bcprov-jdk15on</artifactId>
             <version>1.58</version>
         </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>23.6-jre</version>
+        </dependency>
 
         <dependency>
             <groupId>io.springfox</groupId>

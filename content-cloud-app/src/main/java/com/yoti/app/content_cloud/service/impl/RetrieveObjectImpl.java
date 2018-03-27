@@ -1,5 +1,6 @@
 package com.yoti.app.content_cloud.service.impl;
 
+import com.google.common.collect.ImmutableList;
 import com.google.protobuf.util.JsonFormat;
 import com.yoti.app.UrlConstants.ErrorCodes;
 import com.yoti.app.UrlConstants.ErrorMessages;
@@ -88,7 +89,7 @@ public class RetrieveObjectImpl implements RetrieveObject {
                     }
                 });
                 return RetrieveMessageResponse.builder()
-                        .records(records)
+                        .records(ImmutableList.copyOf(records))
                         .hasMoreRecords(retrieveResponse.getMoreRecords())
                         .build();
             }
