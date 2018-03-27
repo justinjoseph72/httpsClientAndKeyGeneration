@@ -1,4 +1,4 @@
-package com.yoti.app.service.impl;
+package com.yoti.app.content_cloud.service.impl;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.yoti.app.content_cloud.service.PayloadConversion;

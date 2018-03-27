@@ -1,10 +1,9 @@
-package com.yoti.app.service.impl;
+package com.yoti.app.content_cloud.service.impl;
 
 import com.yoti.app.content_cloud.model.BinRequest;
 import com.yoti.app.content_cloud.service.BinInteractions;
 import com.yoti.app.exception.CloudInteractionException;
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;

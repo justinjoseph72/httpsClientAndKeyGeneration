@@ -33,18 +33,15 @@ public class BinInteractionsImpl implements BinInteractions {
         try {
             BinOpsProto.MoveToBinRequest moveToBinRequestProto = binAdapter.getMoveToBinRequestProto(binRequest);
             String jsonPayload = jsonPrinter.print(moveToBinRequestProto);
-            log.info("the move to bin request is {}", jsonPayload);
-            log.info("url to use {}", endpointsProperties.getMoveDataToBin());
             ResponseEntity<?> responseEntity = postDataService.postData(endpointsProperties.getMoveDataToBin(), jsonPayload);
             return handleResponse(responseEntity);
         } catch (CloudDataConversionException | CloudDataAdapterException | CloudInteractionException e) {
-            log.info(" Exception {}", e.getMessage());
+            log.warn(" Exception {} {}", e.getClass().getName(), e.getMessage());
             throw e;
         } catch (Exception e) {
-            log.info(" Exception {}", e.getMessage());
+            log.warn(" Exception {} {}", e.getClass().getName(), e.getMessage());
             throw new CloudInteractionException(ErrorCodes.BIN_ERROR, e.getMessage());
         }
-
     }
 
     @Override
@@ -53,12 +50,10 @@ public class BinInteractionsImpl implements BinInteractions {
         try {
             BinOpsProto.RestoreFromBinRequest restoreFromBinRequestProto = binAdapter.getRestoreFromBinRequestProto(binRequest);
             String jsonPayload = jsonPrinter.print(restoreFromBinRequestProto);
-            log.info("the restore object from bin request is {}", jsonPayload);
-            log.info("url to use {}", endpointsProperties.getRestoreDataFromBin());
             ResponseEntity<?> responseEntity = postDataService.postData(endpointsProperties.getRestoreDataFromBin(), jsonPayload);
             return handleResponse(responseEntity);
         } catch (CloudDataConversionException | CloudDataAdapterException | CloudInteractionException e) {
-            log.info(" Exception {}", e.getMessage());
+            log.warn(" Exception {} {}", e.getClass().getName(), e.getMessage());
             throw e;
         } catch (Exception e) {
             log.info(" Exception {}", e.getMessage());
@@ -72,15 +67,13 @@ public class BinInteractionsImpl implements BinInteractions {
         try {
             BinOpsProto.EmptyBinRequest emptyBinRequestProto = binAdapter.getEmptyBinRequestProto(binRequest);
             String jsonPayload = jsonPrinter.print(emptyBinRequestProto);
-            log.info("the empty bin request is {}", jsonPayload);
-            log.info("url to use {}", endpointsProperties.getEmptyBin());
             ResponseEntity<?> responseEntity = postDataService.postData(endpointsProperties.getEmptyBin(), jsonPayload);
             return handleResponse(responseEntity);
         } catch (CloudDataConversionException | CloudDataAdapterException | CloudInteractionException e) {
-            log.info(" Exception {}", e.getMessage());
+            log.warn(" Exception {} {}", e.getClass().getName(), e.getMessage());
             throw e;
         } catch (Exception e) {
-            log.info(" Exception {}", e.getMessage());
+            log.warn(" Exception {} {}", e.getClass().getName(), e.getMessage());
             throw new CloudInteractionException(ErrorCodes.BIN_ERROR, e.getMessage());
         }
     }
@@ -91,8 +84,6 @@ public class BinInteractionsImpl implements BinInteractions {
         try {
             BinOpsProto.RemoveBinnedRequest removeBinnedRequestProto = binAdapter.getRemoveBinnedRequestProto(binRequest);
             String jsonPayload = jsonPrinter.print(removeBinnedRequestProto);
-            log.info("the remove object from bin request is {}", jsonPayload);
-            log.info("url to use {}", endpointsProperties.getRemoveBinnedObject());
             ResponseEntity<?> responseEntity = postDataService.postData(endpointsProperties.getRemoveBinnedObject(), jsonPayload);
             return handleResponse(responseEntity);
         } catch (CloudDataConversionException | CloudDataAdapterException | CloudInteractionException e) {

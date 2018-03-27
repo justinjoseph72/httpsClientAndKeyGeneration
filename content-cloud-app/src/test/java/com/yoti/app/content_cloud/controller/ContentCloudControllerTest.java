@@ -1,4 +1,4 @@
-package com.yoti.app.controller;
+package com.yoti.app.content_cloud.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ImmutableList;
@@ -24,7 +24,7 @@ import java.util.Arrays;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@ActiveProfiles("dev")
+@ActiveProfiles("mock")
 @Slf4j
 public class ContentCloudControllerTest {
 

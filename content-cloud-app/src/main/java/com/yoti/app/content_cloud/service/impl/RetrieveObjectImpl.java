@@ -43,15 +43,13 @@ public class RetrieveObjectImpl implements RetrieveObject {
             RetrieveProto.RetrieveRequest retrieveRequest = retrieveProtoAdapter
                     .getRetrieveRequestProtoFromRetrieveRequest(retrieveMessageRequest);
             String jsonStr = jsonPrinter.print(retrieveRequest);
-            log.info("the json string is {}", jsonStr);
-            log.info("url to use {}",endpointsProperties.getRetrieveData());
             ResponseEntity<?> responseEntity = postDataService.postData(endpointsProperties.getRetrieveData(), jsonStr);
             return handleResponse(responseEntity);
         } catch (CloudDataConversionException | CloudDataAdapterException | CloudInteractionException e) {
-            log.info("Exception {} ", e.getMessage());
+            log.warn(" Exception {} {}", e.getClass().getName(), e.getMessage());
             throw e;
         } catch (Exception e) {
-            log.info("Exception {}", e.getMessage());
+            log.warn(" Exception {} {}", e.getClass().getName(), e.getMessage());
             throw new CloudInteractionException(ErrorCodes.CLOUD_RETRIEVE_ERROR, e.getMessage());
         }
 
@@ -94,10 +92,10 @@ public class RetrieveObjectImpl implements RetrieveObject {
                         .build();
             }
         } catch (IOException e) {
-            log.warn("Exception {} ", e.getMessage());
+            log.warn(" Exception {} {}", e.getClass().getName(), e.getMessage());
             throw new CloudDataConversionException(e.getMessage());
         } catch (Exception e) {
-            log.warn("Exception {}", e.getMessage());
+            log.warn(" Exception {} {}", e.getClass().getName(), e.getMessage());
             throw new CloudInteractionException(ErrorCodes.CLOUD_RETRIEVE_ERROR, e.getMessage());
         }
         return null;

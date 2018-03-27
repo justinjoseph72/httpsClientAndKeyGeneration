@@ -24,7 +24,7 @@ public class JsonPayloadConversionImpl implements PayloadConversion {
             String jsonStr = mapper.writeValueAsString(obj);
             return encryptDataUsingKey(jsonStr, encryptionKeyId);
         } catch (JsonProcessingException e) {
-            log.info(e.getMessage());
+            log.warn(" Exception {} {}", e.getClass().getName(), e.getMessage());
             throw new CloudInteractionException(ErrorCodes.BODY_CONVERSION_ERROR, e.getMessage());
         }
     }

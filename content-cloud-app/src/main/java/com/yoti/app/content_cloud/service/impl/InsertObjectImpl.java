@@ -39,15 +39,13 @@ public class InsertObjectImpl implements InsertObject {
         try {
             InsertProto.InsertRequest request = insertProtoAdapter.getInsertProtoFromInsertMessageRequest(insertMessageRequest);
             String jsonPayload = jsonPrinter.print(request);
-            log.info("the insert request is {}", jsonPayload);
-            log.info("url to use {}",endpointsProperties.getInsertData());
             ResponseEntity<?> responseEntity = postDataService.postData(endpointsProperties.getInsertData(), jsonPayload);
             return handleResponse(responseEntity);
         } catch (CloudDataConversionException | CloudDataAdapterException | CloudInteractionException e) {
-            log.info("Exception {}", e.getMessage());
+            log.warn(" Exception {} {}", e.getClass().getName(), e.getMessage());
             throw e;
         } catch (Exception e) {
-            log.info(e.getMessage());
+            log.warn(" Exception {} {}", e.getClass().getName(), e.getMessage());
             throw new CloudInteractionException(ErrorCodes.CLOUD_INSERT_ERROR, e.getMessage());
         }
     }
@@ -65,10 +63,10 @@ public class InsertObjectImpl implements InsertObject {
             InsertProto.InsertResponse insertResponseProto = responseBuilder.build();
             return insertProtoAdapter.getInsertMessageResponse(insertResponseProto);
         } catch (IOException e) {
-            log.info("Exception {}", e.getMessage());
+            log.warn(" Exception {} {}", e.getClass().getName(), e.getMessage());
             throw new CloudDataConversionException(e.getMessage());
         } catch (Exception e) {
-            log.info("Exception {}", e.getMessage());
+            log.warn(" Exception {} {}", e.getClass().getName(), e.getMessage());
             throw new CloudInteractionException(ErrorCodes.CLOUD_INSERT_ERROR, e.getMessage());
         }
 

@@ -1,4 +1,4 @@
-package com.yoti.app.httpClient;
+package com.yoti.app.content_cloud.httpClient;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -40,11 +40,10 @@ public class RestTemplateTest {
 
     }
 
-
     @Test
     public void testPostData() {
         ObjectNode node = mapper.createObjectNode();
-        node.put("name","justin");
+        node.put("name", "justin");
         log.info(node.toString());
         service.postData(properties.getRetrieveData(), node.toString());
     }

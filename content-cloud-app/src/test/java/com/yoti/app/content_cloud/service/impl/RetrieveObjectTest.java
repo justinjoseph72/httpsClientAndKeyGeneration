@@ -1,11 +1,10 @@
-package com.yoti.app.service.impl;
+package com.yoti.app.content_cloud.service.impl;
 
 import com.google.common.collect.ImmutableList;
 import com.yoti.app.content_cloud.model.ResponseRecord;
 import com.yoti.app.content_cloud.model.RetrieveMessageRequest;
 import com.yoti.app.content_cloud.model.RetrieveMessageResponse;
 import com.yoti.app.content_cloud.service.RetrieveObject;
-import com.yoti.app.content_cloud.service.impl.RetrieveObjectImpl;
 import com.yoti.app.exception.CloudInteractionException;
 import org.hamcrest.Matchers;
 import org.junit.Assert;
