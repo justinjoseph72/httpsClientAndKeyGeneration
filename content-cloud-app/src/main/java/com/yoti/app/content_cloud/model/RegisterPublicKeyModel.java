@@ -27,18 +27,18 @@ public class RegisterPublicKeyModel {
     }
 
     @JsonProperty("keyId")
-    @NotNull
+    @NotNull(message = "keyId should not be null")
     private byte[] keyId;
 
     @JsonProperty("wrapper")
-    @NotNull
+    @NotNull(message = "wrapper should not be null")
     private byte[] wrapper;
 
     @JsonProperty("wrappedKey")
-    @NotNull
+    @NotNull(message = "wrappedKey should not be null")
     private byte[] wrappedKey;
 
     @JsonProperty("validTo")
-    @NotNull
+    @NotNull(message = "validTo should not be null")
     private Date validTo;
 }

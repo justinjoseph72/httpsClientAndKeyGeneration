@@ -1,11 +1,13 @@
 package com.yoti.app.content_cloud.service.impl;
 
 import com.google.common.collect.ImmutableList;
+import com.yoti.app.content_cloud.RequestHelper;
 import com.yoti.app.content_cloud.model.ResponseRecord;
 import com.yoti.app.content_cloud.model.RetrieveMessageRequest;
 import com.yoti.app.content_cloud.model.RetrieveMessageResponse;
 import com.yoti.app.content_cloud.service.RetrieveObject;
 import com.yoti.app.exception.CloudInteractionException;
+import com.yoti.ccloudpubapi_v1.RetrieveProto;
 import org.hamcrest.Matchers;
 import org.junit.Assert;
 import org.junit.Before;
@@ -44,7 +46,6 @@ public class RetrieveObjectTest {
     @Test
     public void validateObjectCreation() {
         Assert.assertNotNull(retrieveObject);
-        RetrieveObjectImpl impl = (RetrieveObjectImpl) retrieveObject;
     }
 
     @Test
@@ -68,14 +69,8 @@ public class RetrieveObjectTest {
     }
 
     private RetrieveMessageRequest getInsertMessageRequest() {
-        return RetrieveMessageRequest.builder()
-                .cloudId("cloudId")
-                .dataGroup("Connection")
-                .requesterPublicKey("public key")
-                .queryTags(ImmutableList.copyOf(Arrays.asList("query1", "query2")))
-                .endDate(Date.from(clock.instant().plus(2, ChronoUnit.HOURS)))
-                .startDate(Date.from(clock.instant()))
-                .searchType(0)
-                .build();
+        return  RequestHelper.getRetrieveMessageRequest("cloudId","public key",Arrays.asList("query1", "query2"),
+                Date.from(clock.instant()),Date.from(clock.instant().plus(2, ChronoUnit.HOURS)), RetrieveProto.RetrieveRequest.SearchType.AND_TAGS_VALUE,true);
+
     }
 }

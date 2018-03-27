@@ -19,11 +19,16 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 
+import javax.validation.ConstraintViolation;
+import javax.validation.Validator;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Service
@@ -33,12 +38,13 @@ public class RetrieveObjectImpl implements RetrieveObject {
     private final RetrieveProtoAdapter retrieveProtoAdapter;
     private final EndpointsProperties endpointsProperties;
     private final PostDataService postDataService;
+    private final Validator validator;
     private final JsonFormat.Printer jsonPrinter = JsonFormat.printer().preservingProtoFieldNames();
     private final JsonFormat.Parser jsonParser = JsonFormat.parser();
 
     @Override
     public RetrieveMessageResponse fetchRecordsFromCloud(final RetrieveMessageRequest retrieveMessageRequest) throws CloudInteractionException, CloudDataConversionException, CloudDataAdapterException {
-        validateRequest(retrieveMessageRequest);
+        validateInputObject(retrieveMessageRequest);
         try {
             RetrieveProto.RetrieveRequest retrieveRequest = retrieveProtoAdapter
                     .getRetrieveRequestProtoFromRetrieveRequest(retrieveMessageRequest);
@@ -55,10 +61,15 @@ public class RetrieveObjectImpl implements RetrieveObject {
 
     }
 
-    private void validateRequest(final RetrieveMessageRequest obj) {
+    private void validateInputObject(final RetrieveMessageRequest obj) {
         if (obj == null) {
-            log.info("retrieve message request object is null");
             throw new CloudInteractionException(ErrorCodes.NULL_INPUT, ErrorMessages.NULL_OBJ_MSG);
+        }
+        Set<ConstraintViolation<RetrieveMessageRequest>> violations = validator.validate(obj);
+        if (!CollectionUtils.isEmpty(violations)) {
+            String message = violations.stream().map(s -> s.getMessage()).collect(Collectors.joining("::"));
+            log.debug("Invalid InputObject with error {}", message);
+            throw new CloudInteractionException(ErrorCodes.INVALID_CLOUD_BODY, message);
         }
     }
 
@@ -70,11 +81,11 @@ public class RetrieveObjectImpl implements RetrieveObject {
         }
         try {
             String jsonResponseBody = (String) httpResponse.getBody();
-            log.info("the response jsonResponseBody");
-            log.info(jsonResponseBody);
+            log.debug("the response jsonResponseBody {}", jsonResponseBody);
             RetrieveProto.RetrieveResponse.Builder builder = RetrieveProto.RetrieveResponse.newBuilder();
             jsonParser.merge(jsonResponseBody, builder);
             RetrieveProto.RetrieveResponse retrieveResponse = builder.build();
+            log.debug("Retrieve Response body parsed successfully");
             List<RetrieveProto.Record> recordProtoList = retrieveResponse.getRecordsList();
             if (recordProtoList != null && !recordProtoList.isEmpty()) {
                 List<ResponseRecord> records = new ArrayList<>();

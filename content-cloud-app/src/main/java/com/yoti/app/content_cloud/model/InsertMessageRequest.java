@@ -33,26 +33,26 @@ public class InsertMessageRequest<T> {
     }
 
     @JsonProperty("cloudId")
-    @NotBlank
+    @NotBlank(message = "cloudId cannot be null")
     private String cloudId;
 
     @JsonProperty("requesterPublicKey")
-    @NotBlank
+    @NotBlank(message = "requesterPublicKey cannot be null")
     private String requesterPublicKey;
 
     @JsonProperty("dataGroup")
-    @NotBlank
+    @NotBlank(message = "dataGroup cannot be null")
     private String dataGroup;
 
     @JsonProperty("dataObj")
-    @NotNull
+    @NotNull(message = "dataObj cannot be null")
     private T dataObj;
 
     @JsonProperty("encryptionKeyId")
-    @NotBlank
+    @NotBlank(message = "encryptionKeyId cannot be null")
     private String encryptionKeyId;
 
     @JsonProperty("tag")
-    @NotNull
+    @NotNull(message = "tag cannot be null")
     private ImmutableList<String> tag;
 }

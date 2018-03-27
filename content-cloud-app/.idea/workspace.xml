@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6026f32-d891-4989-a790-8822e0ce3fbb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ErrorCodes.java" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ErrorCodes.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/adpaters/InsertProtoAdapter.java" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/adpaters/InsertProtoAdapter.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/InsertObjectImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/InsertObjectImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/service/impl/InsertObjectTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/service/impl/InsertObjectTest.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/BinRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/BinRequest.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/InsertMessageRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/InsertMessageRequest.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/RegisterPublicKeyModel.java" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/RegisterPublicKeyModel.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/RetrieveMessageRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/RetrieveMessageRequest.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,103 +21,104 @@
   <component name="ChangesViewManager" flattened_view="false" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ModelTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/model/ModelTest.java">
+      <file leaf-file-name="InsertObjectImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/InsertObjectImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="23" lean-forward="false" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+            <state relative-caret-position="378">
+              <caret line="82" column="3" lean-forward="false" selection-start-line="82" selection-start-column="3" selection-end-line="92" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RetrieveObjectImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="45" column="78" lean-forward="false" selection-start-line="45" selection-start-column="78" selection-end-line="45" selection-end-column="78" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RetrieveMessageRequest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/RetrieveMessageRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="62" column="43" lean-forward="false" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BinRequest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/BinRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="31" column="43" lean-forward="false" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResponseRecord.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/ResponseRecord.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="28" column="21" lean-forward="false" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegisterPublicKeyModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/RegisterPublicKeyModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="33" column="31" lean-forward="false" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InsertMessageRequest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/InsertMessageRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="574">
+              <caret line="55" column="27" lean-forward="false" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RetrieveObjectTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="468">
+              <caret line="70" column="29" lean-forward="false" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1453#1454#0" expanded="true" />
+                <element signature="e#1505#1506#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InsertObjectImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/InsertObjectImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="65" column="70" lean-forward="true" selection-start-line="65" selection-start-column="70" selection-end-line="65" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ErrorCodes.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ErrorCodes.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InsertProto.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/target/generated-sources/protobuf/java/com/yoti/ccloudpubapi_v1/InsertProto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="2256" column="29" lean-forward="false" selection-start-line="2256" selection-start-column="29" selection-end-line="2256" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Insert.proto" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/proto/ccloudpubapi_v1/Insert.proto">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="24" column="41" lean-forward="false" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InsertProtoAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/adpaters/InsertProtoAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="48" column="33" lean-forward="false" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PostDataService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/PostDataService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="27" column="29" lean-forward="false" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InsertObjectTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/service/impl/InsertObjectTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="23" column="28" lean-forward="true" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InsertObject.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/InsertObject.java">
+      <file leaf-file-name="RetrieveObject.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/RetrieveObject.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+              <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InsertMessageResponse.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/InsertMessageResponse.java">
+      <file leaf-file-name="Retrieve.proto" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/proto/ccloudpubapi_v1/Retrieve.proto">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="460">
+              <caret line="93" column="19" lean-forward="false" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -172,16 +176,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/ResponseRecord.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/RetrieveMessageResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/RetrieveMessageRequest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/InsertMessageRequest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/InsertObjectTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/yoti/app/service/impl/RetrieveObjectTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/BinRequest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/RegisterPublicKeyModel.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/yoti/app/controller/ContentCloudControllerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/PostDataService.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/yoti/app/httpClient/RestTemplateTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/JsonPayloadConversionImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/BinInteractionsImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/controller/ContentCloudControllerTest.java" />
@@ -194,6 +193,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/adpaters/InsertProtoAdapter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ErrorCodes.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/InsertObjectImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/InsertMessageRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/BinRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/RegisterPublicKeyModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/RetrieveMessageRequest.java" />
       </list>
     </option>
   </component>
@@ -506,7 +511,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.InsertObjectTest">
+  <component name="RunManager" selected="JUnit.RetrieveObjectTest.validObjectReturnedForValidInput">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -578,7 +583,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="InsertObjectTest.testWriteSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RetrieveObjectTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.yoti.app.content_cloud.service.impl.*" />
@@ -589,32 +594,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.yoti.app.content_cloud.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.yoti.app.content_cloud.service.impl.InsertObjectTest" />
-      <option name="METHOD_NAME" value="testWriteSuccess" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="ModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.yoti.app.content_cloud.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="content-cloud-app" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.yoti.app.content_cloud.model" />
-      <option name="MAIN_CLASS_NAME" value="com.yoti.app.content_cloud.model.ModelTest" />
+      <option name="MAIN_CLASS_NAME" value="com.yoti.app.content_cloud.service.impl.RetrieveObjectTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -628,19 +608,44 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="ModelTest.testInsertMessageRequestDeserializing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RetrieveObjectTest.validObjectReturnedForValidInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.yoti.app.content_cloud.model.*" />
+          <option name="PATTERN" value="com.yoti.app.content_cloud.service.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="content-cloud-app" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.yoti.app.content_cloud.model" />
-      <option name="MAIN_CLASS_NAME" value="com.yoti.app.content_cloud.model.ModelTest" />
-      <option name="METHOD_NAME" value="testInsertMessageRequestDeserializing" />
+      <option name="PACKAGE_NAME" value="com.yoti.app.content_cloud.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.yoti.app.content_cloud.service.impl.RetrieveObjectTest" />
+      <option name="METHOD_NAME" value="validObjectReturnedForValidInput" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="RetrieveObjectTest.validateInputObject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.yoti.app.content_cloud.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="content-cloud-app" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.yoti.app.content_cloud.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.yoti.app.content_cloud.service.impl.RetrieveObjectTest" />
+      <option name="METHOD_NAME" value="validateInputObject" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -720,19 +725,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.ContentCloudApp" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ModelTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ModelTest.testInsertMessageRequestDeserializing" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.InsertObjectTest.testWriteSuccess" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.InsertObjectTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.InsertObjectTest.testValidateInputObject" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.InsertObjectTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.InsertObjectTest.testValidateInputObject" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.RetrieveObjectTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.RetrieveObjectTest.validateInputObject" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.RetrieveObjectTest.validObjectReturnedForValidInput" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.InsertObjectTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.InsertObjectTest.testValidateInputObject" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.InsertObjectTest.testWriteSuccess" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ModelTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ModelTest.testInsertMessageRequestDeserializing" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.RetrieveObjectTest.validObjectReturnedForValidInput" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.RetrieveObjectTest.validateInputObject" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.RetrieveObjectTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.InsertObjectTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.InsertObjectTest.testValidateInputObject" />
       </list>
     </recent_temporary>
   </component>
@@ -752,26 +757,26 @@
     <history-entry file="InsertObjectTest_testValidateInputObject - 2018.03.27 at 14h 29m 04s.xml">
       <configuration name="InsertObjectTest.testValidateInputObject" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InsertObjectTest_testWriteSuccess - 2018.03.27 at 14h 03m 52s.xml">
-      <configuration name="InsertObjectTest.testWriteSuccess" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InsertObjectTest_testWriteSuccess - 2018.03.27 at 14h 04m 55s.xml">
-      <configuration name="InsertObjectTest.testWriteSuccess" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InsertObjectTest_testWriteSuccess - 2018.03.27 at 14h 07m 58s.xml">
-      <configuration name="InsertObjectTest.testWriteSuccess" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="InsertObjectTest_testWriteSuccess - 2018.03.27 at 14h 11m 18s.xml">
       <configuration name="InsertObjectTest.testWriteSuccess" configurationId="JUnit" />
     </history-entry>
     <history-entry file="InsertObjectTest_testWriteSuccess - 2018.03.27 at 14h 25m 36s.xml">
       <configuration name="InsertObjectTest.testWriteSuccess" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ModelTest - 2018.03.27 at 13h 56m 38s.xml">
-      <configuration name="ModelTest" configurationId="JUnit" />
+    <history-entry file="RetrieveObjectTest - 2018.03.27 at 14h 44m 04s.xml">
+      <configuration name="RetrieveObjectTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ModelTest_testRetrieveMessageRequestSerialization - 2018.03.27 at 13h 33m 32s.xml">
-      <configuration name="ModelTest.testRetrieveMessageRequestSerialization" configurationId="JUnit" />
+    <history-entry file="RetrieveObjectTest_validObjectReturnedForValidInput - 2018.03.27 at 15h 03m 16s.xml">
+      <configuration name="RetrieveObjectTest.validObjectReturnedForValidInput" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RetrieveObjectTest_validObjectReturnedForValidInput - 2018.03.27 at 15h 07m 33s.xml">
+      <configuration name="RetrieveObjectTest.validObjectReturnedForValidInput" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RetrieveObjectTest_validObjectReturnedForValidInput - 2018.03.27 at 15h 08m 52s.xml">
+      <configuration name="RetrieveObjectTest.validObjectReturnedForValidInput" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RetrieveObjectTest_validateInputObject - 2018.03.27 at 14h 53m 38s.xml">
+      <configuration name="RetrieveObjectTest.validateInputObject" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -837,13 +842,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectTest.java</url>
-          <line>62</line>
+          <line>63</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectImpl.java</url>
-          <line>67</line>
+          <line>78</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
@@ -853,8 +858,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/ContentCloudInteraction.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/httpClient/RequestGeneratorTest.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/1.5.10.RELEASE/spring-boot-1.5.10.RELEASE.jar!/org/springframework/boot/env/YamlPropertySourceLoader.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -945,14 +948,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/ResponseRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="28" column="21" lean-forward="false" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="407">
@@ -965,14 +960,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="20" column="52" lean-forward="false" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/RegisterPublicKeyModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="30" column="25" lean-forward="false" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1001,14 +988,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="62" column="64" lean-forward="false" selection-start-line="62" selection-start-column="64" selection-end-line="62" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/httpClient/RestTemplateTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="404">
@@ -1021,14 +1000,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="97" column="81" lean-forward="false" selection-start-line="97" selection-start-column="81" selection-end-line="97" selection-end-column="81" />
           <folding />
         </state>
       </provider>
@@ -1075,51 +1046,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
           <caret line="26" column="200" lean-forward="false" selection-start-line="26" selection-start-column="200" selection-end-line="26" selection-end-column="200" />
-          <folding>
-            <marker date="1522157325782" expanded="true" signature="0:104" ph="/.../" />
-            <marker date="1522157325782" expanded="false" signature="156:308" ph="..." />
-            <marker date="1522157325782" expanded="true" signature="346:385" ph="@{...}" />
-            <marker date="1522157325782" expanded="true" signature="425:474" ph="@{...}" />
-            <marker date="1522157325782" expanded="true" signature="524:562" ph="@{...}" />
-            <marker date="1522157325782" expanded="true" signature="601:641" ph="@{...}" />
-            <marker date="1522157325782" expanded="true" signature="903:1066" ph="{...}" />
-            <marker date="1522157325782" expanded="false" signature="1124:1135" ph=" { " />
-            <marker date="1522157325782" expanded="false" signature="1177:1183" ph=" }" />
-            <marker date="1522157325782" expanded="false" signature="1216:1227" ph=" { " />
-            <marker date="1522157325782" expanded="false" signature="1248:1254" ph=" }" />
-            <marker date="1522157325782" expanded="false" signature="1297:1308" ph=" { " />
-            <marker date="1522157325782" expanded="false" signature="1339:1345" ph=" }" />
-            <marker date="1522157325782" expanded="false" signature="1377:1388" ph=" { " />
-            <marker date="1522157325782" expanded="false" signature="1408:1414" ph=" }" />
-            <marker date="1522157325782" expanded="false" signature="1448:1459" ph=" { " />
-            <marker date="1522157325782" expanded="false" signature="1481:1487" ph=" }" />
-            <marker date="1522157325782" expanded="true" signature="1525:3508" ph="{...}" />
-            <marker date="1522157325782" expanded="true" signature="3536:4168" ph="{...}" />
-            <marker date="1522157325782" expanded="true" signature="4199:4403" ph="{...}" />
-            <marker date="1522157325782" expanded="true" signature="4447:5658" ph="{...}" />
-            <marker date="1522157325782" expanded="true" signature="4620:4631" ph="{}" />
-            <marker date="1522157325782" expanded="true" signature="4703:4777" ph="{...}" />
-            <marker date="1522157325782" expanded="true" signature="4869:4963" ph="{...}" />
-            <marker date="1522157325782" expanded="true" signature="5033:5105" ph="{...}" />
-            <marker date="1522157325782" expanded="true" signature="5179:5255" ph="{...}" />
-            <marker date="1522157325782" expanded="true" signature="5291:5407" ph="{...}" />
-            <marker date="1522157325782" expanded="true" signature="5442:5652" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/BinRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/BinInteractionsImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="41" column="31" lean-forward="false" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -1133,14 +1059,6 @@
             <element signature="e#822#823#0" expanded="false" />
             <element signature="e#870#871#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/InsertMessageRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1254,14 +1172,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/RetrieveMessageRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="26" column="60" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="26" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/RequestHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
@@ -1280,20 +1190,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/generated-sources/protobuf/java/com/yoti/ccloudpubapi_v1/RetrieveProto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="2825" column="30" lean-forward="false" selection-start-line="2825" selection-start-column="30" selection-end-line="2825" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/model/ModelTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="29" column="23" lean-forward="false" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1302,14 +1204,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/PostDataService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="27" column="29" lean-forward="false" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -1362,10 +1256,109 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/BinInteractionsImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="38" column="34" lean-forward="false" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/generated-sources/protobuf/java/com/yoti/ccloudpubapi_v1/RetrieveProto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5233" column="29" lean-forward="false" selection-start-line="5233" selection-start-column="29" selection-end-line="5233" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/PostDataService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="27" column="29" lean-forward="false" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/RetrieveObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/InsertObjectImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="65" column="70" lean-forward="true" selection-start-line="65" selection-start-column="70" selection-end-line="65" selection-end-column="70" />
+        <state relative-caret-position="378">
+          <caret line="82" column="3" lean-forward="false" selection-start-line="82" selection-start-column="3" selection-end-line="92" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/proto/ccloudpubapi_v1/Retrieve.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="93" column="19" lean-forward="false" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="45" column="78" lean-forward="false" selection-start-line="45" selection-start-column="78" selection-end-line="45" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/service/impl/RetrieveObjectTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="70" column="29" lean-forward="false" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
+          <folding>
+            <element signature="e#1453#1454#0" expanded="true" />
+            <element signature="e#1505#1506#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/InsertMessageRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="574">
+          <caret line="55" column="27" lean-forward="false" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/BinRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="31" column="43" lean-forward="false" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/ResponseRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="28" column="21" lean-forward="false" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/RegisterPublicKeyModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="33" column="31" lean-forward="false" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/model/RetrieveMessageRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="62" column="43" lean-forward="false" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
           <folding />
         </state>
       </provider>

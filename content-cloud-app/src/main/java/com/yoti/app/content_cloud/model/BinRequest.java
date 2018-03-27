@@ -25,18 +25,18 @@ public class BinRequest {
     }
 
     @JsonProperty("recordId")
-    @NotBlank
+    @NotBlank(message = "recordId should not be null")
     private String recordId;
 
     @JsonProperty("requesterPublicKey")
-    @NotBlank
+    @NotBlank(message = "requesterPublicKey should not be null")
     private String requesterPublicKey;
 
     @JsonProperty("cloudId")
-    @NotBlank
+    @NotBlank(message = "cloudId should not be null")
     private String cloudId;
 
     @JsonProperty("dataGroup")
-    @NotBlank
+    @NotBlank(message = "dataGroup should not be null")
     private String dataGroup;
 }
