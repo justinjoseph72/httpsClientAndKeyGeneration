@@ -3,7 +3,9 @@ package com.yoti.app.content_cloud.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ImmutableList;
 import com.yoti.app.UrlConstants.ApiConstants;
+import com.yoti.app.content_cloud.RequestHelper;
 import com.yoti.app.content_cloud.model.InsertMessageRequest;
+import com.yoti.app.controllers.model.ContentCloudModel;
 import com.yoti.app.domain.Person;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Before;
@@ -50,8 +52,7 @@ public class ContentCloudControllerTest {
             mockMvc.perform(MockMvcRequestBuilders.post(getInviteUrl()).contentType(MediaType.APPLICATION_JSON_VALUE).content(jsonPayLoad))
                     .andExpect(MockMvcResultMatchers.status().is2xxSuccessful());
         } catch (Exception e) {
-            e.printStackTrace();
-            log.warn(e.getMessage());
+            log.warn("{} {}", e.getClass().getName(), e.getMessage());
         }
     }
 
@@ -63,8 +64,7 @@ public class ContentCloudControllerTest {
             mockMvc.perform(MockMvcRequestBuilders.post(getInviteUrl()).contentType(MediaType.APPLICATION_JSON_VALUE).content(jsonPayLoad))
                     .andExpect(MockMvcResultMatchers.status().is2xxSuccessful());
         } catch (Exception e) {
-            e.printStackTrace();
-            log.warn(e.getMessage());
+            log.warn("{} {}", e.getClass().getName(), e.getMessage());
         }
     }
 
@@ -76,50 +76,47 @@ public class ContentCloudControllerTest {
             mockMvc.perform(MockMvcRequestBuilders.post(getInviteUrl()).contentType(MediaType.APPLICATION_JSON_VALUE).content(jsonPayLoad))
                     .andExpect(MockMvcResultMatchers.status().isBadRequest());
         } catch (Exception e) {
-            e.printStackTrace();
-            log.warn(e.getMessage());
+            log.warn("{} {}", e.getClass().getName(), e.getMessage());
         }
+    }
+
+    @Test
+    public void testee() {
+        try {
+            String jsonPayLoad = mapper.writeValueAsString(getContentCloudModelForInsert());
+            log.info("payload is {}", jsonPayLoad);
+            mockMvc.perform(MockMvcRequestBuilders.post(gettestUrl()).contentType(MediaType.APPLICATION_JSON_VALUE).content(jsonPayLoad))
+                    .andExpect(MockMvcResultMatchers.status().isOk());
+        } catch (Exception e) {
+            log.warn("{} {}", e.getClass().getName(), e.getMessage());
+        }
+    }
+
+    private ContentCloudModel<InsertMessageRequest> getContentCloudModelForInsert() {
+        InsertMessageRequest<String> insertMessageRequest = getInsertMessageRequestForStringInput();
+        ContentCloudModel model = ContentCloudModel.builder().data(insertMessageRequest).privateKey("private-key".getBytes()).build();
+        return model;
     }
 
 
     private InsertMessageRequest<String> getInsertMessageRequestForStringInput() {
-        InsertMessageRequest insertMessageRequest = InsertMessageRequest.builder()
-                .cloudId("cloudId")
-                .tag(ImmutableList.copyOf(Arrays.asList("key1", "key2")))
-                .encryptionKeyId("eee")
-                .dataObj("common-aes-key")
-                .dataGroup("Conn")
-                .requesterPublicKey("public-key")
-                .build();
-        return insertMessageRequest;
+        return RequestHelper.getInsertMessagRequest("common-aes-key", "public-key", "cloudId", Arrays.asList("key1", "key2"), "eee");
     }
 
     private InsertMessageRequest<Person> getInsertMessageRequestForPersonObject() {
         Person person = new Person(1, "givenName", "lastName", "email@email.com");
-        InsertMessageRequest insertMessageRequest = InsertMessageRequest.builder()
-                .cloudId("cloudId")
-                .tag(ImmutableList.copyOf(Arrays.asList("key1", "key2")))
-                .encryptionKeyId("eee")
-                .dataObj(person)
-                .dataGroup("Conn")
-                .requesterPublicKey("public-key")
-                .build();
-        return insertMessageRequest;
+        return RequestHelper.getInsertMessagRequest(person, "public-key", "cloudId", Arrays.asList("key1", "key2"), "eee");
     }
 
     private InsertMessageRequest<String> getInvalidInsertMessageRequestForStringInput() {
-        InsertMessageRequest insertMessageRequest = InsertMessageRequest.builder()
-                .cloudId("cloudId")
-                .tag(ImmutableList.copyOf(Arrays.asList("key1", "key2")))
-                .encryptionKeyId(null)
-                .dataObj("common-aes-key")
-                .dataGroup("Conn")
-                .requesterPublicKey("public-key")
-                .build();
-        return insertMessageRequest;
+        return RequestHelper.getInsertMessagRequest("common-aes-key", "public-key", "cloudId", Arrays.asList("key1", "key2"), null);
     }
 
     private String getInviteUrl() {
         return ApiConstants.API_BASE.concat(ApiConstants.INSERT_RECORD);
+    }
+
+    private String gettestUrl() {
+        return ApiConstants.API_BASE.concat(ApiConstants.NEW_PATH);
     }
 }

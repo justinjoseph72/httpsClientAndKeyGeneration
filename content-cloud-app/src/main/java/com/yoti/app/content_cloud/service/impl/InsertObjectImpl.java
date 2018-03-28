@@ -9,6 +9,7 @@ import com.yoti.app.content_cloud.model.InsertMessageRequest;
 import com.yoti.app.content_cloud.model.InsertMessageResponse;
 import com.yoti.app.content_cloud.service.InsertObject;
 import com.yoti.app.content_cloud.service.PostDataService;
+import com.yoti.app.controllers.model.ContentCloudModel;
 import com.yoti.app.exception.CloudDataAdapterException;
 import com.yoti.app.exception.CloudDataConversionException;
 import com.yoti.app.exception.CloudInteractionException;
@@ -40,10 +41,11 @@ public class InsertObjectImpl implements InsertObject {
     private final JsonFormat.Parser jsonParser = JsonFormat.parser();
 
     @Override
-    public <T> InsertMessageResponse insertObjectToCloud(final InsertMessageRequest<T> insertMessageRequest) throws CloudInteractionException, CloudDataAdapterException {
-        validateInputObject(insertMessageRequest);
+    public <T> InsertMessageResponse insertObjectToCloud(final ContentCloudModel<InsertMessageRequest<T>> contentCloudModel) throws CloudInteractionException, CloudDataAdapterException {
+        validateInputObject(contentCloudModel);
+        validateInputObject(contentCloudModel.getData());
         try {
-            InsertProto.InsertRequest request = insertProtoAdapter.getInsertProtoFromInsertMessageRequest(insertMessageRequest);
+            InsertProto.InsertRequest request = insertProtoAdapter.getInsertProtoFromInsertMessageRequest(contentCloudModel.getData());
             String jsonPayload = jsonPrinter.print(request);
             ResponseEntity<?> responseEntity = postDataService.postData(endpointsProperties.getInsertData(), jsonPayload);
             return handleResponse(responseEntity);
