@@ -32,11 +32,6 @@ public class InsertObjectTest {
     @Rule
     public ExpectedException expectedException = ExpectedException.none();
 
-    @Before
-    public void init() {
-
-    }
-
     @Test
     public void testObjectCreated() {
         Assert.assertNotNull(insertObject);
