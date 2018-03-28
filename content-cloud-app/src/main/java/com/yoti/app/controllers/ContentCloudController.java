@@ -5,6 +5,7 @@ import com.yoti.app.content_cloud.model.*;
 import com.yoti.app.content_cloud.service.BinInteractions;
 import com.yoti.app.content_cloud.service.InsertObject;
 import com.yoti.app.content_cloud.service.RetrieveObject;
+import com.yoti.app.controllers.model.ContentCloudModel;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
@@ -66,5 +67,12 @@ public class ContentCloudController {
         log.info("starting the empty bin process");
         Boolean response = binService.emptyBin(binRequest);
         return ResponseEntity.ok(response);
+    }
+
+    @PostMapping(path = ApiConstants.NEW_PATH, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Boolean> testEndpoint(@Valid @RequestBody ContentCloudModel<InsertMessageRequest> insertMessageRequest) {
+        log.info("the private Key is {}", insertMessageRequest.getPrivateKey());
+        log.info("the insert message is {}", insertMessageRequest.getData());
+        return ResponseEntity.ok(Boolean.valueOf(true));
     }
 }

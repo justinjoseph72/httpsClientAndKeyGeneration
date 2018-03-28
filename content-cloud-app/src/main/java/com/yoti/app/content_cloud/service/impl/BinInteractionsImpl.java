@@ -101,7 +101,7 @@ public class BinInteractionsImpl implements BinInteractions {
             throw new CloudInteractionException(ErrorCodes.CLOUD_INSERT_ERROR, String.format("Status %d returned from the Content Cloud Service",
                     httpResponse.getStatusCodeValue()));
         }
-        return Boolean.TRUE;
+        return Boolean.valueOf(true);
     }
 
     private void validateRequest(final BinRequest binRequest) {
