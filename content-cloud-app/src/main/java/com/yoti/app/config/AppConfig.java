@@ -38,7 +38,7 @@ public class AppConfig {
             requestFactory = new HttpComponentsClientHttpRequestFactory();
             requestFactory.setHttpClient(httpClient);
         } catch (NoSuchAlgorithmException | KeyManagementException | KeyStoreException e) {
-            log.warn("Exception in in initalizing rest template {} {}", e.getClass().getName(), e.getMessage());
+            log.warn("Exception in in initalising rest template {} {}", e.getClass().getName(), e.getMessage());
         }
         return requestFactory;
     }
