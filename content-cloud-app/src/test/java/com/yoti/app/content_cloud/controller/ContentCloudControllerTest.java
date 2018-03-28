@@ -45,30 +45,6 @@ public class ContentCloudControllerTest {
     private ObjectMapper mapper;
 
     @Test
-    public void testInsertStringDataEndpoint() {
-        try {
-            String jsonPayLoad = mapper.writeValueAsString(getInsertMessageRequestForStringInput());
-            log.info("payload is {}", jsonPayLoad);
-            mockMvc.perform(MockMvcRequestBuilders.post(getInviteUrl()).contentType(MediaType.APPLICATION_JSON_VALUE).content(jsonPayLoad))
-                    .andExpect(MockMvcResultMatchers.status().is2xxSuccessful());
-        } catch (Exception e) {
-            log.warn("{} {}", e.getClass().getName(), e.getMessage());
-        }
-    }
-
-    @Test
-    public void testInsertPersonDataEndpoint() {
-        try {
-            String jsonPayLoad = mapper.writeValueAsString(getInsertMessageRequestForPersonObject());
-            log.info("payload is {}", jsonPayLoad);
-            mockMvc.perform(MockMvcRequestBuilders.post(getInviteUrl()).contentType(MediaType.APPLICATION_JSON_VALUE).content(jsonPayLoad))
-                    .andExpect(MockMvcResultMatchers.status().is2xxSuccessful());
-        } catch (Exception e) {
-            log.warn("{} {}", e.getClass().getName(), e.getMessage());
-        }
-    }
-
-    @Test
     public void testInValidDataInsertDataEndpoint() {
         try {
             String jsonPayLoad = mapper.writeValueAsString(getInvalidInsertMessageRequestForStringInput());
@@ -81,7 +57,7 @@ public class ContentCloudControllerTest {
     }
 
     @Test
-    public void testee() {
+    public void shouldReturnOkStatusForInsertingValidContentCloudDataHavingStringData() {
         try {
             String jsonPayLoad = mapper.writeValueAsString(getContentCloudModelForInsert());
             log.info("payload is {}", jsonPayLoad);
@@ -92,8 +68,27 @@ public class ContentCloudControllerTest {
         }
     }
 
+    @Test
+    public void shouldReturnOkStatusForInsertingValidContentCloudDataHavingPersonData(){
+        try{
+            String jsonPayload = mapper.writeValueAsString(getContentCloudModelForInsertWithPerson());
+            log.info("payload is {}",jsonPayload);
+            mockMvc.perform(MockMvcRequestBuilders.post(gettestUrl()).contentType(MediaType.APPLICATION_JSON_VALUE).content(jsonPayload))
+                    .andExpect(MockMvcResultMatchers.status().isOk());
+        }catch (Exception e){
+            log.warn(" {} {}",e.getClass().getName(),e.getMessage());
+        }
+    }
+
+
     private ContentCloudModel<InsertMessageRequest> getContentCloudModelForInsert() {
         InsertMessageRequest<String> insertMessageRequest = getInsertMessageRequestForStringInput();
+        ContentCloudModel model = ContentCloudModel.builder().data(insertMessageRequest).privateKey("private-key".getBytes()).build();
+        return model;
+    }
+
+    private ContentCloudModel<InsertMessageRequest<Person>> getContentCloudModelForInsertWithPerson(){
+        InsertMessageRequest<Person> insertMessageRequest = getInsertMessageRequestForPersonObject();
         ContentCloudModel model = ContentCloudModel.builder().data(insertMessageRequest).privateKey("private-key".getBytes()).build();
         return model;
     }
