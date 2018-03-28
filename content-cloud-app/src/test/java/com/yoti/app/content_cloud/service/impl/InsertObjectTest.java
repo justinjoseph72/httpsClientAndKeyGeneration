@@ -9,7 +9,6 @@ import com.yoti.app.domain.Person;
 import com.yoti.app.exception.CloudInteractionException;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -46,8 +45,9 @@ public class InsertObjectTest {
         InsertMessageResponse response = insertObject.insertObjectToCloud(contentCloudModel);
         Assert.assertNotNull(response);
         insertMessageRequest = RequestHelper.getInsertMessagRequest(null, "public-key", "cloudId", Arrays.asList("key1", "key2"), "encryptionId");
+        contentCloudModel = ContentCloudModel.builder().data(insertMessageRequest).privateKey("ssss".getBytes()).build();
         expectedException.expect(CloudInteractionException.class);
-        insertObject.insertObjectToCloud(insertMessageRequest);
+        insertObject.insertObjectToCloud(contentCloudModel);
     }
 
     private ContentCloudModel getContentCloudModel() {
@@ -58,8 +58,7 @@ public class InsertObjectTest {
 
     @Test
     public void testWriteSuccess() {
-        InsertMessageRequest insertMessageRequest = getInsertMessageRequest();
-        InsertMessageResponse response = insertObject.insertObjectToCloud(insertMessageRequest);
+        InsertMessageResponse response = insertObject.insertObjectToCloud(getContentCloudModel());
         Assert.assertNotNull(response);
         log.info(response.getRecordId());
     }

@@ -28,7 +28,7 @@ public class ContentCloudController {
     private final BinInteractions binService;
 
     @PostMapping(path = ApiConstants.INSERT_RECORD, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<InsertMessageResponse> insertDataToContentCloud(@Valid @RequestBody InsertMessageRequest messageRequest) {
+    public ResponseEntity<InsertMessageResponse> insertDataToContentCloud(@Valid @RequestBody ContentCloudModel messageRequest) {
         log.info("starting the insert process");
         InsertMessageResponse response = insertService.insertObjectToCloud(messageRequest);
         return ResponseEntity.ok(response);
