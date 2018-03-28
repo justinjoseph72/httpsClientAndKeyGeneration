@@ -4,6 +4,7 @@ import com.yoti.app.content_cloud.RequestHelper;
 import com.yoti.app.content_cloud.model.InsertMessageRequest;
 import com.yoti.app.content_cloud.model.InsertMessageResponse;
 import com.yoti.app.content_cloud.service.InsertObject;
+import com.yoti.app.controllers.model.ContentCloudModel;
 import com.yoti.app.domain.Person;
 import com.yoti.app.exception.CloudInteractionException;
 import lombok.extern.slf4j.Slf4j;
@@ -39,12 +40,19 @@ public class InsertObjectTest {
 
     @Test
     public void testValidateInputObject() {
-        InsertMessageRequest insertMessageRequest = getInsertMessageRequest();
-        InsertMessageResponse response = insertObject.insertObjectToCloud(insertMessageRequest);
+
+        ContentCloudModel contentCloudModel = getContentCloudModel();
+        final InsertMessageRequest insertMessageRequest;
+        InsertMessageResponse response = insertObject.insertObjectToCloud(contentCloudModel);
         Assert.assertNotNull(response);
         insertMessageRequest = RequestHelper.getInsertMessagRequest(null, "public-key", "cloudId", Arrays.asList("key1", "key2"), "encryptionId");
         expectedException.expect(CloudInteractionException.class);
         insertObject.insertObjectToCloud(insertMessageRequest);
+    }
+
+    private ContentCloudModel getContentCloudModel() {
+        InsertMessageRequest insertMessageRequest = getInsertMessageRequest();
+        return ContentCloudModel.builder().data(insertMessageRequest).privateKey("ssss".getBytes()).build();
     }
 
 
