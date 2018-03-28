@@ -1,6 +1,5 @@
 package com.yoti.app.content_cloud.service.impl;
 
-import com.google.common.collect.ImmutableList;
 import com.yoti.app.content_cloud.RequestHelper;
 import com.yoti.app.content_cloud.model.ResponseRecord;
 import com.yoti.app.content_cloud.model.RetrieveMessageRequest;
