@@ -263,5 +263,29 @@
 
     </dependencies>
 
+    <profiles>
+
+        <profile>
+            <id>build</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <findbugs.skip>true</findbugs.skip>
+                <enforcer.skip>true</enforcer.skip>
+                <nvd.skip>true</nvd.skip>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>codeQuality</id>
+            <properties>
+                <findbugs.skip>false</findbugs.skip>
+                <enforcer.skip>false</enforcer.skip>
+                <nvd.skip>false</nvd.skip>
+            </properties>
+        </profile>
+    </profiles>
+
 
 </project>
