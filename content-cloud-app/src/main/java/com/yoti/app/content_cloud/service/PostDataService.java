@@ -18,6 +18,8 @@ public class PostDataService {
     private final RestTemplate restTemplate;
 
     private HttpHeaders getHeaders() {
+
+        //TODO update the headers to use the correct values
         HttpHeaders headers = new HttpHeaders();
         headers.add(ServerConstants.CONTENT_TYPE_HEADER, "application/json");
         headers.add(ServerConstants.AUTH_DIGEST, "sdfssfsdf");

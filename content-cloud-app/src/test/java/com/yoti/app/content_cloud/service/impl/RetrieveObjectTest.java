@@ -5,6 +5,7 @@ import com.yoti.app.content_cloud.model.ResponseRecord;
 import com.yoti.app.content_cloud.model.RetrieveMessageRequest;
 import com.yoti.app.content_cloud.model.RetrieveMessageResponse;
 import com.yoti.app.content_cloud.service.RetrieveObject;
+import com.yoti.app.controllers.model.ContentCloudModel;
 import com.yoti.app.exception.CloudInteractionException;
 import com.yoti.ccloudpubapi_v1.RetrieveProto;
 import org.hamcrest.Matchers;
@@ -59,7 +60,7 @@ public class RetrieveObjectTest {
      */
     @Test
     public void validObjectReturnedForValidInput() {
-        RetrieveMessageResponse response = retrieveObject.fetchRecordsFromCloud(getInsertMessageRequest());
+        RetrieveMessageResponse response = retrieveObject.fetchRecordsFromCloud(getContentCloudModel(getInsertMessageRequest()));
         Assert.assertNotNull(response);
         Assert.assertNotNull(response.getRecords());
         Assert.assertThat(response.getRecords(), Matchers.not(Matchers.emptyIterableOf(ResponseRecord.class)));
@@ -68,8 +69,16 @@ public class RetrieveObjectTest {
     }
 
     private RetrieveMessageRequest getInsertMessageRequest() {
-        return  RequestHelper.getRetrieveMessageRequest("cloudId","public key",Arrays.asList("query1", "query2"),
-                Date.from(clock.instant()),Date.from(clock.instant().plus(2, ChronoUnit.HOURS)), RetrieveProto.RetrieveRequest.SearchType.AND_TAGS_VALUE,true);
+        return RequestHelper.getRetrieveMessageRequest("cloudId", "public key", Arrays.asList("query1", "query2"),
+                Date.from(clock.instant()), Date.from(clock.instant().plus(2, ChronoUnit.HOURS)), RetrieveProto.RetrieveRequest.SearchType.AND_TAGS_VALUE, true);
 
+    }
+
+    private <T> ContentCloudModel<T> getContentCloudModel(T retrieveMessageRequest) {
+        ContentCloudModel contentCloudModel = ContentCloudModel.builder()
+                .data(retrieveMessageRequest)
+                .privateKey("ssss".getBytes())
+                .build();
+        return contentCloudModel;
     }
 }

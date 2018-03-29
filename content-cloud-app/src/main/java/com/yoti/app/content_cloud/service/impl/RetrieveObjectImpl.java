@@ -11,6 +11,7 @@ import com.yoti.app.content_cloud.model.RetrieveMessageRequest;
 import com.yoti.app.content_cloud.model.RetrieveMessageResponse;
 import com.yoti.app.content_cloud.service.PostDataService;
 import com.yoti.app.content_cloud.service.RetrieveObject;
+import com.yoti.app.controllers.model.ContentCloudModel;
 import com.yoti.app.exception.CloudDataAdapterException;
 import com.yoti.app.exception.CloudDataConversionException;
 import com.yoti.app.exception.CloudInteractionException;
@@ -43,11 +44,12 @@ public class RetrieveObjectImpl implements RetrieveObject {
     private final JsonFormat.Parser jsonParser = JsonFormat.parser();
 
     @Override
-    public RetrieveMessageResponse fetchRecordsFromCloud(final RetrieveMessageRequest retrieveMessageRequest) throws CloudInteractionException, CloudDataConversionException, CloudDataAdapterException {
+    public RetrieveMessageResponse fetchRecordsFromCloud(final ContentCloudModel<RetrieveMessageRequest> retrieveMessageRequest) throws CloudInteractionException, CloudDataConversionException, CloudDataAdapterException {
         validateInputObject(retrieveMessageRequest);
+        validateInputObject(retrieveMessageRequest.getData());
         try {
             RetrieveProto.RetrieveRequest retrieveRequest = retrieveProtoAdapter
-                    .getRetrieveRequestProtoFromRetrieveRequest(retrieveMessageRequest);
+                    .getRetrieveRequestProtoFromRetrieveRequest(retrieveMessageRequest.getData());
             String jsonStr = jsonPrinter.print(retrieveRequest);
             ResponseEntity<?> responseEntity = postDataService.postData(endpointsProperties.getRetrieveData(), jsonStr);
             return handleResponse(responseEntity);
@@ -61,13 +63,13 @@ public class RetrieveObjectImpl implements RetrieveObject {
 
     }
 
-    private void validateInputObject(final RetrieveMessageRequest obj) {
+    private <T> void validateInputObject(final T obj) {
         if (obj == null) {
             throw new CloudInteractionException(ErrorCodes.NULL_INPUT, ErrorMessages.NULL_OBJ_MSG);
         }
-        Set<ConstraintViolation<RetrieveMessageRequest>> violations = validator.validate(obj);
+        Set<ConstraintViolation<T>> violations = validator.validate(obj);
         if (!CollectionUtils.isEmpty(violations)) {
-            String message = violations.stream().map(s -> s.getMessage()).collect(Collectors.joining("::"));
+            String message = violations.stream().map(ConstraintViolation::getMessage).collect(Collectors.joining("::"));
             log.debug("Invalid InputObject with error {}", message);
             throw new CloudInteractionException(ErrorCodes.INVALID_CLOUD_BODY, message);
         }

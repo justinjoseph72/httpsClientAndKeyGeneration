@@ -2,6 +2,7 @@ package com.yoti.app.content_cloud.service.impl;
 
 import com.yoti.app.content_cloud.model.BinRequest;
 import com.yoti.app.content_cloud.service.BinInteractions;
+import com.yoti.app.controllers.model.ContentCloudModel;
 import com.yoti.app.exception.CloudInteractionException;
 import org.junit.Assert;
 import org.junit.Rule;
@@ -39,24 +40,21 @@ public class BinInteractionTest {
 
     @Test
     public void validResponseForValidMoveToBinInput() {
-        BinRequest binRequest = getBinRequest();
-        Boolean moved = binInteractions.moveObjectToBin(binRequest);
+        Boolean moved = binInteractions.moveObjectToBin(getContentCloudModel(getBinRequest()));
         Assert.assertNotNull(moved);
         Assert.assertTrue(moved.booleanValue());
     }
 
     @Test
     public void validResponseForValidRestoreBinInput() {
-        BinRequest binRequest = getBinRequest();
-        Boolean moved = binInteractions.restoreObjectFromBin(binRequest);
+        Boolean moved = binInteractions.restoreObjectFromBin(getContentCloudModel(getBinRequest()));
         Assert.assertNotNull(moved);
         Assert.assertTrue(moved.booleanValue());
     }
 
     @Test
     public void validResponseForValidRemoveBinInput() {
-        BinRequest binRequest = getBinRequest();
-        Boolean moved = binInteractions.removeBinnedObjectFromBin(binRequest);
+        Boolean moved = binInteractions.removeBinnedObjectFromBin(getContentCloudModel(getBinRequest()));
         Assert.assertNotNull(moved);
         Assert.assertTrue(moved.booleanValue());
     }
@@ -69,5 +67,13 @@ public class BinInteractionTest {
                 .recordId("eee")
                 .requesterPublicKey("sdfasdfasdf")
                 .build();
+    }
+
+    private <T> ContentCloudModel<T> getContentCloudModel(final T binRequest) {
+        ContentCloudModel contentCloudModel = ContentCloudModel.builder()
+                .data(binRequest)
+                .privateKey("sss".getBytes())
+                .build();
+        return contentCloudModel;
     }
 }
