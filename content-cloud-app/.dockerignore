@@ -1,0 +1,12 @@
+/src/**
+/mvn*
+/pom.xml
+/build-and-run-*
+/tools/**
+*/*classes*
+*/generated*
+*/site
+*/maven*
+*/surefire*
+
+
