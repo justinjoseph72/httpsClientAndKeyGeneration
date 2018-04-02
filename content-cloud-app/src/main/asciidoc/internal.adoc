@@ -1,0 +1,10 @@
+= Content Cloud Client - Internal API Documentation
+Justin Joseph
+v1.0, April 2018
+:doctype: book
+:toc:
+:toclevels: 2
+:source-highlighter: highlightjs
+:homepage: https://yoticonnections.com
+
+This is a document explaining how to use the content cloud client

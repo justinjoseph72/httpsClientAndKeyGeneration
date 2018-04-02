@@ -12,6 +12,7 @@
         <connect-api-proto.version>1.1.1-SNAPSHOT</connect-api-proto.version>
         <signed-requests.utils.version>1.1-SNAPSHOT</signed-requests.utils.version>
         <jacoco.plugin.version>0.7.9</jacoco.plugin.version>
+        <project.build.finalName>content-cloud-client</project.build.finalName>
     </properties>
 
 
@@ -139,8 +140,28 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>1.0.0</version>
+                <configuration>
+                    <imageName>content-cloud-client</imageName>
+                    <baseImage>java:8</baseImage>
+                    <maintainer>Justin Joseph (justin.joseph@yoti.com</maintainer>
+                    <entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
+                    <!-- copy the service's jar file from target into the root directory of the image -->
+                    <resources>
+                        <resource>
+                            <targetPath>/</targetPath>
+                            <directory>${project.build.directory}</directory>
+                            <include>${project.build.finalName}.jar</include>
+                        </resource>
+                    </resources>
+                </configuration>
+            </plugin>
 
         </plugins>
+        <finalName>${project.build.finalName}</finalName>
     </build>
     <packaging>jar</packaging>
 
@@ -286,6 +307,7 @@
             </properties>
         </profile>
     </profiles>
+
 
 
 </project>
