@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.yoti.app.UrlConstants.ServerConstants;
 import com.yoti.app.content_cloud.RequestHelper;
 import com.yoti.app.content_cloud.model.InsertMessageRequest;
-import com.yoti.app.content_cloud.service.SignMessageService;
+import com.yoti.app.content_cloud.service.CreateSignatureService;
 import com.yoti.app.exception.SignMessageException;
 import com.yoti.signedrequests.utils.exceptions.SignedRequestValidationException;
 import com.yoti.signedrequests.utils.service.SignedRequestService;
@@ -27,10 +27,10 @@ import java.util.Arrays;
 @Slf4j
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class SignMessageTest {
+public class CreateSignatuerServiceTest {
 
     @Autowired
-    private SignMessageService signMessageService;
+    private CreateSignatureService createSignatureService;
 
     @Autowired
     private SignedRequestService signedRequestService;
@@ -53,7 +53,7 @@ public class SignMessageTest {
 
     @Test
     public void loadContext() {
-        Assert.assertNotNull(signMessageService);
+        Assert.assertNotNull(createSignatureService);
     }
 
     @Test
@@ -63,7 +63,7 @@ public class SignMessageTest {
         Assert.assertNotNull(privateKeyByte);
         InsertMessageRequest insertMessageRequest = RequestHelper.getInsertMessagRequest("TEstStr", "sfsdf", "ccc",
                 Arrays.asList("key1", "key2"), "eee");
-        String signedData = signMessageService.signMessage(getJsonPayload(insertMessageRequest),privateKeyByte);
+        String signedData = createSignatureService.signMessage(getJsonPayload(insertMessageRequest),privateKeyByte);
 
     }
 
@@ -73,7 +73,7 @@ public class SignMessageTest {
         Assert.assertNotNull(privateKeyByte);
         InsertMessageRequest insertMessageRequest = RequestHelper.getInsertMessagRequest("TEstStr", "sfsdf", "ccc",
                 Arrays.asList("key1", "key2"), "eee");
-        String signedData = signMessageService.signMessage(getJsonPayload(insertMessageRequest),privateKeyByte);
+        String signedData = createSignatureService.signMessage(getJsonPayload(insertMessageRequest),privateKeyByte);
         Assert.assertNotNull(signedData);
     }
 
@@ -84,7 +84,7 @@ public class SignMessageTest {
         InsertMessageRequest insertMessageRequest = RequestHelper.getInsertMessagRequest("TEstStr", "sfsdf", "ccc",
                 Arrays.asList("key1", "key2"), "eee");
         String message = getJsonPayload(insertMessageRequest);
-        String signedData = signMessageService.signMessage(message,privateKeyBytes);
+        String signedData = createSignatureService.signMessage(message,privateKeyBytes);
         signedRequestService.verify(publicKey,message,signedData);
     }
 
@@ -93,7 +93,7 @@ public class SignMessageTest {
         expectedException.expect(SignedRequestValidationException.class);
         expectedException.expectMessage("The signature is not valid");
         String message ="This is a test string";
-        String signedData = signMessageService.signMessage(message,keyPair.getPrivate().getEncoded());
+        String signedData = createSignatureService.signMessage(message,keyPair.getPrivate().getEncoded());
         signedRequestService.verify(keyPair.getPublic(),"Another text",signedData);
     }
 

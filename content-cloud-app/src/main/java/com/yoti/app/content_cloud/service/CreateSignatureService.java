@@ -1,6 +1,6 @@
 package com.yoti.app.content_cloud.service;
 
-public interface SignMessageService {
+public interface CreateSignatureService {
 
      String signMessage(final String message, final byte[] privateKey);
 

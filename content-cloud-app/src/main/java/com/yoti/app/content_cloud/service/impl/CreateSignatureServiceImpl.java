@@ -1,7 +1,7 @@
 package com.yoti.app.content_cloud.service.impl;
 
 import com.yoti.app.UrlConstants.ErrorCodes;
-import com.yoti.app.content_cloud.service.SignMessageService;
+import com.yoti.app.content_cloud.service.CreateSignatureService;
 import com.yoti.app.exception.KeyGenerationException;
 import com.yoti.app.exception.SignMessageException;
 import com.yoti.signedrequests.utils.key.PrivateKeyProvider;
@@ -16,7 +16,7 @@ import java.util.Base64;
 @Service
 @Slf4j
 @RequiredArgsConstructor
-public class SignMessageServiceImpl implements SignMessageService {
+public class CreateSignatureServiceImpl implements CreateSignatureService {
 
     private final SignedRequestService signedRequestService;
 
