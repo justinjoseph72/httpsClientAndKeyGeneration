@@ -35,7 +35,6 @@ public class SignMessageServiceImpl implements SignMessageService {
         }
     }
 
-
     private String signRequestMessage(final String message, final PrivateKeyProvider privateKeyProvider){
         return signedRequestService.sign(message,privateKeyProvider);
     }
