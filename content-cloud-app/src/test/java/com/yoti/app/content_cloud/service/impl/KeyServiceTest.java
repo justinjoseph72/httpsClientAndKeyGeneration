@@ -32,7 +32,7 @@ public class KeyServiceTest {
     @Before
     public void init() throws NoSuchProviderException, NoSuchAlgorithmException {
         Security.addProvider(new BouncyCastleProvider());
-        KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance(ServerConstants.CIPHER_ALGORITHM, ServerConstants.PROVIDER);
+        KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance(ServerConstants.CIPHER_ALGORITHM, ServerConstants.BC_PROVIDER);
         keyPairGenerator.initialize(2018);
         keyPair = keyPairGenerator.generateKeyPair();
     }
@@ -74,7 +74,7 @@ public class KeyServiceTest {
     public void shouldEncrytAndDecryptProperly() throws NoSuchPaddingException, NoSuchAlgorithmException, NoSuchProviderException, InvalidKeyException, BadPaddingException, IllegalBlockSizeException {
         String testStr = "This is a test String";
         PrivateKey privateKey = keyPair.getPrivate();
-        Cipher cipher = Cipher.getInstance(ServerConstants.CIPHER_ALGORITHM, ServerConstants.PROVIDER);
+        Cipher cipher = Cipher.getInstance(ServerConstants.CIPHER_ALGORITHM, ServerConstants.BC_PROVIDER);
         cipher.init(Cipher.ENCRYPT_MODE, privateKey);
         byte[] encryptedData = cipher.doFinal(testStr.getBytes());
         Assert.assertNotNull(encryptedData);

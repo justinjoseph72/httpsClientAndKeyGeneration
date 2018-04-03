@@ -52,7 +52,7 @@ public class AppConfig {
     @Bean
     public KeyFactory getKeyFactory(){
         try {
-            return KeyFactory.getInstance(ServerConstants.CIPHER_ALGORITHM, ServerConstants.PROVIDER);
+            return KeyFactory.getInstance(ServerConstants.CIPHER_ALGORITHM, ServerConstants.BC_PROVIDER);
         } catch (NoSuchAlgorithmException | NoSuchProviderException e) {
             log.warn("Key Factory initialization exception {} {}", e.getClass().getName(), e.getMessage());
             throw new KeyGenerationException(String.format("Key factory initialization exception {} {} ", e.getClass().getName(), e.getMessage()));
