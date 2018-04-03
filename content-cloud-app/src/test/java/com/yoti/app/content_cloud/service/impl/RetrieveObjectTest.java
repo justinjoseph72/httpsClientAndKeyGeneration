@@ -20,6 +20,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
 import java.time.Clock;
 import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
@@ -59,7 +61,7 @@ public class RetrieveObjectTest {
      * the response should have Tags for the byte to parse
      */
     @Test
-    public void validObjectReturnedForValidInput() {
+    public void validObjectReturnedForValidInput() throws NoSuchProviderException, NoSuchAlgorithmException {
         RetrieveMessageResponse response = retrieveObject.fetchRecordsFromCloud(getContentCloudModel(getInsertMessageRequest()));
         Assert.assertNotNull(response);
         Assert.assertNotNull(response.getRecords());
@@ -74,10 +76,10 @@ public class RetrieveObjectTest {
 
     }
 
-    private <T> ContentCloudModel<T> getContentCloudModel(T retrieveMessageRequest) {
+    private <T> ContentCloudModel<T> getContentCloudModel(T retrieveMessageRequest) throws NoSuchProviderException, NoSuchAlgorithmException {
         ContentCloudModel contentCloudModel = ContentCloudModel.builder()
                 .data(retrieveMessageRequest)
-                .privateKey("ssss".getBytes())
+                .keyData(RequestHelper.getKeyData())
                 .build();
         return contentCloudModel;
     }

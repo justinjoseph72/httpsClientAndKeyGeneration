@@ -1,11 +1,13 @@
 package com.yoti.app.content_cloud.service.impl;
 
 import com.google.common.collect.ImmutableList;
+import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.util.JsonFormat;
 import com.yoti.app.UrlConstants.ErrorCodes;
 import com.yoti.app.UrlConstants.ErrorMessages;
 import com.yoti.app.config.EndpointsProperties;
 import com.yoti.app.content_cloud.adpaters.RetrieveProtoAdapter;
+import com.yoti.app.content_cloud.model.PostDataModel;
 import com.yoti.app.content_cloud.model.ResponseRecord;
 import com.yoti.app.content_cloud.model.RetrieveMessageRequest;
 import com.yoti.app.content_cloud.model.RetrieveMessageResponse;
@@ -48,10 +50,8 @@ public class RetrieveObjectImpl implements RetrieveObject {
         validateInputObject(retrieveMessageRequest);
         validateInputObject(retrieveMessageRequest.getData());
         try {
-            RetrieveProto.RetrieveRequest retrieveRequest = retrieveProtoAdapter
-                    .getRetrieveRequestProtoFromRetrieveRequest(retrieveMessageRequest.getData());
-            String jsonStr = jsonPrinter.print(retrieveRequest);
-            ResponseEntity<?> responseEntity = postDataService.postData(endpointsProperties.getRetrieveData(), jsonStr);
+            PostDataModel postDataModel = getPostDataModel(retrieveMessageRequest);
+            ResponseEntity<?> responseEntity = postDataService.postData(postDataModel);
             return handleResponse(responseEntity);
         } catch (CloudDataConversionException | CloudDataAdapterException | CloudInteractionException e) {
             log.warn(" Exception {} {}", e.getClass().getName(), e.getMessage());
@@ -61,6 +61,17 @@ public class RetrieveObjectImpl implements RetrieveObject {
             throw new CloudInteractionException(ErrorCodes.CLOUD_RETRIEVE_ERROR, e.getMessage());
         }
 
+    }
+
+    private PostDataModel getPostDataModel(final ContentCloudModel<RetrieveMessageRequest> retrieveMessageRequest) throws InvalidProtocolBufferException {
+        RetrieveProto.RetrieveRequest retrieveRequest = retrieveProtoAdapter
+                .getRetrieveRequestProtoFromRetrieveRequest(retrieveMessageRequest.getData());
+        String payload =  jsonPrinter.print(retrieveRequest);
+        return PostDataModel.builder()
+                .payload(payload)
+                .postUrl(endpointsProperties.getRetrieveData())
+                .keyData(retrieveMessageRequest.getKeyData())
+                .build();
     }
 
     private <T> void validateInputObject(final T obj) {

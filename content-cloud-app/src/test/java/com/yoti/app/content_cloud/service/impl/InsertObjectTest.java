@@ -18,6 +18,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
 import java.util.Arrays;
 
 @Slf4j
@@ -38,26 +40,26 @@ public class InsertObjectTest {
     }
 
     @Test
-    public void testValidateInputObject() {
+    public void testValidateInputObject() throws NoSuchProviderException, NoSuchAlgorithmException {
 
         ContentCloudModel contentCloudModel = getContentCloudModel();
         final InsertMessageRequest insertMessageRequest;
         InsertMessageResponse response = insertObject.insertObjectToCloud(contentCloudModel);
         Assert.assertNotNull(response);
         insertMessageRequest = RequestHelper.getInsertMessagRequest(null, "public-key", "cloudId", Arrays.asList("key1", "key2"), "encryptionId");
-        contentCloudModel = ContentCloudModel.builder().data(insertMessageRequest).privateKey("ssss".getBytes()).build();
+        contentCloudModel = ContentCloudModel.builder().data(insertMessageRequest).keyData(RequestHelper.getKeyData()).build();
         expectedException.expect(CloudInteractionException.class);
         insertObject.insertObjectToCloud(contentCloudModel);
     }
 
-    private ContentCloudModel getContentCloudModel() {
+    private ContentCloudModel getContentCloudModel() throws NoSuchProviderException, NoSuchAlgorithmException {
         InsertMessageRequest insertMessageRequest = getInsertMessageRequest();
-        return ContentCloudModel.builder().data(insertMessageRequest).privateKey("ssss".getBytes()).build();
+        return ContentCloudModel.builder().data(insertMessageRequest).keyData(RequestHelper.getKeyData()).build();
     }
 
 
     @Test
-    public void testWriteSuccess() {
+    public void testWriteSuccess() throws NoSuchProviderException, NoSuchAlgorithmException {
         InsertMessageResponse response = insertObject.insertObjectToCloud(getContentCloudModel());
         Assert.assertNotNull(response);
         log.info(response.getRecordId());

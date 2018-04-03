@@ -13,16 +13,16 @@ public class ContentCloudModel<T> {
 
     @JsonCreator
     ContentCloudModel(
-            @JsonProperty("privateKey") byte[] privateKey,
+            @JsonProperty("keyData") KeyData keyData,
             @JsonProperty("payload") T data
     ) {
-        this.privateKey = privateKey;
+        this.keyData = keyData;
         this.data = data;
     }
 
-    @JsonProperty("privateKey")
-    @NotNull(message = "private jey should not be null")
-    private byte[] privateKey;
+    @JsonProperty("keyData")
+    @NotNull(message = "key data should not be null")
+    private KeyData keyData;
 
     @JsonProperty("payload")
     @NotNull(message = "payload should not be null")

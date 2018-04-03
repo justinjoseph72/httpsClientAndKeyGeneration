@@ -1,5 +1,6 @@
 package com.yoti.app.content_cloud.service.impl;
 
+import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.util.JsonFormat;
 import com.yoti.app.UrlConstants.ErrorCodes;
 import com.yoti.app.UrlConstants.ErrorMessages;
@@ -7,6 +8,7 @@ import com.yoti.app.config.EndpointsProperties;
 import com.yoti.app.content_cloud.adpaters.InsertProtoAdapter;
 import com.yoti.app.content_cloud.model.InsertMessageRequest;
 import com.yoti.app.content_cloud.model.InsertMessageResponse;
+import com.yoti.app.content_cloud.model.PostDataModel;
 import com.yoti.app.content_cloud.service.InsertObject;
 import com.yoti.app.content_cloud.service.PostDataService;
 import com.yoti.app.controllers.model.ContentCloudModel;
@@ -45,9 +47,8 @@ public class InsertObjectImpl implements InsertObject {
         validateInputObject(contentCloudModel);
         validateInputObject(contentCloudModel.getData());
         try {
-            InsertProto.InsertRequest request = insertProtoAdapter.getInsertProtoFromInsertMessageRequest(contentCloudModel.getData());
-            String jsonPayload = jsonPrinter.print(request);
-            ResponseEntity<?> responseEntity = postDataService.postData(endpointsProperties.getInsertData(), jsonPayload);
+            PostDataModel postData = getPostDataModel(contentCloudModel);
+            ResponseEntity<?> responseEntity = postDataService.postData(postData);
             return handleResponse(responseEntity);
         } catch (CloudDataConversionException | CloudDataAdapterException | CloudInteractionException e) {
             log.warn(" Exception {} {}", e.getClass().getName(), e.getMessage());
@@ -56,6 +57,17 @@ public class InsertObjectImpl implements InsertObject {
             log.warn(" Exception {} {}", e.getClass().getName(), e.getMessage());
             throw new CloudInteractionException(ErrorCodes.CLOUD_INSERT_ERROR, e.getMessage());
         }
+    }
+
+    private <T> PostDataModel getPostDataModel(final ContentCloudModel<InsertMessageRequest<T>> contentCloudModel) throws InvalidProtocolBufferException {
+
+        InsertProto.InsertRequest request = insertProtoAdapter.getInsertProtoFromInsertMessageRequest(contentCloudModel.getData());
+        String payLoad =  jsonPrinter.print(request);
+        return  PostDataModel.builder()
+                .keyData(contentCloudModel.getKeyData())
+                .payload(payLoad)
+                .postUrl(endpointsProperties.getInsertData())
+                .build();
     }
 
 

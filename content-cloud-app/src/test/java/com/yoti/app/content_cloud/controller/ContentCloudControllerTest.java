@@ -21,6 +21,8 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
+import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
 import java.util.Arrays;
 
 @RunWith(SpringRunner.class)
@@ -80,15 +82,15 @@ public class ContentCloudControllerTest {
     }
 
 
-    private ContentCloudModel<InsertMessageRequest> getContentCloudModelForInsert() {
+    private ContentCloudModel<InsertMessageRequest> getContentCloudModelForInsert() throws NoSuchProviderException, NoSuchAlgorithmException {
         InsertMessageRequest<String> insertMessageRequest = getInsertMessageRequestForStringInput();
-        ContentCloudModel model = ContentCloudModel.builder().data(insertMessageRequest).privateKey("private-key".getBytes()).build();
+        ContentCloudModel model = ContentCloudModel.builder().data(insertMessageRequest).keyData(RequestHelper.getKeyData()).build();
         return model;
     }
 
-    private ContentCloudModel<InsertMessageRequest<Person>> getContentCloudModelForInsertWithPerson() {
+    private ContentCloudModel<InsertMessageRequest<Person>> getContentCloudModelForInsertWithPerson() throws NoSuchProviderException, NoSuchAlgorithmException {
         InsertMessageRequest<Person> insertMessageRequest = getInsertMessageRequestForPersonObject();
-        ContentCloudModel model = ContentCloudModel.builder().data(insertMessageRequest).privateKey("private-key".getBytes()).build();
+        ContentCloudModel model = ContentCloudModel.builder().data(insertMessageRequest).keyData(RequestHelper.getKeyData()).build();
         return model;
     }
 

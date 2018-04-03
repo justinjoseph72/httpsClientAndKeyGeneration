@@ -1,11 +1,13 @@
 package com.yoti.app.content_cloud.service.impl;
 
+import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.util.JsonFormat;
 import com.yoti.app.UrlConstants.ErrorCodes;
 import com.yoti.app.UrlConstants.ErrorMessages;
 import com.yoti.app.config.EndpointsProperties;
 import com.yoti.app.content_cloud.adpaters.BinOpsProtoAdapter;
 import com.yoti.app.content_cloud.model.BinRequest;
+import com.yoti.app.content_cloud.model.PostDataModel;
 import com.yoti.app.content_cloud.service.BinInteractions;
 import com.yoti.app.content_cloud.service.PostDataService;
 import com.yoti.app.controllers.model.ContentCloudModel;
@@ -33,9 +35,8 @@ public class BinInteractionsImpl implements BinInteractions {
         validateRequest(binRequest);
         validateRequest(binRequest.getData());
         try {
-            BinOpsProto.MoveToBinRequest moveToBinRequestProto = binAdapter.getMoveToBinRequestProto(binRequest.getData());
-            String jsonPayload = jsonPrinter.print(moveToBinRequestProto);
-            ResponseEntity<?> responseEntity = postDataService.postData(endpointsProperties.getMoveDataToBin(), jsonPayload);
+            PostDataModel postDataModel = getPostDataModel(binRequest,endpointsProperties.getMoveDataToBin());
+            ResponseEntity<?> responseEntity = postDataService.postData(postDataModel);
             return handleResponse(responseEntity);
         } catch (CloudDataConversionException | CloudDataAdapterException | CloudInteractionException e) {
             log.warn(" Exception {} {}", e.getClass().getName(), e.getMessage());
@@ -51,9 +52,8 @@ public class BinInteractionsImpl implements BinInteractions {
         validateRequest(binRequest);
         validateRequest(binRequest.getData());
         try {
-            BinOpsProto.RestoreFromBinRequest restoreFromBinRequestProto = binAdapter.getRestoreFromBinRequestProto(binRequest.getData());
-            String jsonPayload = jsonPrinter.print(restoreFromBinRequestProto);
-            ResponseEntity<?> responseEntity = postDataService.postData(endpointsProperties.getRestoreDataFromBin(), jsonPayload);
+            PostDataModel postDataModel = getPostDataModel(binRequest,endpointsProperties.getRestoreDataFromBin());
+            ResponseEntity<?> responseEntity = postDataService.postData(postDataModel);
             return handleResponse(responseEntity);
         } catch (CloudDataConversionException | CloudDataAdapterException | CloudInteractionException e) {
             log.warn(" Exception {} {}", e.getClass().getName(), e.getMessage());
@@ -69,9 +69,8 @@ public class BinInteractionsImpl implements BinInteractions {
         validateRequest(binRequest);
         validateRequest(binRequest.getData());
         try {
-            BinOpsProto.EmptyBinRequest emptyBinRequestProto = binAdapter.getEmptyBinRequestProto(binRequest.getData());
-            String jsonPayload = jsonPrinter.print(emptyBinRequestProto);
-            ResponseEntity<?> responseEntity = postDataService.postData(endpointsProperties.getEmptyBin(), jsonPayload);
+            PostDataModel postDataModel = getPostDataModel(binRequest,endpointsProperties.getEmptyBin());
+            ResponseEntity<?> responseEntity = postDataService.postData(postDataModel);
             return handleResponse(responseEntity);
         } catch (CloudDataConversionException | CloudDataAdapterException | CloudInteractionException e) {
             log.warn(" Exception {} {}", e.getClass().getName(), e.getMessage());
@@ -87,9 +86,8 @@ public class BinInteractionsImpl implements BinInteractions {
         validateRequest(binRequest);
         validateRequest(binRequest.getData());
         try {
-            BinOpsProto.RemoveBinnedRequest removeBinnedRequestProto = binAdapter.getRemoveBinnedRequestProto(binRequest.getData());
-            String jsonPayload = jsonPrinter.print(removeBinnedRequestProto);
-            ResponseEntity<?> responseEntity = postDataService.postData(endpointsProperties.getRemoveBinnedObject(), jsonPayload);
+            PostDataModel postDataModel = getPostDataModel(binRequest,endpointsProperties.getRemoveBinnedObject());
+            ResponseEntity<?> responseEntity = postDataService.postData(postDataModel);
             return handleResponse(responseEntity);
         } catch (CloudDataConversionException | CloudDataAdapterException | CloudInteractionException e) {
             log.info(" Exception {}", e.getMessage());
@@ -107,6 +105,15 @@ public class BinInteractionsImpl implements BinInteractions {
                     httpResponse.getStatusCodeValue()));
         }
         return Boolean.valueOf(true);
+    }
+
+    private PostDataModel getPostDataModel(final ContentCloudModel<BinRequest> binRequest, final String postUrl) throws InvalidProtocolBufferException {
+        BinOpsProto.RemoveBinnedRequest removeBinnedRequestProto = binAdapter.getRemoveBinnedRequestProto(binRequest.getData());
+        String jsonPayload = jsonPrinter.print(removeBinnedRequestProto);
+        return PostDataModel.builder().keyData(binRequest.getKeyData())
+                .postUrl(postUrl)
+                .payload(jsonPayload)
+                .build();
     }
 
     private <T> void validateRequest(final T binRequest) {

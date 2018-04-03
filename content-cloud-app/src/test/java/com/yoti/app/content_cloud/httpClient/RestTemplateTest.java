@@ -45,6 +45,6 @@ public class RestTemplateTest {
         ObjectNode node = mapper.createObjectNode();
         node.put("name", "justin");
         log.info(node.toString());
-        service.postData(properties.getRetrieveData(), node.toString());
+        //service.postData(properties.getRetrieveData(), node.toString());
     }
 }

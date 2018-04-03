@@ -1,11 +1,14 @@
 package com.yoti.app.content_cloud;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.common.collect.ImmutableList;
+import com.yoti.app.UrlConstants.ServerConstants;
 import com.yoti.app.content_cloud.model.BinRequest;
 import com.yoti.app.content_cloud.model.InsertMessageRequest;
 import com.yoti.app.content_cloud.model.RetrieveMessageRequest;
+import com.yoti.app.controllers.model.KeyData;
+import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
+import java.security.*;
 import java.util.Date;
 import java.util.List;
 
@@ -49,6 +52,17 @@ public class RequestHelper {
                 .searchType(searchType)
                 .retrieveBin(retrieveBin)
                 .build();
+    }
+
+    public static KeyData getKeyData() throws NoSuchProviderException, NoSuchAlgorithmException {
+        Security.addProvider(new BouncyCastleProvider());
+        KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance(ServerConstants.CIPHER_ALGORITHM, ServerConstants.BC_PROVIDER);
+        keyPairGenerator.initialize(2018);
+        KeyPair keyPair = keyPairGenerator.generateKeyPair();
+        String privateKeyStr = new String(keyPair.getPrivate().getEncoded());
+        String publicKeyStr = new String(keyPair.getPublic().getEncoded());
+        return KeyData.builder().privateKeyStr(privateKeyStr)
+                .publicKeyStr(publicKeyStr).build();
     }
 
 }
