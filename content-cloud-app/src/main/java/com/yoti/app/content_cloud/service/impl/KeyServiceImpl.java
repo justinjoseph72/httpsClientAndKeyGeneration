@@ -1,33 +1,25 @@
 package com.yoti.app.content_cloud.service.impl;
 
-import com.yoti.app.UrlConstants.ServerConstants;
 import com.yoti.app.content_cloud.service.KeyService;
 import com.yoti.app.exception.KeyGenerationException;
 import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import java.security.*;
+import java.security.KeyFactory;
+import java.security.PrivateKey;
+import java.security.PublicKey;
 import java.security.spec.KeySpec;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
 
 @Slf4j
 @Service
+@RequiredArgsConstructor
 public class KeyServiceImpl implements KeyService {
 
-
-    private KeyFactory keyFactory;
-
-    {
-        try {
-            keyFactory = KeyFactory.getInstance(ServerConstants.CIPHER_ALGORITHM, ServerConstants.PROVIDER);
-        } catch (NoSuchAlgorithmException | NoSuchProviderException e) {
-            log.warn("Key Factory initialization exception {} {}", e.getClass().getName(), e.getMessage());
-            throw new KeyGenerationException(String.format("Key factory initialization exception {} {} ", e.getClass().getName(), e.getMessage()));
-        }
-    }
-
+    private final KeyFactory keyFactory;
 
     @Override
     public PrivateKey getPrivateKey(final @NonNull byte[] privateKeyByte) throws KeyGenerationException {

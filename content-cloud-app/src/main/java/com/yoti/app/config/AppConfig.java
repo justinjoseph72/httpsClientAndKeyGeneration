@@ -1,5 +1,7 @@
 package com.yoti.app.config;
 
+import com.yoti.app.UrlConstants.ServerConstants;
+import com.yoti.app.exception.KeyGenerationException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.conn.ssl.NoopHostnameVerifier;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -13,10 +15,7 @@ import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.PostConstruct;
 import javax.net.ssl.SSLContext;
-import java.security.KeyManagementException;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
-import java.security.Security;
+import java.security.*;
 
 @Configuration
 @Slf4j
@@ -48,5 +47,15 @@ public class AppConfig {
     public RestTemplate getRestTemplate() {
         RestTemplate restTemplate = new RestTemplate(getHttpComponentsClientHttpRequestFactory());
         return restTemplate;
+    }
+
+    @Bean
+    public KeyFactory getKeyFactory(){
+        try {
+            return KeyFactory.getInstance(ServerConstants.CIPHER_ALGORITHM, ServerConstants.PROVIDER);
+        } catch (NoSuchAlgorithmException | NoSuchProviderException e) {
+            log.warn("Key Factory initialization exception {} {}", e.getClass().getName(), e.getMessage());
+            throw new KeyGenerationException(String.format("Key factory initialization exception {} {} ", e.getClass().getName(), e.getMessage()));
+        }
     }
 }
