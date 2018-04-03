@@ -53,14 +53,13 @@ public class SignMessageTest {
     }
 
     @Test
-    public void shouldThrowExceptionOnUsingInvalidPrivateKeyToSignMessages() {
+    public void shouldThrowExceptionOnUsingSignMessageExceptionInvalidPrivateKeyToSignMessages() {
         expectedException.expect(SignMessageException.class);
-        expectedException.expectMessage(ErrorCodes.PRIVATE_KEY_ERROR);
         byte[] privateKeyByte = "sdfsf".getBytes();
         Assert.assertNotNull(privateKeyByte);
         InsertMessageRequest insertMessageRequest = RequestHelper.getInsertMessagRequest("TEstStr", "sfsdf", "ccc",
                 Arrays.asList("key1", "key2"), "eee");
-        byte[] signedData = signMessageService.signMessage(getJsonPayload(insertMessageRequest),privateKeyByte);
+        String signedData = signMessageService.signMessage(getJsonPayload(insertMessageRequest),privateKeyByte);
 
     }
 
@@ -70,7 +69,7 @@ public class SignMessageTest {
         Assert.assertNotNull(privateKeyByte);
         InsertMessageRequest insertMessageRequest = RequestHelper.getInsertMessagRequest("TEstStr", "sfsdf", "ccc",
                 Arrays.asList("key1", "key2"), "eee");
-        byte[] signedData = signMessageService.signMessage(getJsonPayload(insertMessageRequest),privateKeyByte);
+        String signedData = signMessageService.signMessage(getJsonPayload(insertMessageRequest),privateKeyByte);
         Assert.assertNotNull(signedData);
 
     }

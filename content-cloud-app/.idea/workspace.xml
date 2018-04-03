@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6026f32-d891-4989-a790-8822e0ce3fbb" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/service/impl/SignMessageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ErrorCodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ErrorCodes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ServerConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ServerConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/config/AppConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/SignMessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/SignMessageService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/SignMessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/SignMessageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/service/impl/KeyServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/service/impl/KeyServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/service/impl/SignMessageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/service/impl/SignMessageTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,17 +43,17 @@
       <file leaf-file-name="SignMessageService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/SignMessageService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+            <state relative-caret-position="30">
+              <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SignMessageServiceImpl.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SignMessageServiceImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/SignMessageServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="18" column="58" lean-forward="true" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+            <state relative-caret-position="150">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
@@ -63,8 +61,8 @@
       <file leaf-file-name="ServerConstants.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ServerConstants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="50" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="50" />
+            <state relative-caret-position="255">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -72,8 +70,8 @@
       <file leaf-file-name="AppConfig.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/config/AppConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="54" column="103" selection-start-line="54" selection-start-column="103" selection-end-line="54" selection-end-column="103" />
+            <state relative-caret-position="583">
+              <caret line="69" column="5" lean-forward="true" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -96,24 +94,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SignMessageTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SignMessageTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/service/impl/SignMessageTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="50" column="31" lean-forward="true" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+            <state relative-caret-position="78">
+              <caret line="11" column="58" lean-forward="true" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1470#1471#0" expanded="true" />
                 <element signature="e#1526#1527#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ErrorCodes.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ErrorCodes.java">
+      <file leaf-file-name="PostDataService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/PostDataService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="48" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="48" />
+            <state relative-caret-position="240">
+              <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -190,11 +188,11 @@
         <option value="$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/service/impl/SignRequestTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ErrorCodes.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/KeyServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/SignMessageService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/config/AppConfig.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/service/impl/KeyServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/service/impl/SignMessageTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ServerConstants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/config/AppConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/SignMessageService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/service/impl/SignMessageTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/SignMessageServiceImpl.java" />
       </list>
     </option>
@@ -504,7 +502,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ContentCloudApp">
+  <component name="RunManager" selected="JUnit.SignMessageTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HEIGHT" value="0" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
@@ -713,7 +711,7 @@
       <workItem from="1522254141706" duration="303000" />
       <workItem from="1522254468920" duration="183000" />
       <workItem from="1522254676915" duration="149000" />
-      <workItem from="1522740696091" duration="5856000" />
+      <workItem from="1522740696091" duration="8670000" />
     </task>
     <task id="LOCAL-00001" summary="adding BC security provider">
       <created>1522254361618</created>
@@ -740,27 +738,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RetrieveObjectTest_validObjectReturnedForValidInput - 2018.03.27 at 15h 07m 33s.xml">
-      <configuration name="RetrieveObjectTest.validObjectReturnedForValidInput" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RetrieveObjectTest_validObjectReturnedForValidInput - 2018.03.27 at 15h 08m 52s.xml">
-      <configuration name="RetrieveObjectTest.validObjectReturnedForValidInput" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RetrieveObjectTest_validObjectReturnedForValidInput - 2018.03.27 at 15h 45m 31s.xml">
-      <configuration name="RetrieveObjectTest.validObjectReturnedForValidInput" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RetrieveObjectTest_validObjectReturnedForValidInput - 2018.03.27 at 15h 48m 28s.xml">
-      <configuration name="RetrieveObjectTest.validObjectReturnedForValidInput" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RetrieveObjectTest_validObjectReturnedForValidInput - 2018.03.27 at 15h 49m 57s.xml">
-      <configuration name="RetrieveObjectTest.validObjectReturnedForValidInput" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RetrieveObjectTest_validateInputObject - 2018.03.27 at 14h 53m 38s.xml">
-      <configuration name="RetrieveObjectTest.validateInputObject" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="KeyServiceTest - 2018.04.03 at 08h 44m 23s.xml">
-      <configuration name="KeyServiceTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="KeyServiceTest - 2018.04.03 at 08h 57m 11s.xml">
       <configuration name="KeyServiceTest" configurationId="JUnit" />
     </history-entry>
@@ -770,9 +747,30 @@
     <history-entry file="SignMessageTest - 2018.04.03 at 09h 46m 56s.xml">
       <configuration name="SignMessageTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="SignMessageTest_loadContext - 2018.04.03 at 10h 35m 45s.xml">
+      <configuration name="SignMessageTest.loadContext" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SignMessageTest - 2018.04.03 at 10h 35m 56s.xml">
+      <configuration name="SignMessageTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SignMessageTest - 2018.04.03 at 10h 46m 08s.xml">
+      <configuration name="SignMessageTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SignMessageTest - 2018.04.03 at 11h 27m 27s.xml">
+      <configuration name="SignMessageTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SignMessageTest_loadContext - 2018.04.03 at 11h 30m 24s.xml">
+      <configuration name="SignMessageTest.loadContext" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SignMessageTest - 2018.04.03 at 11h 30m 58s.xml">
+      <configuration name="SignMessageTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SignMessageTest - 2018.04.03 at 11h 33m 30s.xml">
+      <configuration name="SignMessageTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6491000" />
+    <option name="totallyTimeSpent" value="9305000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1080" width="1920" height="1080" extended-state="0" />
@@ -785,18 +783,18 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.14635417" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32935324" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32935324" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32934132" />
       <window_info anchor="bottom" id="Spring" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21875" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21875" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.25" />
       <window_info anchor="right" id="Bean Validation" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info id="Web" side_tool="true" />
       <window_info anchor="right" id="Database" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32935324" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32935324" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -991,13 +989,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/PostDataService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/BinInteractionsImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
@@ -1124,16 +1115,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/KeyServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/KeyService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1148,20 +1129,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/SignMessageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/config/AppConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="54" column="103" selection-start-line="54" selection-start-column="103" selection-end-line="54" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/service/impl/KeyServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
@@ -1169,28 +1136,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ServerConstants.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/PostDataService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="50" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="50" />
+        <state relative-caret-position="240">
+          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/SignMessageServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/UrlConstants/ServerConstants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="18" column="58" lean-forward="true" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/config/AppConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="69" column="5" lean-forward="true" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/SignMessageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/KeyServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/yoti/app/content_cloud/service/impl/SignMessageTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="50" column="31" lean-forward="true" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+        <state relative-caret-position="78">
+          <caret line="11" column="58" lean-forward="true" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1470#1471#0" expanded="true" />
             <element signature="e#1526#1527#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yoti/app/content_cloud/service/impl/SignMessageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>

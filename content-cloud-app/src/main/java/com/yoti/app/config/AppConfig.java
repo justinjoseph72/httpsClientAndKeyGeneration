@@ -2,6 +2,11 @@ package com.yoti.app.config;
 
 import com.yoti.app.UrlConstants.ServerConstants;
 import com.yoti.app.exception.KeyGenerationException;
+import com.yoti.signedrequests.utils.key.PrivateKeyProvider;
+import com.yoti.signedrequests.utils.key.StaticRsaPrivateKeyProvider;
+import com.yoti.signedrequests.utils.service.DefaultSignedReqService;
+import com.yoti.signedrequests.utils.service.SignedRequestService;
+import com.yoti.signedrequests.utils.signature.Sha256WithRsaSignatureProvider;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.conn.ssl.NoopHostnameVerifier;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -58,4 +63,10 @@ public class AppConfig {
             throw new KeyGenerationException(String.format("Key factory initialization exception {} {} ", e.getClass().getName(), e.getMessage()));
         }
     }
+
+    @Bean
+    public SignedRequestService getDefaultSignedReqService(){
+        return new DefaultSignedReqService(new Sha256WithRsaSignatureProvider(ServerConstants.BC_PROVIDER));
+    }
+
 }

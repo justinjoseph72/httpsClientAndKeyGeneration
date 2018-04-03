@@ -1,33 +1,31 @@
 package com.yoti.app.content_cloud.service.impl;
 
 import com.yoti.app.UrlConstants.ErrorCodes;
-import com.yoti.app.UrlConstants.ServerConstants;
-import com.yoti.app.content_cloud.service.KeyService;
 import com.yoti.app.content_cloud.service.SignMessageService;
 import com.yoti.app.exception.KeyGenerationException;
 import com.yoti.app.exception.SignMessageException;
+import com.yoti.signedrequests.utils.key.PrivateKeyProvider;
+import com.yoti.signedrequests.utils.key.StaticRsaPrivateKeyProvider;
+import com.yoti.signedrequests.utils.service.SignedRequestService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import java.nio.charset.StandardCharsets;
-import java.security.*;
+import java.util.Base64;
 
 @Service
 @Slf4j
 @RequiredArgsConstructor
 public class SignMessageServiceImpl implements SignMessageService {
 
-    private final KeyService keyService;
+    private final SignedRequestService signedRequestService;
 
     @Override
-    public byte[] signMessage(final String message, final byte[] privateKeyByte) {
+    public String signMessage(final String message, final byte[] privateKeyByte) {
         try {
-            PrivateKey privateKey = keyService.getPrivateKey(privateKeyByte);
-            if (privateKey == null) {
-                throw new SignMessageException(ErrorCodes.PRIVATE_KEY_ERROR);
-            }
-            return signMessage(message, privateKey);
+            String privateKeyString = new String(Base64.getEncoder().encode(privateKeyByte));
+            PrivateKeyProvider privateKeyProvider = new StaticRsaPrivateKeyProvider(privateKeyString);
+            return signRequestMessage(message, privateKeyProvider);
         } catch (KeyGenerationException e) {
             log.warn("the provided private key is not valid {}", e.getMessage());
             throw new SignMessageException(ErrorCodes.PRIVATE_KEY_ERROR.concat(" ").concat(e.getMessage()));
@@ -37,10 +35,8 @@ public class SignMessageServiceImpl implements SignMessageService {
         }
     }
 
-    private byte[] signMessage(final String message, final PrivateKey privateKey) throws NoSuchProviderException, NoSuchAlgorithmException, InvalidKeyException, SignatureException {
-        final Signature signature = Signature.getInstance(ServerConstants.SIGNATURE_ALGORITHM, ServerConstants.BC_PROVIDER);
-        signature.initSign(privateKey);
-        signature.update(message.getBytes(StandardCharsets.UTF_8));
-        return signature.sign();
+
+    private String signRequestMessage(final String message, final PrivateKeyProvider privateKeyProvider){
+        return signedRequestService.sign(message,privateKeyProvider);
     }
 }
