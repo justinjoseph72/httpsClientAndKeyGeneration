@@ -27,7 +27,7 @@ import java.util.Arrays;
 @Slf4j
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class CreateSignatuerServiceTest {
+public class CreateSignatureServiceTest {
 
     @Autowired
     private CreateSignatureService createSignatureService;

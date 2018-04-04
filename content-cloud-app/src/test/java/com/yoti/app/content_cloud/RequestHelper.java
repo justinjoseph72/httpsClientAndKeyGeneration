@@ -54,15 +54,22 @@ public class RequestHelper {
                 .build();
     }
 
-    public static KeyData getKeyData() throws NoSuchProviderException, NoSuchAlgorithmException {
-        Security.addProvider(new BouncyCastleProvider());
-        KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance(ServerConstants.CIPHER_ALGORITHM, ServerConstants.BC_PROVIDER);
-        keyPairGenerator.initialize(2018);
-        KeyPair keyPair = keyPairGenerator.generateKeyPair();
-        String privateKeyStr = new String(keyPair.getPrivate().getEncoded());
-        String publicKeyStr = new String(keyPair.getPublic().getEncoded());
-        return KeyData.builder().privateKeyStr(privateKeyStr)
-                .publicKeyStr(publicKeyStr).build();
+    public static KeyData getKeyData()  {
+        try {
+            Security.addProvider(new BouncyCastleProvider());
+            KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance(ServerConstants.CIPHER_ALGORITHM, ServerConstants.BC_PROVIDER);
+            keyPairGenerator.initialize(2018);
+            KeyPair keyPair = keyPairGenerator.generateKeyPair();
+            String privateKeyStr = new String(keyPair.getPrivate().getEncoded());
+            String publicKeyStr = new String(keyPair.getPublic().getEncoded());
+            return KeyData.builder().privateKeyStr(privateKeyStr)
+                    .publicKeyStr(publicKeyStr).build();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        } catch (NoSuchProviderException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
 }

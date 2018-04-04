@@ -43,21 +43,21 @@ public class BinInteractionTest {
     }
 
     @Test
-    public void validResponseForValidMoveToBinInput() throws NoSuchProviderException, NoSuchAlgorithmException {
+    public void validResponseForValidMoveToBinInput() {
         Boolean moved = binInteractions.moveObjectToBin(getContentCloudModel(getBinRequest()));
         Assert.assertNotNull(moved);
         Assert.assertTrue(moved.booleanValue());
     }
 
     @Test
-    public void validResponseForValidRestoreBinInput() throws NoSuchProviderException, NoSuchAlgorithmException {
+    public void validResponseForValidRestoreBinInput() {
         Boolean moved = binInteractions.restoreObjectFromBin(getContentCloudModel(getBinRequest()));
         Assert.assertNotNull(moved);
         Assert.assertTrue(moved.booleanValue());
     }
 
     @Test
-    public void validResponseForValidRemoveBinInput() throws NoSuchProviderException, NoSuchAlgorithmException {
+    public void validResponseForValidRemoveBinInput() {
         Boolean moved = binInteractions.removeBinnedObjectFromBin(getContentCloudModel(getBinRequest()));
         Assert.assertNotNull(moved);
         Assert.assertTrue(moved.booleanValue());
@@ -73,7 +73,7 @@ public class BinInteractionTest {
                 .build();
     }
 
-    private <T> ContentCloudModel<T> getContentCloudModel(final T binRequest) throws NoSuchProviderException, NoSuchAlgorithmException {
+    private <T> ContentCloudModel<T> getContentCloudModel(final T binRequest) {
         ContentCloudModel contentCloudModel = ContentCloudModel.builder()
                 .data(binRequest)
                 .keyData(RequestHelper.getKeyData())

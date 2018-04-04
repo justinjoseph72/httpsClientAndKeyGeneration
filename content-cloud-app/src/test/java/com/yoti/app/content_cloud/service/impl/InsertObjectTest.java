@@ -40,7 +40,7 @@ public class InsertObjectTest {
     }
 
     @Test
-    public void testValidateInputObject() throws NoSuchProviderException, NoSuchAlgorithmException {
+    public void testValidateInputObject()  {
 
         ContentCloudModel contentCloudModel = getContentCloudModel();
         final InsertMessageRequest insertMessageRequest;
@@ -52,14 +52,8 @@ public class InsertObjectTest {
         insertObject.insertObjectToCloud(contentCloudModel);
     }
 
-    private ContentCloudModel getContentCloudModel() throws NoSuchProviderException, NoSuchAlgorithmException {
-        InsertMessageRequest insertMessageRequest = getInsertMessageRequest();
-        return ContentCloudModel.builder().data(insertMessageRequest).keyData(RequestHelper.getKeyData()).build();
-    }
-
-
     @Test
-    public void testWriteSuccess() throws NoSuchProviderException, NoSuchAlgorithmException {
+    public void testWriteSuccess() {
         InsertMessageResponse response = insertObject.insertObjectToCloud(getContentCloudModel());
         Assert.assertNotNull(response);
         log.info(response.getRecordId());
@@ -68,6 +62,11 @@ public class InsertObjectTest {
     private InsertMessageRequest getInsertMessageRequest() {
         Person person = new Person(1, "jj", "dd", "sf@sdf.com");
         return RequestHelper.getInsertMessagRequest(person, "public-key", "cloudId", Arrays.asList("key1", "key2"), "encryptionId");
+    }
+
+    private ContentCloudModel getContentCloudModel() {
+        InsertMessageRequest insertMessageRequest = getInsertMessageRequest();
+        return ContentCloudModel.builder().data(insertMessageRequest).keyData(RequestHelper.getKeyData()).build();
     }
 
 }

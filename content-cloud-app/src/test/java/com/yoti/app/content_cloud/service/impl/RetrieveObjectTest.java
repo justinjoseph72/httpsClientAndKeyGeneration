@@ -61,7 +61,7 @@ public class RetrieveObjectTest {
      * the response should have Tags for the byte to parse
      */
     @Test
-    public void validObjectReturnedForValidInput() throws NoSuchProviderException, NoSuchAlgorithmException {
+    public void validObjectReturnedForValidInput() {
         RetrieveMessageResponse response = retrieveObject.fetchRecordsFromCloud(getContentCloudModel(getInsertMessageRequest()));
         Assert.assertNotNull(response);
         Assert.assertNotNull(response.getRecords());
@@ -76,7 +76,7 @@ public class RetrieveObjectTest {
 
     }
 
-    private <T> ContentCloudModel<T> getContentCloudModel(T retrieveMessageRequest) throws NoSuchProviderException, NoSuchAlgorithmException {
+    private <T> ContentCloudModel<T> getContentCloudModel(T retrieveMessageRequest) {
         ContentCloudModel contentCloudModel = ContentCloudModel.builder()
                 .data(retrieveMessageRequest)
                 .keyData(RequestHelper.getKeyData())
