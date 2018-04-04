@@ -7,6 +7,7 @@ public class ServerConstants {
     public static final String CONTENT_CLOUD_SERVER = "preprod0.ccloud.yoti.com:23443";
 
     public static final String CONTENT_TYPE_HEADER = "Content-Type";
+    public static final String JSON_CONTENT_TYPE ="application/json";
     public static final String AUTH_DIGEST = YotiHeaders.REQUEST_DIGEST.headerName;
     public static final String AUTH_KEY = YotiHeaders.REQUEST_PUBLIC_KEY.headerName;
 
