@@ -2,11 +2,14 @@ package com.yoti.app.content_cloud.service.impl;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.protobuf.util.JsonFormat;
 import com.yoti.app.config.EndpointsProperties;
 import com.yoti.app.content_cloud.RequestHelper;
+import com.yoti.app.content_cloud.adpaters.InsertProtoAdapter;
 import com.yoti.app.content_cloud.model.InsertMessageRequest;
 import com.yoti.app.content_cloud.model.PostDataModel;
 import com.yoti.app.content_cloud.service.PostDataService;
+import com.yoti.ccloudpubapi_v1.InsertProto;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 import org.junit.Test;
@@ -28,7 +31,9 @@ public class PostDataServiceTest {
     private PostDataService postDataService;
 
     @Autowired
-    private ObjectMapper mapper;
+    private InsertProtoAdapter insertProtoAdapter;
+
+    private final JsonFormat.Printer jsonPrinter = JsonFormat.printer().preservingProtoFieldNames();
 
     @Autowired
     private EndpointsProperties endpointsProperties;
@@ -58,10 +63,11 @@ public class PostDataServiceTest {
     }
 
 
-    private <T> String getJsonPayload(T obj)  {
+    private  String getJsonPayload(InsertMessageRequest obj)  {
         try {
-            return mapper.writeValueAsString(obj);
-        } catch (JsonProcessingException e) {
+            InsertProto.InsertRequest request = insertProtoAdapter.getInsertProtoFromInsertMessageRequest(obj);
+            return jsonPrinter.print(request);
+        } catch (Exception e) {
             return null;
         }
     }

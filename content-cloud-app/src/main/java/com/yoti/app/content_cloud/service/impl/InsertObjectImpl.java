@@ -60,7 +60,6 @@ public class InsertObjectImpl implements InsertObject {
     }
 
     private <T> PostDataModel getPostDataModel(final ContentCloudModel<InsertMessageRequest<T>> contentCloudModel) throws InvalidProtocolBufferException {
-
         InsertProto.InsertRequest request = insertProtoAdapter.getInsertProtoFromInsertMessageRequest(contentCloudModel.getData());
         String payLoad =  jsonPrinter.print(request);
         return  PostDataModel.builder()
