@@ -53,7 +53,7 @@ public class PostDataServiceTest {
     }
 
     private InsertMessageRequest getInsertMessageRequest() {
-        return RequestHelper.getInsertMessagRequest("TEstStr", "sfsdf", "ccc",
+        return RequestHelper.getInsertMessagRequest("TEstStr111", "sfsdf", "ccc",
                 Arrays.asList("key1", "key2"), "eee");
     }
 

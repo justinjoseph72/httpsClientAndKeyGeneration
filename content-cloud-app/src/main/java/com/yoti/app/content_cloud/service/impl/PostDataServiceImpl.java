@@ -23,12 +23,14 @@ public class PostDataServiceImpl implements PostDataService {
 
     private HttpHeaders getHeaders(final PostDataModel postDataModel) {
 
-        String signature = createSignatureService.signMessage(postDataModel.getPayload(),postDataModel.getKeyData().getPrivateKeyStr().getBytes());
+        String signature = createSignatureService.signMessage(postDataModel.getPayload(),
+                postDataModel.getKeyData().getPrivateKeyStr());
+        String pubicKeyStr = new String(postDataModel.getKeyData().getPublicKeyStr());
         //TODO check with CC team
         HttpHeaders headers = new HttpHeaders();
         headers.add(ServerConstants.CONTENT_TYPE_HEADER, ServerConstants.JSON_CONTENT_TYPE);
         headers.add(ServerConstants.AUTH_DIGEST, signature);
-        headers.add(ServerConstants.AUTH_KEY, postDataModel.getKeyData().getPublicKeyStr());
+        headers.add(ServerConstants.AUTH_KEY, pubicKeyStr);
         return headers;
     }
 
@@ -38,4 +40,6 @@ public class PostDataServiceImpl implements PostDataService {
         HttpEntity<String> strEntity = new HttpEntity<>(postDataModel.getPayload(), getHeaders(postDataModel));
         return restTemplate.exchange(postDataModel.getPostUrl(), HttpMethod.POST, strEntity, String.class);
     }
+
+
 }

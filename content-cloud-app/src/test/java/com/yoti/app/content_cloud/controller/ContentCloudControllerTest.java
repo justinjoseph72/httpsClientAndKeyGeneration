@@ -82,13 +82,13 @@ public class ContentCloudControllerTest {
     }
 
 
-    private ContentCloudModel<InsertMessageRequest> getContentCloudModelForInsert() throws NoSuchProviderException, NoSuchAlgorithmException {
+    private ContentCloudModel<InsertMessageRequest> getContentCloudModelForInsert()  {
         InsertMessageRequest<String> insertMessageRequest = getInsertMessageRequestForStringInput();
         ContentCloudModel model = ContentCloudModel.builder().data(insertMessageRequest).keyData(RequestHelper.getKeyData()).build();
         return model;
     }
 
-    private ContentCloudModel<InsertMessageRequest<Person>> getContentCloudModelForInsertWithPerson() throws NoSuchProviderException, NoSuchAlgorithmException {
+    private ContentCloudModel<InsertMessageRequest<Person>> getContentCloudModelForInsertWithPerson(){
         InsertMessageRequest<Person> insertMessageRequest = getInsertMessageRequestForPersonObject();
         ContentCloudModel model = ContentCloudModel.builder().data(insertMessageRequest).keyData(RequestHelper.getKeyData()).build();
         return model;
