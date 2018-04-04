@@ -9,6 +9,7 @@ import com.yoti.app.controllers.model.KeyData;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
 import java.security.*;
+import java.util.Base64;
 import java.util.Date;
 import java.util.List;
 
@@ -61,8 +62,9 @@ public class RequestHelper {
             keyPairGenerator.initialize(2018);
             KeyPair keyPair = keyPairGenerator.generateKeyPair();
             String privateKeyStr = new String(keyPair.getPrivate().getEncoded());
+            String privateKeyStr1 = new String(Base64.getDecoder().decode(keyPair.getPrivate().getEncoded()));
             String publicKeyStr = new String(keyPair.getPublic().getEncoded());
-            return KeyData.builder().privateKeyStr(privateKeyStr)
+            return KeyData.builder().privateKeyStr(privateKeyStr1)
                     .publicKeyStr(publicKeyStr).build();
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
