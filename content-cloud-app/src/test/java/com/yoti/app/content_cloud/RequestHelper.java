@@ -61,9 +61,6 @@ public class RequestHelper {
             KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance(ServerConstants.CIPHER_ALGORITHM, ServerConstants.BC_PROVIDER);
             keyPairGenerator.initialize(2018);
             KeyPair keyPair = keyPairGenerator.generateKeyPair();
-//            String privateKeyStr = new String(keyPair.getPrivate().getEncoded());
-//            String privateKeyStr1 = new String(Base64.getDecoder().decode(keyPair.getPrivate().getEncoded()));
-            String publicKeyStr = new String(keyPair.getPublic().getEncoded());
             return KeyData.builder().privateKeyStr(keyPair.getPrivate().getEncoded())
                     .publicKeyStr(keyPair.getPublic().getEncoded()).build();
         } catch (NoSuchAlgorithmException e) {

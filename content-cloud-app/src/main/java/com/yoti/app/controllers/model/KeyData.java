@@ -19,12 +19,12 @@ public class KeyData {
         this.publicKeyStr = publicKeyStr;
     }
 
-    //base64  encoded string
+    //base64  encoded byte
     @JsonProperty("privateKey")
     @NotBlank(message = "private key cannot be blank or null")
     private byte[] privateKeyStr;
 
-    //base64 encoded str
+    //base64 encoded byte
     @JsonProperty("publicKey")
     @NotBlank(message = "public key cannot be blank or null")
     private byte[] publicKeyStr;
