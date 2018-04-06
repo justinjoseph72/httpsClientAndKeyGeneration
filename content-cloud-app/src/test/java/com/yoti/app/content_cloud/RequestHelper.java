@@ -62,7 +62,7 @@ public class RequestHelper {
             keyPairGenerator.initialize(2018);
             KeyPair keyPair = keyPairGenerator.generateKeyPair();
             return KeyData.builder().privateKeyStr(keyPair.getPrivate().getEncoded())
-                    .publicKeyStr(keyPair.getPublic().getEncoded()).build();
+                    .publicKeyStr(Base64.getEncoder().encodeToString(keyPair.getPublic().getEncoded())).build();
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         } catch (NoSuchProviderException e) {

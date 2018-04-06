@@ -13,7 +13,7 @@ public class KeyData {
     @JsonCreator
     KeyData(
             @JsonProperty("privateKey") byte[] privateKeyStr,
-            @JsonProperty("publicKey") byte[] publicKeyStr
+            @JsonProperty("publicKey") String publicKeyStr
     ) {
         this.privateKeyStr = privateKeyStr;
         this.publicKeyStr = publicKeyStr;
@@ -27,5 +27,5 @@ public class KeyData {
     //base64 encoded byte
     @JsonProperty("publicKey")
     @NotBlank(message = "public key cannot be blank or null")
-    private byte[] publicKeyStr;
+    private String publicKeyStr;
 }
