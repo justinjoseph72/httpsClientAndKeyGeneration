@@ -21,10 +21,10 @@ public class CreateSignatureServiceImpl implements CreateSignatureService {
     private final SignedRequestService signedRequestService;
 
     @Override
-    public String signMessage(final String message, final byte[] privateKeyByte) {
+    public String signMessage(final String message, final String privateKeyStr) {
         try {
-            String privateKeyString = new String(Base64.getEncoder().encode(privateKeyByte));
-            PrivateKeyProvider privateKeyProvider = new StaticRsaPrivateKeyProvider(privateKeyString);
+            //String privateKeyString = new String(Base64.getEncoder().encode(privateKeyByte));
+            PrivateKeyProvider privateKeyProvider = new StaticRsaPrivateKeyProvider(privateKeyStr);
             return signRequestMessage(message, privateKeyProvider);
         } catch (KeyGenerationException e) {
             log.warn("the provided private key is not valid {}", e.getMessage());

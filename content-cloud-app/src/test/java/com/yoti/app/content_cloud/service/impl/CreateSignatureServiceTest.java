@@ -23,6 +23,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.security.*;
 import java.util.Arrays;
+import java.util.Base64;
 
 @Slf4j
 @RunWith(SpringRunner.class)
@@ -59,32 +60,32 @@ public class CreateSignatureServiceTest {
     @Test
     public void shouldThrowExceptionOnUsingSignMessageExceptionInvalidPrivateKeyToSignMessages() {
         expectedException.expect(SignMessageException.class);
-        byte[] privateKeyByte = "sdfsf".getBytes();
-        Assert.assertNotNull(privateKeyByte);
         InsertMessageRequest insertMessageRequest = RequestHelper.getInsertMessagRequest("TEstStr", "sfsdf", "ccc",
                 Arrays.asList("key1", "key2"), "eee");
-        String signedData = createSignatureService.signMessage(getJsonPayload(insertMessageRequest),privateKeyByte);
+        String signedData = createSignatureService.signMessage(getJsonPayload(insertMessageRequest),"ddd");
 
     }
 
     @Test
     public void shouldSignTheInsertMessageRequestWithValidPrivateKeyWithoutAnyErrors() {
         byte[] privateKeyByte = keyPair.getPrivate().getEncoded();
+        String privateKeyStr = Base64.getEncoder().encodeToString(privateKeyByte);
         Assert.assertNotNull(privateKeyByte);
         InsertMessageRequest insertMessageRequest = RequestHelper.getInsertMessagRequest("TEstStr", "sfsdf", "ccc",
                 Arrays.asList("key1", "key2"), "eee");
-        String signedData = createSignatureService.signMessage(getJsonPayload(insertMessageRequest),privateKeyByte);
+        String signedData = createSignatureService.signMessage(getJsonPayload(insertMessageRequest),privateKeyStr);
         Assert.assertNotNull(signedData);
     }
 
     @Test
     public void shouldVerifyTheSignForInputDataForValidKeyPair() {
         byte[] privateKeyBytes = keyPair.getPrivate().getEncoded();
+        String privateKeyStr = Base64.getEncoder().encodeToString(privateKeyBytes);
         PublicKey publicKey = keyPair.getPublic();
         InsertMessageRequest insertMessageRequest = RequestHelper.getInsertMessagRequest("TEstStr", "sfsdf", "ccc",
                 Arrays.asList("key1", "key2"), "eee");
         String message = getJsonPayload(insertMessageRequest);
-        String signedData = createSignatureService.signMessage(message,privateKeyBytes);
+        String signedData = createSignatureService.signMessage(message,privateKeyStr);
         signedRequestService.verify(publicKey,message,signedData);
     }
 
@@ -92,8 +93,10 @@ public class CreateSignatureServiceTest {
     public void shouldThrowExceptionOnVerifyingDifferentData(){
         expectedException.expect(SignedRequestValidationException.class);
         expectedException.expectMessage("The signature is not valid");
+        byte[] privateKeyByte = keyPair.getPrivate().getEncoded();
+        String privateKeyStr = Base64.getEncoder().encodeToString(privateKeyByte);
         String message ="This is a test string";
-        String signedData = createSignatureService.signMessage(message,keyPair.getPrivate().getEncoded());
+        String signedData = createSignatureService.signMessage(message,privateKeyStr);
         signedRequestService.verify(keyPair.getPublic(),"Another text",signedData);
     }
 
