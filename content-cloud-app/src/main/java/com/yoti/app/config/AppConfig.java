@@ -21,6 +21,7 @@ import org.springframework.web.client.RestTemplate;
 import javax.annotation.PostConstruct;
 import javax.net.ssl.SSLContext;
 import java.security.*;
+import java.time.Clock;
 
 @Configuration
 @Slf4j
@@ -67,6 +68,11 @@ public class AppConfig {
     @Bean
     public SignedRequestService getDefaultSignedReqService(){
         return new DefaultSignedReqService(new Sha256WithRsaSignatureProvider(ServerConstants.BC_PROVIDER));
+    }
+
+    @Bean
+    public Clock getClock(){
+        return Clock.systemUTC();
     }
 
 }

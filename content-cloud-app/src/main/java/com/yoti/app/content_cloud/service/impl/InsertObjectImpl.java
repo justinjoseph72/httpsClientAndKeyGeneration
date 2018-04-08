@@ -28,7 +28,6 @@ import java.io.IOException;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-
 @Slf4j
 @Service
 @RequiredArgsConstructor
@@ -78,11 +77,10 @@ public class InsertObjectImpl implements InsertObject {
         try {
             String jsonResponseBody = (String) httpResponse.getBody();
             log.debug("the response json body is {}", jsonResponseBody);
-            InsertProto.InsertResponse.Builder responseBuilder = InsertProto.InsertResponse.newBuilder();
-            jsonParser.merge(jsonResponseBody, responseBuilder);
-            InsertProto.InsertResponse insertResponseProto = responseBuilder.build();
+            InsertProto.InsertResponse insertResponseProto = validateInputMessageResponse(jsonResponseBody);
             log.debug("response from content cloud parsed successfully");
-            return insertProtoAdapter.getInsertMessageResponse(insertResponseProto);
+            log.debug("response id  from the response proto is {}",insertResponseProto.getRecordId());
+            return insertProtoAdapter.getInsertMessageResponseFromJson(jsonResponseBody);
         } catch (IOException e) {
             log.warn(" Exception {} {}", e.getClass().getName(), e.getMessage());
             throw new CloudDataConversionException(e.getMessage());
@@ -91,6 +89,12 @@ public class InsertObjectImpl implements InsertObject {
             throw new CloudInteractionException(ErrorCodes.CLOUD_INSERT_ERROR, e.getMessage());
         }
 
+    }
+
+    private InsertProto.InsertResponse validateInputMessageResponse(final String jsonResponseBody) throws InvalidProtocolBufferException {
+        InsertProto.InsertResponse.Builder responseBuilder = InsertProto.InsertResponse.newBuilder();
+        jsonParser.merge(jsonResponseBody, responseBuilder);
+        return responseBuilder.build();
     }
 
     private <T> void validateInputObject(final T obj) {
