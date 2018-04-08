@@ -69,7 +69,7 @@ public class RetrieveObjectTest {
     }
 
     private RetrieveMessageRequest getInsertMessageRequest() {
-        return RequestHelper.getRetrieveMessageRequest("cloudId", "public key", Arrays.asList("query1", "query2"),
+        return RequestHelper.getRetrieveMessageRequest("cloudId", "public key", Arrays.asList("record1"),
                 Date.from(clock.instant()), Date.from(clock.instant().plus(2, ChronoUnit.HOURS)), RetrieveProto.RetrieveRequest.SearchType.AND_TAGS_VALUE, true);
 
     }

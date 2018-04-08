@@ -41,7 +41,6 @@ public class InsertObjectTest {
 
     @Test
     public void testValidateInputObject()  {
-
         ContentCloudModel contentCloudModel = getContentCloudModel();
         final InsertMessageRequest insertMessageRequest;
         InsertMessageResponse response = insertObject.insertObjectToCloud(contentCloudModel);

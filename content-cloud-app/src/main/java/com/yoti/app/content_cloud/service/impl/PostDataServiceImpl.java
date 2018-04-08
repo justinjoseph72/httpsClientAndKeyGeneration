@@ -11,6 +11,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 @Slf4j
@@ -37,8 +38,13 @@ public class PostDataServiceImpl implements PostDataService {
     public ResponseEntity<?> postData(final PostDataModel postDataModel) {
         log.debug("posting to url {}", postDataModel.getPostUrl());
         log.debug("payload : {}", postDataModel.getPayload());
-        HttpEntity<String> strEntity = new HttpEntity<>(postDataModel.getPayload(), getHeaders(postDataModel));
-        return restTemplate.exchange(postDataModel.getPostUrl(), HttpMethod.POST, strEntity, String.class);
+        try {
+            HttpEntity<String> strEntity = new HttpEntity<>(postDataModel.getPayload(), getHeaders(postDataModel));
+            return restTemplate.exchange(postDataModel.getPostUrl(), HttpMethod.POST, strEntity, String.class);
+        } catch (RestClientException e) {
+            log.error(" {}  {}",e.getClass().getName(), e.getMessage());
+            throw e;
+        }
     }
 
 

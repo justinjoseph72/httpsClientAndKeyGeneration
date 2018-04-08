@@ -1,6 +1,7 @@
 package com.yoti.app.content_cloud.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
 import lombok.Getter;
@@ -17,7 +18,7 @@ public class ResponseRecord {
             @JsonProperty("encryptedRecordData") String encryptedRecordData,
             @JsonProperty("encryptionKeyId") String encryptionKeyId,
             @JsonProperty("tag") String tag,
-            @JsonProperty("recordTimestamp") Date recordTimestamp,
+            @JsonProperty("recordTimestamp") @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ssZ") Date recordTimestamp,
             @JsonProperty("binned") boolean binned
 
     ) {
@@ -42,6 +43,7 @@ public class ResponseRecord {
     private String tag;
 
     @JsonProperty("recordTimestamp")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ssZ")
     private Date recordTimestamp;
 
     @JsonProperty("binned")

@@ -19,7 +19,7 @@ import java.util.List;
 @Slf4j
 public class RetrieveProtoAdapter {
 
-    private SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssXXX");
+    private SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ssZ");
 
     public RetrieveProto.RetrieveRequest getRetrieveRequestProtoFromRetrieveRequest(@NonNull final RetrieveMessageRequest retrieveMessageRequest) throws CloudDataAdapterException {
         RetrieveProto.RetrieveRequest retrieveRequest = null;

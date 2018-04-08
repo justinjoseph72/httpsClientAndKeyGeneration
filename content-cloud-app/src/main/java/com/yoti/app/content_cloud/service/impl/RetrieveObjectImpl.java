@@ -107,6 +107,7 @@ public class RetrieveObjectImpl implements RetrieveObject {
                         ResponseRecord responseRecord = retrieveProtoAdapter.getResponseRecordFromRecordProto(recordProto);
                         records.add(responseRecord);
                     } catch (ParseException e) {
+                        log.warn("record parsing error {}", e.getMessage());
                         throw new CloudInteractionException(ErrorCodes.CLOUD_RETRIEVE_ERROR, e.getMessage());
                     }
                 });
