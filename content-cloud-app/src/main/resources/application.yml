@@ -11,12 +11,12 @@ spring:
   profiles: mock
 content_cloud:
   endpoint:
-    insertData: http://localhost:23443/content-cloud/v1/insert
-    retrieveData: http://localhost:23443/content-cloud/v1/retrieve
-    moveDataToBin: http://localhost:23443/content-cloud/v1/move-to-bin
-    restoreDataFromBin: http://localhost:23443/content-cloud/v1/restore-from-bin
-    removeBinnedObject: http://localhost:23443/content-cloud/v1/remove-binned
-    emptyBin: http://localhost:23443/content-cloud/v1/remove-binned
+    insertData: https://localhost:23443/content-cloud/v1/insert
+    retrieveData: https://localhost:23443/content-cloud/v1/retrieve
+    moveDataToBin: https://localhost:23443/content-cloud/v1/move-to-bin
+    restoreDataFromBin: https://localhost:23443/content-cloud/v1/restore-from-bin
+    removeBinnedObject: https://localhost:23443/content-cloud/v1/remove-binned
+    emptyBin: https://localhost:23443/content-cloud/v1/remove-binned
 
 ---
 spring:
